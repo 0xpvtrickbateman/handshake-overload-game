@@ -127,7 +127,10 @@ export async function roomTransaction(
       applied = false;
     if (action && hash) {
       const localKey = hash + ':' + requestId;
-      if (!room.actionIds.includes(localKey) && !(receipt && (await read(receipt)))) {
+      if (!room.actionIds.includes(localKey)) {
+        // A concurrent commit can land between the room read and this receipt read.
+        // Return a snapshot read after that commit, never the earlier room value.
+        if (receipt && (await read(receipt))) return roomTransaction(code, hash);
         applyAction(room, hash, action, now, randomUUID());
         room.actionIds.push(localKey);
         room.actionIds = room.actionIds.slice(-128);

@@ -1,6 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { randomUUID } from 'node:crypto';
 import { newRoom, roomTransaction, rateLimit } from '../../src/server/store';
+import { applyAction } from '../../src/game/engine';
+import type { Room } from '../../src/game/types';
 const avatar = { hat: 0, color: 0 };
 afterEach(() => {
   vi.unstubAllEnvs();
@@ -12,6 +14,44 @@ function useMemory() {
   vi.stubEnv('OVERLOAD_TEST_REDIS', '');
 }
 describe('atomic room transactions', () => {
+  it('rereads the room when a concurrent action commits before its receipt is checked', async () => {
+    useMemory();
+    const hash = randomUUID(),
+      requestId = randomUUID();
+    const room = await newRoom(hash, 'Host', avatar, false, randomUUID());
+    const memory = (globalThis as typeof globalThis & { overloadMemory: Map<string, string> })
+      .overloadMemory;
+    const get = memory.get.bind(memory),
+      roomKey = 'overload:test:v1:room:' + room.code;
+    let committed = false;
+    vi.spyOn(memory, 'get').mockImplementation((key) => {
+      if (key.startsWith('overload:test:v1:action:') && !committed) {
+        committed = true;
+        const winner: Room = JSON.parse(get(roomKey)!);
+        applyAction(
+          winner,
+          hash,
+          { type: 'add-bot', personality: 'sam' },
+          Date.now(),
+          randomUUID(),
+        );
+        winner.actionIds.push(hash + ':' + requestId);
+        winner.version++;
+        memory.set(roomKey, JSON.stringify(winner));
+        memory.set(key, '1');
+      }
+      return get(key);
+    });
+    const retried = await roomTransaction(
+      room.code,
+      hash,
+      { type: 'add-bot', personality: 'sam' },
+      requestId,
+    );
+    expect(committed).toBe(true);
+    expect(retried.players).toHaveLength(2);
+    expect(retried.version).toBe(room.version + 1);
+  });
   it('returns one room and one seat for concurrent create retries', async () => {
     useMemory();
     const hash = randomUUID(),

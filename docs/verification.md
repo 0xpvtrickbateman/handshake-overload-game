@@ -2,13 +2,13 @@
 
 Verified October 30, 2026 (America/Phoenix); production suite completed October 31 UTC.
 
-## Release
+## Initial release
 
 - Live: **https://overload-game.vercel.app**
 - TV: **https://overload-game.vercel.app/tv/CODE** (replace CODE with the room code).
 - Vercel team/project: **Jake / williamjake / overload-game**.
 - Verified deployment: `dpl_86S1uN7D3KmZ5Sjyspte6UsN49Qv` — [immutable deployment](https://overload-game-gw4ufr2qe-williamjake.vercel.app).
-- Runtime source commit: `3ebd02a`. Later documentation/test-only commits do not change the deployed application.
+- Baseline runtime source commit: `3ebd02a`. The Git delivery follow-up below describes a subsequent retry-response correction.
 - Upstash Marketplace resource: `overload-game-redis`, region `iad1`, attached to production, preview, and development. Room TTL and action-receipt window: six hours. Credentials remain server-only.
 - Four successive production releases kept a playable version live: baseline, presentation, retry/privacy hardening, then compact lobby/QR polish.
 
@@ -78,3 +78,11 @@ The competitor timing samples involve different event types and observation meth
 ## Remaining verification limits
 
 No blocking application issue was found in these checks. Physical iOS/Android devices, their vibration hardware, and native OS share sheets were not tested. Vibration depends on browser support; the PNG download fallback was verified. Browser contexts were isolated sessions on one machine; broad geographic/network testing and high-concurrency load testing were not performed. Room capacity remains eight seated guests, with extra viewers spectating.
+
+## Git delivery follow-up
+
+The source is published at [0xpvtrickbateman/handshake-overload-game](https://github.com/0xpvtrickbateman/handshake-overload-game). Vercel's existing `williamjake/overload-game` project is connected to that repository with `main` as its production branch and automatic domain assignment enabled. A push of commit `818cf2b` created a production deployment with source `git`; both Vercel and the GitHub commit status reported success. No manual CLI deployment was used to trigger it.
+
+An additional API smoke test exposed a retry-response race: a concurrent action could commit between the room read and the action-receipt read, allowing the retry to return an older snapshot. The server now rereads the room after finding an already-committed receipt. A deterministic regression test failed against the previous implementation and passed with the correction.
+
+After the correction, build and lint passed, all **26 unit tests** passed, and the concurrent API/validation test passed **three consecutive runs against real Redis** locally. The full-game and timing measurements above remain the recorded baseline checks; the new regression specifically covers the receipt/read ordering. The fix is delivered by pushing `main` through the same Git integration.
