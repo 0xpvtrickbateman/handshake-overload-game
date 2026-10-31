@@ -18,11 +18,13 @@ export type Room = {
   durations: { signal: number; load: number; reveal: number; lead: number };
 };
 export type PublicPlayer = Omit<Player, 'sessionHash' | 'lastSeen' | 'joinedAt' | 'missed'> & { connected: boolean; covered: boolean; signal: Signal | null; locked: boolean };
+export type Award = { title: string; icon: string; playerId: string; name: string; detail: string };
 export type Snapshot = {
   code: string; version: number; game: number; hostId: string; phase: Phase;
   round: number; limit: number; phaseEndsAt: number; revealAt: number; serverNow: number;
   players: PublicPlayer[]; meId: string | null; myLoad: number | null;
   history: RoundResult[]; result: RoundResult | null;
+  standings: string[]; winnerIds: string[]; awards: Award[];
 };
 export type Action =
   | { type: 'join'; name: string; avatar: Avatar }

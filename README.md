@@ -7,6 +7,8 @@
 - **Play now vs bots** creates a private game immediately, with all four bot personalities.
 - Host a room and share its four-letter code or link. Guests choose a nickname, hat, and color. The host can add/remove bots or fill to four seats.
 - `/room/CODE` is the phone controller. `/tv/CODE` is a read-only big-screen view.
+- The first solo visit includes a skippable 15-second practice lift. It demonstrates fit, blame, and salvage using examples scored by the same server rules module.
+- Room links and QR codes work without accounts. The phone controller fits 375×667 and 390×844 without scrolling; results and the optional ledger can scroll.
 - 2–8 seated players; later arrivals watch and are seated at rematch, with humans taking priority over bots.
 
 ## Rules
@@ -20,6 +22,14 @@ Limit: `clamp(round(3.5 × seated players) + offset, players, 5 × players)`, wi
 Steady Sam usually loads three. Greedy Gus loads four to six. Liar Lou signals the opposite of his load. Mirror Mel copies the previous round's first human load (three before any human history exists). Their choices and delayed actions are planned by the server.
 
 Keyboard: **L / H / S** signal, **1–6** select crates, **Enter** locks. Signals remain non-binding.
+
+## Presentation and accessibility
+
+The six-second reveal recaps signals, drops each guest's crates with rising-pitch thuds, climbs a brass gauge, and resolves with a bell or cable snap. Eight-player drops accelerate to keep the same total length. Snaps spotlight every tied heaviest guest and identify the lightest guests' salvage. Scores appear on the shared reveal timeline.
+
+Audio is synthesized locally with Web Audio: elevator hum, thuds, bell, cable twang, and a gasp-like noise envelope. Sound begins after a user gesture; mute is saved per device. Lock and snap request vibration where supported. Reduced motion replaces shake with a brief flash and removes movement.
+
+The end screen includes a podium, four server-calculated awards, an expandable round-by-round ledger, and a one-tap PNG share (native sharing where supported, download otherwise). The Breaker has most blamed snaps; The Saint loaded fewest crates; Honest Abe made most matching light/heavy signals (light = 1–3, heavy = 4–6, shrug unscored); Dark Horse recovered most from their largest deficit behind the leader. Award ties use seat order.
 
 ## Architecture
 
@@ -55,7 +65,7 @@ npm run build
 npm run test:e2e
 ```
 
-Playwright creates isolated contexts for two humans and TV, plays eight accelerated local rounds, checks reveal phase/totals/scores, measures reveal-start skew, verifies 375×667 and 390×844 controller fit, refreshes mid-round, tests an absent player, and rematches after the host leaves.
+Playwright starts the production build locally and creates isolated contexts for two humans and TV, plays eight accelerated local rounds, checks reveal phase/totals/scores, measures reveal-start skew, verifies 375×667 and 390×844 controller fit, refreshes mid-round, tests an absent player, and rematches after the host leaves. Run `npm run build` before the local end-to-end suite.
 
 The local test server explicitly uses `OVERLOAD_TEST_MODE=1`, an isolated in-memory store and shorter phase durations. This mode is **disabled whenever `VERCEL` is set** and is not used for production validation. Production must be checked separately against real Redis, SSE, and normal round lengths.
 

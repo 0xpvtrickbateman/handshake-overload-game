@@ -1,4 +1,4 @@
-import { BOT_NAMES, BOT_ORDER, botChoice, scoreRound, seededRandom, weightLimit } from './rules';
+import { BOT_NAMES, BOT_ORDER, awards, botChoice, rankPlayers, scoreRound, seededRandom, weightLimit } from './rules';
 import type { Action, Avatar, Personality, Player, Room, Snapshot } from './types';
 
 export const PRESENCE_MS = 12_000;
@@ -104,9 +104,12 @@ export function applyAction(r: Room, hash: string, action: Action, now: number, 
 }
 export function publicSnapshot(r: Room, hash: string | null, now: number): Snapshot {
   const me = r.players.find(p => p.sessionHash === hash);
+  const ranking = rankPlayers(seated(r));
   return { code: r.code, version: r.version, game: r.game, hostId: r.hostId, phase: r.phase, round: r.round, limit: r.limit, phaseEndsAt: r.phaseEndsAt, revealAt: r.revealAt, serverNow: now,
     players: r.players.map(p => ({ id: p.id, name: p.name, avatar: p.avatar, bot: p.bot, seat: p.seat, departed: p.departed, score: p.score, snaps: p.snaps, connected: online(p, now), covered: covered(p), signal: r.signals[p.id] ?? null, locked: r.loads[p.id] !== undefined })),
     meId: me?.id ?? null, myLoad: me ? r.loads[me.id] ?? null : null,
     history: r.history, result: r.phase === 'reveal' || r.phase === 'finished' ? r.history.at(-1) ?? null : null,
+    standings: ranking.map(p => p.id), winnerIds: r.phase === 'finished' ? ranking.filter(p => p.score === ranking[0].score && p.snaps === ranking[0].snaps).map(p => p.id) : [],
+    awards: r.phase === 'finished' ? awards(seated(r), r.history).map(a => ({ title: a.title, icon: a.icon, playerId: a.player.id, name: a.player.name, detail: a.detail })) : [],
   };
 }
