@@ -103,14 +103,14 @@ export function Results({
             Open the guest ledger
           </button>
           <button className="secondary" onClick={() => void share()}>
-            <Icon name="share" size={16} />
             {shareLabel}
           </button>
         </div>
       </div>
       <p className="result-note">
-        The winner took the blame for {first.snaps} {first.snaps === 1 ? 'snap' : 'snaps'}. A stay
-        to remember.
+        {first.snaps === 0
+          ? 'The winner never took the blame for a snap. A stay to remember.'
+          : `The winner took the blame for ${first.snaps} ${first.snaps === 1 ? 'snap' : 'snaps'}. A stay to remember.`}
       </p>
       <Link className="text-link" href="/">
         Back to the hotel
