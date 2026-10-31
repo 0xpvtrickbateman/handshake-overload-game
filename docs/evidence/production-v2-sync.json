@@ -1,0 +1,34 @@
+[
+  {
+    "round": 1,
+    "skewMs": 11
+  },
+  {
+    "round": 2,
+    "skewMs": 6
+  },
+  {
+    "round": 3,
+    "skewMs": 11
+  },
+  {
+    "round": 4,
+    "skewMs": 31
+  },
+  {
+    "round": 5,
+    "skewMs": 21
+  },
+  {
+    "round": 6,
+    "skewMs": 6
+  },
+  {
+    "round": 7,
+    "skewMs": 19
+  },
+  {
+    "round": 8,
+    "skewMs": 33
+  }
+]

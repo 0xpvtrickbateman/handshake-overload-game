@@ -1,0 +1,8 @@
+node_modules
+.next
+.vercel
+.playwright-mcp
+test-results
+docs/evidence
+package-lock.json
+.env*

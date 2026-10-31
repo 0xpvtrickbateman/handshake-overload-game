@@ -19,7 +19,7 @@
 
 Limit: `clamp(round(3.5 × seated players) + offset, players, 5 × players)`, with offset chosen from `[-2, -1, 1, 2]`.
 
-Steady Sam usually loads three. Greedy Gus loads four to six. Liar Lou signals the opposite of his load. Mirror Mel copies the previous round's first human load (three before any human history exists). Their choices and delayed actions are planned by the server.
+Steady Sam usually loads three. Greedy Gus loads four to six. Liar Lou signals the opposite of his load. Mirror Mel copies the most recently confirmed human load from the previous round (three initially). Their choices and delayed actions are planned by the server.
 
 Keyboard: **L / H / S** signal, **1–6** select crates, **Enter** locks. Signals remain non-binding.
 
@@ -35,7 +35,7 @@ The end screen includes a podium, four server-calculated awards, an expandable r
 
 - Next.js App Router, TypeScript, React, Tailwind/CSS. No account or external game service is required.
 - `src/game/rules.ts` is the pure scoring/limit/bot/award module. `engine.ts` owns phases and actions. Only the server runs authoritative transitions.
-- Upstash Redis stores rooms with a six-hour TTL. REST reads and atomic Lua compare-and-swap writes prevent concurrent actions from losing updates. A bounded request-ID ledger and immutable per-round loads make retries safe.
+- Upstash Redis stores rooms with a six-hour TTL. REST reads and atomic Lua compare-and-swap writes prevent concurrent actions from losing updates. Atomic six-hour action receipts, idempotent room creation, and immutable per-round loads make retries safe. Redis calls have a three-second timeout; unavailable storage returns a recoverable error.
 - A browser-local random session token is hashed server-side and reconnects the same seat. Only hashes are stored in private room state; neither tokens nor hashes enter public snapshots.
 - Every request advances expired phases. No player needs to press Next, and no background worker is required. A missed first load defaults to three; bot coverage handles later missed rounds until the player returns. An absent host transfers to the next online human.
 - Public state is versioned and redacted. Other players see signals and lock flags, never private loads before loading closes.
@@ -67,7 +67,7 @@ npm run test:e2e
 
 Playwright starts the production build locally and creates isolated contexts for two humans and TV, plays eight accelerated local rounds, checks reveal phase/totals/scores, measures reveal-start skew, verifies 375×667 and 390×844 controller fit, refreshes mid-round, tests an absent player, and rematches after the host leaves. Run `npm run build` before the local end-to-end suite.
 
-The local test server explicitly uses `OVERLOAD_TEST_MODE=1`, an isolated in-memory store and shorter phase durations. This mode is **disabled whenever `VERCEL` is set** and is not used for production validation. Production must be checked separately against real Redis, SSE, and normal round lengths.
+The local test server explicitly uses `OVERLOAD_TEST_MODE=1`, an isolated in-memory store and shorter phase durations. This mode is **disabled whenever `VERCEL` is set** and is not used for production validation. Set `OVERLOAD_TEST_REDIS=1 npm run test:e2e` to exercise real Redis with accelerated rounds in a separate test namespace. Production is checked separately with `PLAYWRIGHT_BASE_URL=https://overload-game.vercel.app npm run test:e2e`, using real Redis, SSE, and normal round lengths.
 
 ## Deploy
 

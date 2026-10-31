@@ -1,7 +1,96 @@
 import { ImageResponse } from 'next/og';
-export const alt = 'OVERLOAD — Load it up. Don’t snap the cable. 2–8 guests, four minutes, trust optional.';
+export const alt =
+  'OVERLOAD — Load it up. Don’t snap the cable. 2–8 guests, four minutes, trust optional.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export default function Image() {
-  return new ImageResponse(<div style={{ background: '#28191c', color: '#f3e9d6', width: '100%', height: '100%', display: 'flex', padding: 28 }}><div style={{ border: '2px solid #d3b579', width: '100%', display: 'flex', alignItems: 'center', padding: 55, background: 'linear-gradient(120deg, #602933, #28191c)' }}><div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}><div style={{ color: '#d3b579', letterSpacing: 7, fontSize: 19 }}>THE GRAND HOTEL · EST. 1931</div><div style={{ fontSize: 100, letterSpacing: -5, fontWeight: 900, marginTop: 36 }}>OVERLOAD</div><div style={{ fontSize: 34, color: '#e4c48a', marginTop: 16 }}>Load it up.</div><div style={{ fontSize: 34, color: '#e4c48a' }}>Don’t snap the cable.</div><div style={{ fontSize: 19, color: '#c4b29b', marginTop: 40 }}>2–8 guests · 4 minutes · Trust optional</div></div><div style={{ display: 'flex', width: 280, height: 370, border: '5px solid #d3b579', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', position: 'relative', background: '#261d21', padding: 16 }}><div style={{ position: 'absolute', top: 24, color: '#d3b579', fontSize: 18, letterSpacing: 4 }}>FREIGHT № 01</div><div style={{ position: 'absolute', top: 70, height: 250, width: 4, background: '#ac976f' }} /><div style={{ display: 'flex', alignItems: 'flex-end', gap: 5 }}>{[3, 1, 6].map((n, i) => <div key={n} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 75 + i * 32, width: 74, border: '4px solid #503827', background: '#b78b55', color: '#28191c', fontSize: 42, fontWeight: 700 }}>{n}</div>)}</div><div style={{ width: 235, height: 8, background: '#d3b579' }} /></div></div></div>, size);
+  return new ImageResponse(
+    <div
+      style={{
+        background: '#28191c',
+        color: '#f3e9d6',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        padding: 28,
+      }}
+    >
+      <div
+        style={{
+          border: '2px solid #d3b579',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          padding: 55,
+          background: 'linear-gradient(120deg, #602933, #28191c)',
+        }}
+      >
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+          <div style={{ color: '#d3b579', letterSpacing: 7, fontSize: 19 }}>
+            THE GRAND HOTEL · EST. 1931
+          </div>
+          <div style={{ fontSize: 100, letterSpacing: -5, fontWeight: 900, marginTop: 36 }}>
+            OVERLOAD
+          </div>
+          <div style={{ fontSize: 34, color: '#e4c48a', marginTop: 16 }}>Load it up.</div>
+          <div style={{ fontSize: 34, color: '#e4c48a' }}>Don’t snap the cable.</div>
+          <div style={{ fontSize: 19, color: '#c4b29b', marginTop: 40 }}>
+            2–8 guests · 4 minutes · Trust optional
+          </div>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            width: 280,
+            height: 370,
+            border: '5px solid #d3b579',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            position: 'relative',
+            background: '#261d21',
+            padding: 16,
+          }}
+        >
+          <div
+            style={{
+              position: 'absolute',
+              top: 24,
+              color: '#d3b579',
+              fontSize: 18,
+              letterSpacing: 4,
+            }}
+          >
+            FREIGHT № 01
+          </div>
+          <div
+            style={{ position: 'absolute', top: 70, height: 250, width: 4, background: '#ac976f' }}
+          />
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: 5 }}>
+            {[3, 1, 6].map((n, i) => (
+              <div
+                key={n}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: 75 + i * 32,
+                  width: 74,
+                  border: '4px solid #503827',
+                  background: '#b78b55',
+                  color: '#28191c',
+                  fontSize: 42,
+                  fontWeight: 700,
+                }}
+              >
+                {n}
+              </div>
+            ))}
+          </div>
+          <div style={{ width: 235, height: 8, background: '#d3b579' }} />
+        </div>
+      </div>
+    </div>,
+    size,
+  );
 }

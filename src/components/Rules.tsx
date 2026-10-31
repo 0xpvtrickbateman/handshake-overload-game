@@ -1,7 +1,65 @@
 'use client';
 import { useState } from 'react';
-export function RuleLines() { return <ol className="rule-lines"><li><b>Bluff.</b> Signal anything. Secretly load 1–6 crates.</li><li><b>Fit?</b> Bank crates. <b>Snap?</b> No bank; heaviest −3, lightest +2.</li><li><b>8 lifts.</b> Last two ×2. Most points wins; fewer blames breaks ties.</li></ol>; }
+export function RuleLines() {
+  return (
+    <ol className="rule-lines">
+      <li>
+        <b>Bluff.</b> Signal anything. Secretly load 1–6 crates.
+      </li>
+      <li>
+        <b>Fit?</b> Bank crates. <b>Snap?</b> No bank; heaviest −3, lightest +2.
+      </li>
+      <li>
+        <b>8 lifts.</b> Last two ×2. Most points wins; fewer blames breaks ties.
+      </li>
+    </ol>
+  );
+}
 export function Rules() {
   const [open, setOpen] = useState(false);
-  return <><button className="icon-button" aria-label="How to play" onClick={() => setOpen(true)}>?</button>{open && <div className="modal-backdrop" onClick={() => setOpen(false)}><section className="modal" role="dialog" aria-modal="true" aria-label="How to play" onClick={e => e.stopPropagation()}><button className="close" aria-label="Close rules" onClick={() => setOpen(false)}>×</button><p className="eyebrow">THE GUEST HANDBOOK</p><h2>A little greed.<br />A very old cable.</h2><RuleLines /><p>You have 5 seconds to signal and 10 to load. A missed pick loads 3. Signals are promises you don’t have to keep.</p><p>Every tied heaviest loader takes blame; every tied lightest loader salvages. If everyone ties on a snap, both apply. Final two rounds double all points, penalties, and salvage.</p><p>Light means 1–3 crates; heavy means 4–6 for the Honest Abe award. Shrug makes no promise. Equal scores and equal blame counts share the win.</p><p className="muted">Keyboard: L / H / S to signal · 1–6 to pick · Enter to lock.</p><button className="primary" onClick={() => setOpen(false)}>Got it. Let’s load.</button></section></div>}</>;
+  return (
+    <>
+      <button className="icon-button" aria-label="How to play" onClick={() => setOpen(true)}>
+        ?
+      </button>
+      {open && (
+        <div className="modal-backdrop" onClick={() => setOpen(false)}>
+          <section
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="How to play"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="close" aria-label="Close rules" onClick={() => setOpen(false)}>
+              ×
+            </button>
+            <p className="eyebrow">THE GUEST HANDBOOK</p>
+            <h2>
+              A little greed.
+              <br />A very old cable.
+            </h2>
+            <RuleLines />
+            <p>
+              You have 5 seconds to signal and 10 to load. A missed pick loads 3. Signals are
+              promises you don’t have to keep.
+            </p>
+            <p>
+              Every tied heaviest loader takes blame; every tied lightest loader salvages. If
+              everyone ties on a snap, both apply. Final two rounds double all points, penalties,
+              and salvage.
+            </p>
+            <p>
+              Light means 1–3 crates; heavy means 4–6 for the Honest Abe award. Shrug makes no
+              promise. Equal scores and equal blame counts share the win.
+            </p>
+            <p className="muted">Keyboard: L / H / S to signal · 1–6 to pick · Enter to lock.</p>
+            <button className="primary" onClick={() => setOpen(false)}>
+              Got it. Let’s load.
+            </button>
+          </section>
+        </div>
+      )}
+    </>
+  );
 }
