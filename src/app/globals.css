@@ -229,8 +229,8 @@ kbd {
 .icon-button:disabled {
   opacity: 0.5;
 }
-.help-button span {
-  transform: translateY(1px);
+.help-button {
+  font: 600 20px/1 var(--sans);
 }
 .error {
   margin-top: 12px;
@@ -648,11 +648,8 @@ footer {
     position: absolute;
     inset: 26px 18px;
     border: 1px solid #d8b06470;
-    background:
-      linear-gradient(135deg, transparent 47%, #d8b06470 48% 52%, transparent 53%) 0 0 / 50% 40px
-        repeat-y,
-      linear-gradient(225deg, transparent 47%, #d8b06470 48% 52%, transparent 53%) 100% 0 / 50% 40px
-        repeat-y;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='34'%3E%3Cpath d='M4 28 20 12l16 16M4 18 20 2l16 16' fill='none' stroke='%23d8b064' stroke-opacity='.5' stroke-width='1.5'/%3E%3C/svg%3E")
+      center top / 40px 34px repeat-y;
   }
   .lift-door.left {
     left: 22px;
@@ -669,6 +666,19 @@ footer {
     bottom: 0;
     height: 16px;
     background: linear-gradient(180deg, var(--brass-hi), var(--brass-lo));
+  }
+}
+@media (min-height: 760px) and (max-width: 959px) {
+  .lede {
+    display: block;
+    font-size: 16px;
+    margin: -4px auto 0;
+  }
+  .lift-transom {
+    width: min(220px, 60vw);
+  }
+  .hero-copy {
+    gap: 16px;
   }
 }
 @media (max-height: 700px) and (max-width: 959px) {

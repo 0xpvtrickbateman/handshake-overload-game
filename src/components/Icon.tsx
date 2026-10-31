@@ -18,7 +18,7 @@ const PATHS = {
   diamond: 'M12 3l7 9-7 9-7-9z',
   climb: 'M3 18l6-6 4 4 8-8M15 8h6v6',
   crown: 'M3 18 5 7l4.5 5L12 5l2.5 7L19 7l2 11z',
-  crate: 'M4 6h16v14H4zM4 6l16 14M20 6 4 20',
+  crate: 'M4 5h16v15H4zM4 10h16M4 15h16M8 5v15M16 5v15',
 } as const;
 export type IconName = keyof typeof PATHS;
 export function Icon({
