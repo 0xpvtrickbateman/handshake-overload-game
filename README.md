@@ -75,6 +75,18 @@ The local test server explicitly uses `OVERLOAD_TEST_MODE=1`, an isolated in-mem
 
 ## Deploy
 
+Source repository: [0xpvtrickbateman/handshake-overload-game](https://github.com/0xpvtrickbateman/handshake-overload-game).
+
+The existing `williamjake/overload-game` project is connected through Vercel's GitHub integration, with `main` as its production branch. After the local checks pass, publish changes with:
+
+```sh
+git push origin main
+```
+
+Each push to `main` triggers a Vercel production build and updates **https://overload-game.vercel.app** when the build succeeds. The existing Upstash integration and Vercel environment variables remain attached to the project; secrets are not stored in this repository.
+
+For an explicitly intended manual deployment, the CLI path remains available:
+
 ```sh
 vercel project inspect --scope williamjake --non-interactive
 vercel --prod --scope williamjake --yes
