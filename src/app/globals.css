@@ -24,6 +24,7 @@
 
   --display: var(--font-display), 'Limelight', Georgia, serif;
   --sans: var(--font-sans), 'Jost', 'Futura', 'Avenir Next', system-ui, sans-serif;
+  /* Limelight's zero reads as a half moon, so scores, timers and limits use Jost. */
 
   --r-control: 10px;
   --r-panel: 16px;
@@ -976,6 +977,11 @@ footer {
 .room-toolbar .brand {
   margin-right: auto;
 }
+@media (max-width: 419px) {
+  .room-root:not(.tv-root) .room-toolbar .brand-word {
+    display: none;
+  }
+}
 .room-toolbar .icon-button {
   width: 40px;
   height: 40px;
@@ -1084,7 +1090,7 @@ footer {
 .guest-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-height: 52px;
   padding: 6px 6px 6px 8px;
   border-radius: var(--r-control);
@@ -1110,9 +1116,9 @@ footer {
   color: var(--mute);
 }
 .guest-row .icon-button {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
   color: var(--cream-dim);
 }
 .bot-controls {
@@ -1326,13 +1332,15 @@ footer {
   text-overflow: ellipsis;
 }
 .timer {
+  width: 52px;
   min-width: 52px;
   height: 52px;
+  flex-shrink: 0;
   border-radius: 50%;
   display: grid;
   place-content: center;
   text-align: center;
-  font: 400 26px/1 var(--display);
+  font: 600 24px/1 var(--sans);
   color: var(--brass-hi);
   border: 1px solid var(--brass-line);
   background: radial-gradient(circle, #ffffff0a, transparent 70%);
@@ -1375,7 +1383,7 @@ footer {
 }
 .cable {
   position: absolute;
-  top: 92px;
+  top: 108px;
   left: 50%;
   bottom: 70px;
   width: 4px;
@@ -1408,7 +1416,7 @@ footer {
   line-height: 1.1;
 }
 .capacity-plate strong {
-  font: 400 28px/1 var(--display);
+  font: 700 28px/1 var(--sans);
   margin: 1px 0;
 }
 .weight-gauge {
@@ -1432,7 +1440,7 @@ footer {
   color: var(--cream);
 }
 .gauge-readout b {
-  font: 400 16px var(--display);
+  font: 700 15px var(--sans);
   color: var(--brass-hi);
 }
 .platform {
@@ -1557,7 +1565,7 @@ footer {
     0 3px 0 #5e1009;
 }
 .verdict.verdict-small {
-  inset: 12px 12px auto auto;
+  inset: 56px 14px auto auto;
   background: transparent;
   align-items: flex-end;
   gap: 1px;
@@ -1737,7 +1745,8 @@ footer {
   color: var(--cream-dim);
 }
 .player-token > span {
-  font: 400 15px/1 var(--display);
+  font: 600 15px/1 var(--sans);
+  font-variant-numeric: tabular-nums;
   color: var(--cream);
 }
 .player-token small {
@@ -1760,7 +1769,7 @@ footer {
   z-index: 8;
   padding: 3px 7px;
   border-radius: 99px;
-  font: 400 17px/1 var(--display) !important;
+  font: 700 17px/1 var(--sans) !important;
   color: #0d2a20 !important;
   background: var(--verdigris);
   box-shadow: 0 4px 14px #00000080;
@@ -1922,9 +1931,10 @@ footer {
     font-size: 21px;
   }
   .timer {
+    width: 44px;
     min-width: 44px;
     height: 44px;
-    font-size: 22px;
+    font-size: 20px;
   }
   .timer small {
     font-size: 9px;
@@ -1934,7 +1944,7 @@ footer {
     top: 8px;
   }
   .cable {
-    top: 82px;
+    top: 96px;
   }
   .capacity-plate {
     top: 44px;
@@ -2082,7 +2092,7 @@ footer {
   );
 }
 .podium-place strong {
-  font: 400 30px/1 var(--display);
+  font: 700 30px/1 var(--sans);
   color: var(--brass-hi);
   margin-top: 6px;
 }
@@ -2203,7 +2213,7 @@ footer {
 }
 .final-scores > div > b {
   width: 18px;
-  font: 400 18px var(--display);
+  font: 700 16px var(--sans);
   color: var(--brass-hi);
 }
 .final-scores > div > span {
@@ -2213,7 +2223,7 @@ footer {
   overflow-wrap: anywhere;
 }
 .final-scores strong {
-  font: 400 20px var(--display);
+  font: 700 18px var(--sans);
 }
 .final-scores small {
   font-size: 12px;
@@ -2283,7 +2293,7 @@ footer {
   font-size: 12px;
 }
 .ledger-row > strong {
-  font: 400 18px var(--display);
+  font: 700 16px var(--sans);
 }
 .ledger-row > span {
   font-size: 13px;
@@ -2475,6 +2485,7 @@ footer {
   font-size: 46px;
 }
 .tv-controller .timer {
+  width: 84px;
   min-width: 84px;
   height: 84px;
   font-size: 40px;
@@ -2499,7 +2510,7 @@ footer {
   font-size: 26px;
 }
 .tv-controller .cable {
-  top: 160px;
+  top: 180px;
   bottom: 110px;
   width: 6px;
 }
@@ -2554,7 +2565,7 @@ footer {
   font-size: 22px;
 }
 .tv-controller .verdict.verdict-small {
-  inset: 24px 40px auto auto;
+  inset: 120px 60px auto auto;
 }
 .tv-controller .verdict.verdict-small strong {
   font-size: 52px;
