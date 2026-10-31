@@ -1,0 +1,5 @@
+import type { Avatar as AvatarType } from '@/game/types';
+export const COLORS = ['#dbb96d', '#e29685', '#8fbaaa', '#a7b9d6', '#c6a5cd', '#d9d3b9'];
+export function Avatar({ avatar, size = 40 }: { avatar: AvatarType; size?: number }) {
+  return <svg width={size} height={size} viewBox="0 0 48 48" className="avatar" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="15" fill={COLORS[avatar.color]} /><path d="M10 48c0-14 28-14 28 0" fill="#342628" /><ellipse cx="24" cy="26" rx="10" ry="11" fill="#f2dec1" /><path d="M17 25h2m10 0h2" stroke="#342628" strokeWidth="2.4" strokeLinecap="round" /><path d="M21 32q3 2 6 0" fill="none" stroke="#7c4a40" strokeWidth="1.5" />{avatar.hat === 0 ? <path d="M10 19h28v-4h-7V5H17v10h-7z" fill="#342628" /> : avatar.hat === 1 ? <><path d="M9 19q15-19 30 0z" fill="#69282d" /><path d="M7 19h34" stroke="#69282d" strokeWidth="4" /></> : avatar.hat === 2 ? <><path d="M10 18q1-16 25-9l-5 11z" fill="#39594f" /><path d="M24 18h16" stroke="#39594f" strokeWidth="4" /></> : <><path d="M13 18V9l11 5 11-5v9z" fill="#a57432" /><path d="M11 19h26" stroke="#a57432" strokeWidth="3" /></>}</svg>;
+}

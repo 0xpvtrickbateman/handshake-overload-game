@@ -1,0 +1,197 @@
+{
+  "additionalObservations": {
+    "treasureLoadSampleMs": { "responseStart": 293.1, "domContentLoaded": 409.8, "load": 419.8, "firstContentfulPaint": 428 },
+    "panicLoadSampleMs": { "responseStart": 337.3, "domContentLoaded": 471.9, "load": 472.4, "firstContentfulPaint": 936 },
+    "horizontalOverflowAt320And390": false,
+    "treasurePhone320PageHeight": 1851,
+    "panicLandingFullPageHeightSample": 11154,
+    "treasureBackToStart": "Cleared room code but retained old game UI after 1.1 seconds; refresh restored landing"
+  },
+  "testedOn": "2026-10-30 America/Phoenix",
+  "method": "Two isolated Playwright browser contexts; same computer/network; 390x844 and 320x568; browser console/network instrumentation; decoded response body bytes; no latency throttling",
+  "treasure": {
+    "completedRounds": 8,
+    "finalScores": [
+      16,
+      16
+    ],
+    "rematch": true,
+    "refreshConfirmedChoiceMs": 343,
+    "lockPropagationMs": 784,
+    "revealSamples": [
+      {
+        "round": 3,
+        "hostAfterClickMs": 1793,
+        "guestAfterClickMs": 800,
+        "displayGapMs": 993
+      },
+      {
+        "round": 4,
+        "hostAfterClickMs": 787,
+        "guestAfterClickMs": 808,
+        "displayGapMs": 21
+      },
+      {
+        "round": 5,
+        "hostAfterClickMs": 787,
+        "guestAfterClickMs": 305,
+        "displayGapMs": 482
+      },
+      {
+        "round": 6,
+        "hostAfterClickMs": 283,
+        "guestAfterClickMs": 297,
+        "displayGapMs": 14
+      },
+      {
+        "round": 7,
+        "hostAfterClickMs": 783,
+        "guestAfterClickMs": 803,
+        "displayGapMs": 20
+      }
+    ],
+    "pollIntervalMs": 1500,
+    "decodedStateBytes": [
+      268,
+      571
+    ],
+    "guestAbsent10s": "Waited for absent choice",
+    "hostAbsent8s": "Guest waited for host",
+    "errors": [],
+    "websockets": 0
+  },
+  "panic": {
+    "completedRounds": 3,
+    "finalTeamScore": 50452,
+    "rematch": true,
+    "refreshMs": 493,
+    "returnAfterAbsenceMs": 328,
+    "joinPropagationMs": 1618,
+    "statePolling": {
+      "requests": 366,
+      "medianIntervalMs": 902.02978515625,
+      "payloadBytes": [
+        1029,
+        2633
+      ]
+    },
+    "presence": {
+      "requests": 137,
+      "medianIntervalMs": 2499.998046875,
+      "payloadBytes": [
+        25,
+        25
+      ]
+    },
+    "scoreDisplayGap": {
+      "samples": [
+        {
+          "score": "39,570",
+          "skewMs": 668
+        },
+        {
+          "score": "39,983",
+          "skewMs": 355
+        },
+        {
+          "score": "40,433",
+          "skewMs": 2
+        },
+        {
+          "score": "40,959",
+          "skewMs": 655
+        },
+        {
+          "score": "41,522",
+          "skewMs": 652
+        },
+        {
+          "score": "41,822",
+          "skewMs": 470
+        },
+        {
+          "score": "42,460",
+          "skewMs": 422
+        },
+        {
+          "score": "43,136",
+          "skewMs": 719
+        },
+        {
+          "score": "43,886",
+          "skewMs": 501
+        },
+        {
+          "score": "44,261",
+          "skewMs": 6
+        },
+        {
+          "score": "44,674",
+          "skewMs": 64
+        },
+        {
+          "score": "45,500",
+          "skewMs": 517
+        },
+        {
+          "score": "46,400",
+          "skewMs": 258
+        },
+        {
+          "score": "47,300",
+          "skewMs": 1302
+        },
+        {
+          "score": "48,200",
+          "skewMs": 785
+        },
+        {
+          "score": "48,150",
+          "skewMs": 257
+        },
+        {
+          "score": "48,450",
+          "skewMs": 283
+        },
+        {
+          "score": "48,826",
+          "skewMs": 854
+        },
+        {
+          "score": "49,239",
+          "skewMs": 340
+        },
+        {
+          "score": "49,689",
+          "skewMs": 114
+        },
+        {
+          "score": "49,952",
+          "skewMs": 162
+        }
+      ],
+      "median": 422,
+      "max": 1302
+    },
+    "hostAbsent12s": {
+      "waitMs": 12000,
+      "guestIsHost": false,
+      "phase": "playing",
+      "round": 3,
+      "players": [
+        {
+          "name": "Jake Audit",
+          "connected": false
+        },
+        {
+          "name": "Mia Audit",
+          "connected": true
+        }
+      ]
+    },
+    "explicitHostLeave": "Guest became host",
+    "errors": [],
+    "failedResponses": [],
+    "websockets": 0
+  }
+}
