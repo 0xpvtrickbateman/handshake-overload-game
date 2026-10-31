@@ -6,11 +6,16 @@ export function RoomQR({ code, compact = false }: { code: string; compact?: bool
   useEffect(() => {
     if (canvas.current)
       void QRCode.toCanvas(canvas.current, `${location.origin}/room/${code}`, {
-        width: compact ? 100 : 150,
+        width: compact ? 256 : 360,
         margin: 2,
         color: { dark: '#28191c', light: '#f3e9d6' },
         errorCorrectionLevel: 'M',
-      }).catch(() => {});
+      })
+        .then(() => {
+          canvas.current?.style.removeProperty('width');
+          canvas.current?.style.removeProperty('height');
+        })
+        .catch(() => {});
   }, [code, compact]);
   return (
     <div className={`room-qr ${compact ? 'compact' : ''}`}>

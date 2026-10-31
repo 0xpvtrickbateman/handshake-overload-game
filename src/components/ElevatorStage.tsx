@@ -99,7 +99,7 @@ export function ElevatorStage({
       <div className="weight-gauge" aria-label={`${total} of ${state.limit} crates on the lift`}>
         <svg viewBox="0 0 150 90" aria-hidden="true">
           <path d="M15 73A60 60 0 0 1 135 73" fill="#1c1619" stroke="#c6a66c" strokeWidth="2" />
-          <path d="M112 25A60 60 0 0 1 135 73" fill="none" stroke="#c56b65" strokeWidth="7" />
+          <path d="M122 35A60 60 0 0 1 135 73" fill="none" stroke="#c56b65" strokeWidth="7" />
           {[-80, -50, -20, 10, 40, 70].map((a) => (
             <path
               key={a}
