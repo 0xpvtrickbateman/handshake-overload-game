@@ -1589,7 +1589,13 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: radial-gradient(closest-side, #5c2a22f0, #170a0de6 80%, #170a0d00);
+  border-radius: 40% 40% 8px 8px / 60px 60px 8px 8px;
+  background: radial-gradient(
+    ellipse 70% 65% at 50% 45%,
+    #5a2620 0%,
+    #2a0f12f7 55%,
+    #170a0df2 100%
+  );
   animation: fade-in 0.3s ease-out both;
 }
 .blame-avatars {
@@ -2448,6 +2454,10 @@ footer {
 }
 .tv-root .room-toolbar {
   height: 84px;
+}
+.tv-root .room-toolbar .icon-button {
+  width: 52px;
+  height: 52px;
 }
 .tv-root .brand-word {
   font-size: 34px;
