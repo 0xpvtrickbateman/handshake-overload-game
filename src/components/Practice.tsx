@@ -18,7 +18,7 @@ const lessons = [
   },
   {
     title: 'Meet the blame game.',
-    text: '16 crates. Limit 14. Snap! Nobody banks. Gus loaded the most, so he loses 3.',
+    text: '16 crates. Limit 14. Snap! Nobody banks. Gus loaded the most, so Gus loses 3.',
     label: 'Snap → heaviest loses 3',
     icon: 'bolt' as IconName,
     tone: 'snap',
