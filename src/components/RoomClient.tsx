@@ -44,7 +44,7 @@ export function RoomClient({ code, tv = false }: { code: string; tv?: boolean })
           </div>
         </header>
         <div className="skeleton lift-skeleton" aria-hidden="true" />
-        <h2>Your lift is arriving</h2>
+        <h2>{error ? 'We can’t reach that room' : 'Your lift is arriving'}</h2>
         <p role="status">{error || 'Finding room ' + code + '…'}</p>
         <Link className="secondary" href="/">
           Back to the desk
