@@ -1,0 +1,30 @@
+[
+  {
+    "name": "preview",
+    "height": 724,
+    "button": {
+      "x": 16,
+      "y": 606.640625,
+      "width": 328,
+      "height": 48,
+      "top": 606.640625,
+      "right": 344,
+      "bottom": 654.640625,
+      "left": 16
+    }
+  },
+  {
+    "name": "production",
+    "height": 667,
+    "button": {
+      "x": 24,
+      "y": 496.1875,
+      "width": 327,
+      "height": 50,
+      "top": 496.1875,
+      "right": 351,
+      "bottom": 546.1875,
+      "left": 24
+    }
+  }
+]

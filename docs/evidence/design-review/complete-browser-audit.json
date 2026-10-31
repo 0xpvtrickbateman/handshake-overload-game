@@ -1,0 +1,4856 @@
+{
+  "checks": [
+    "Host, avatar selection, join by code, bot fill, TV lobby, landing rules",
+    {
+      "rules": "lobby",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "rules": "TV lobby",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "keyboardSignal": "false"
+    },
+    "Keyboard loads 1–6 and Enter, mouse signal",
+    "Reload retained round 2 seat and locked load",
+    "Absent player covered; same seat restored on return",
+    {
+      "rules": "join-by-QR",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Decoded QR opened join form; late joiner spectates",
+    {
+      "reducedMotion": "snap-flash"
+    },
+    {
+      "doubleRound": 7,
+      "banner": "Double points"
+    },
+    {
+      "doubleRound": 8,
+      "banner": "Double points"
+    },
+    {
+      "rules": "results",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Forced unsupported native-share environment: actual PNG download succeeds",
+    "Host left; remaining human rematched successfully in same room",
+    {
+      "lateSeated": true,
+      "newHost": "Review Grace"
+    },
+    {
+      "rules": "practice",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "All 3 practice lessons; auto-start solo; mute persists",
+    {
+      "rules": "controller",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "rules": "solo controller",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Solo vs 4 personality bots completed all 8 rounds through auto-load; rematch returns to lobby",
+    "Solo rematch starts round 1",
+    "Solo leave works after rematch",
+    {
+      "rules": "TV controller",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "8 seats in live preview: lobby, controls, snap, blame and TV rendered"
+  ],
+  "keyboard": [
+    "l",
+    "h",
+    "s"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "1",
+          "total": "11",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",3],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "1",
+          "total": "11",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",3],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "1",
+          "total": "11",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",3],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        }
+      ],
+      "events": [
+        [
+          {
+            "round": 1,
+            "game": 1,
+            "actualAt": 1793428374216,
+            "scheduledAt": 1793428374226
+          }
+        ],
+        [
+          {
+            "round": 1,
+            "game": 1,
+            "actualAt": 1793428374242,
+            "scheduledAt": 1793428374226
+          }
+        ],
+        [
+          {
+            "round": 1,
+            "game": 1,
+            "actualAt": 1793428374244,
+            "scheduledAt": 1793428374226
+          }
+        ]
+      ],
+      "skewMs": 28,
+      "verdict": "IT FITS!\n11 crates on a 15-crate limit"
+    },
+    {
+      "round": 2,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "2",
+          "total": "19",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-2],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",5],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "2",
+          "total": "19",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-2],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",5],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "2",
+          "total": "19",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-2],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",5],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 2,
+          "game": 1,
+          "actualAt": 1793428401265,
+          "scheduledAt": 1793428401246
+        },
+        {
+          "round": 2,
+          "game": 1,
+          "actualAt": 1793428401249,
+          "scheduledAt": 1793428401246
+        },
+        {
+          "round": 2,
+          "game": 1,
+          "actualAt": 1793428401245,
+          "scheduledAt": 1793428401246
+        }
+      ],
+      "skewMs": 20,
+      "verdict": "SNAP!\n19 crates on a 15-crate limit"
+    },
+    {
+      "round": 3,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "3",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",8],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "3",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",8],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 3,
+          "game": 1,
+          "actualAt": 1793428428406,
+          "scheduledAt": 1793428428382
+        },
+        {
+          "round": 3,
+          "game": 1,
+          "actualAt": 1793428428372,
+          "scheduledAt": 1793428428382
+        }
+      ],
+      "skewMs": 34,
+      "verdict": "IT FITS!\n12 crates on a 16-crate limit"
+    },
+    {
+      "round": 4,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "4",
+          "total": "18",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",10],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "4",
+          "total": "18",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",10],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "4",
+          "total": "18",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",10],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 4,
+          "game": 1,
+          "actualAt": 1793428455444,
+          "scheduledAt": 1793428455425
+        },
+        {
+          "round": 4,
+          "game": 1,
+          "actualAt": 1793428455408,
+          "scheduledAt": 1793428455425
+        },
+        {
+          "round": 4,
+          "game": 1,
+          "actualAt": 1793428455445,
+          "scheduledAt": 1793428455425
+        }
+      ],
+      "skewMs": 37,
+      "verdict": "SNAP!\n18 crates on a 15-crate limit"
+    },
+    {
+      "round": 5,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "5",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-3],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",13],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",16]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "5",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-3],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",13],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",16]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "5",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-3],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",13],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",16]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 5,
+          "game": 1,
+          "actualAt": 1793428482490,
+          "scheduledAt": 1793428482466
+        },
+        {
+          "round": 5,
+          "game": 1,
+          "actualAt": 1793428482473,
+          "scheduledAt": 1793428482466
+        },
+        {
+          "round": 5,
+          "game": 1,
+          "actualAt": 1793428482469,
+          "scheduledAt": 1793428482466
+        }
+      ],
+      "skewMs": 21,
+      "verdict": "IT FITS!\n12 crates on a 13-crate limit"
+    },
+    {
+      "round": 6,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "6",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-6],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",15],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",13]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "6",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-6],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",15],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",13]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "6",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-6],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",15],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",13]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 6,
+          "game": 1,
+          "actualAt": 1793428509473,
+          "scheduledAt": 1793428509478
+        },
+        {
+          "round": 6,
+          "game": 1,
+          "actualAt": 1793428509497,
+          "scheduledAt": 1793428509478
+        },
+        {
+          "round": 6,
+          "game": 1,
+          "actualAt": 1793428509472,
+          "scheduledAt": 1793428509478
+        }
+      ],
+      "skewMs": 25,
+      "verdict": "SNAP!\n21 crates on a 13-crate limit"
+    },
+    {
+      "round": 7,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "7",
+          "total": "10",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",0],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",23],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",21]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "7",
+          "total": "10",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",0],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",23],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",21]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "7",
+          "total": "10",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",0],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",23],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",21]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 7,
+          "game": 1,
+          "actualAt": 1793428536507,
+          "scheduledAt": 1793428536500
+        },
+        {
+          "round": 7,
+          "game": 1,
+          "actualAt": 1793428536504,
+          "scheduledAt": 1793428536500
+        },
+        {
+          "round": 7,
+          "game": 1,
+          "actualAt": 1793428536520,
+          "scheduledAt": 1793428536500
+        }
+      ],
+      "skewMs": 16,
+      "verdict": "IT FITS!\n10 crates on a 12-crate limit"
+    },
+    {
+      "round": 8,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "8",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-10],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-6],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",27],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",15]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "8",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-10],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-6],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",27],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",15]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "8",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-10],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-6],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",27],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",15]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 8,
+          "game": 1,
+          "actualAt": 1793428563574,
+          "scheduledAt": 1793428563552
+        },
+        {
+          "round": 8,
+          "game": 1,
+          "actualAt": 1793428563550,
+          "scheduledAt": 1793428563552
+        },
+        {
+          "round": 8,
+          "game": 1,
+          "actualAt": 1793428563572,
+          "scheduledAt": 1793428563552
+        }
+      ],
+      "skewMs": 24,
+      "verdict": "SNAP!\n21 crates on a 12-crate limit"
+    }
+  ],
+  "captures": [
+    {
+      "name": "preview-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.017856763359728252
+    },
+    {
+      "name": "preview-tv-lobby-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-signal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-load-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.017856763359728252
+    },
+    {
+      "name": "preview-fit-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.004442330535444421
+    },
+    {
+      "name": "preview-tv-fit-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.0008210289056409043
+    },
+    {
+      "name": "preview-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.10740845600438162
+    },
+    {
+      "name": "preview-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.1294542919127692
+    },
+    {
+      "name": "preview-tv-snap-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.11428326989790048
+    },
+    {
+      "name": "preview-controller-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 120,
+            "y": 676,
+            "width": 528,
+            "height": 46,
+            "top": 676,
+            "right": 648,
+            "bottom": 722,
+            "left": 120
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 120,
+            "y": 730,
+            "width": 528,
+            "height": 52,
+            "top": 730,
+            "right": 648,
+            "bottom": 782,
+            "left": 120
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 120,
+            "y": 790,
+            "width": 528,
+            "height": 50,
+            "top": 790,
+            "right": 648,
+            "bottom": 840,
+            "left": 120
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.22322138018556315
+    },
+    {
+      "name": "preview-controller-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 465,
+            "y": 700,
+            "width": 510,
+            "height": 46,
+            "top": 700,
+            "right": 975,
+            "bottom": 746,
+            "left": 465
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 465,
+            "y": 754,
+            "width": 510,
+            "height": 52,
+            "top": 754,
+            "right": 975,
+            "bottom": 806,
+            "left": 465
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 465,
+            "y": 814,
+            "width": 510,
+            "height": 50,
+            "top": 814,
+            "right": 975,
+            "bottom": 864,
+            "left": 465
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.10922856790311501
+    },
+    {
+      "name": "preview-snap-reduced",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.33548515604688284
+    },
+    {
+      "name": "preview-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.2200631034137448
+    },
+    {
+      "name": "preview-tv-snap-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.34353725130616874
+    },
+    {
+      "name": "preview-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-results-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        375,
+        1007
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3335025979799074
+    },
+    {
+      "name": "preview-tv-results-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.4584959518551336
+    },
+    {
+      "name": "preview-results-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-results-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1425,
+        956
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-ledger-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-practice-fit-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-practice-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ],
+      "rawShiftSum": 0.45525702175383453
+    },
+    {
+      "name": "preview-practice-salvage-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ],
+      "rawShiftSum": 0.5857375846020956
+    },
+    {
+      "name": "preview-solo-load-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.7151801574966827
+    },
+    {
+      "name": "production-landing-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        677
+      ],
+      "nav": [
+        {
+          "ttfb": 107.90000000596046,
+          "dom": 194.60000002384186,
+          "load": 213
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "production-controller-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 135.09999999403954,
+          "load": 165.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 14,
+            "y": 488,
+            "width": 347,
+            "height": 44,
+            "top": 488,
+            "right": 361,
+            "bottom": 532,
+            "left": 14
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 14,
+            "y": 538,
+            "width": 347,
+            "height": 47,
+            "top": 538,
+            "right": 361,
+            "bottom": 585,
+            "left": 14
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 14,
+            "y": 591,
+            "width": 347,
+            "height": 48,
+            "top": 591,
+            "right": 361,
+            "bottom": 639,
+            "left": 14
+          }
+        }
+      ],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 95.90000000596046,
+          "dom": 172.90000000596046,
+          "load": 191.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        677
+      ],
+      "nav": [
+        {
+          "ttfb": 168.30000001192093,
+          "dom": 253.60000002384186,
+          "load": 271.40000000596046
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.19999998807907,
+          "dom": 36.19999998807907,
+          "load": 63.80000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        375,
+        846
+      ],
+      "nav": [
+        {
+          "ttfb": 25.400000005960464,
+          "dom": 34.10000002384186,
+          "load": 79.40000000596046
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.900000005960464,
+          "dom": 35.400000005960464,
+          "load": 61.599999994039536
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 26.19999998807907,
+          "dom": 33.79999998211861,
+          "load": 76.39999997615814
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 28.19999998807907,
+          "dom": 47.599999994039536,
+          "load": 74.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 104.30000001192093,
+          "load": 145.90000000596046
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-host-form-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 38.5,
+          "load": 66.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "preview-code-join-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 38.5,
+          "load": 66.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "compare-preview-reveal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.732394964354873
+    },
+    {
+      "name": "compare-production-reveal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 135.09999999403954,
+          "load": 165.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 14,
+            "y": 488,
+            "width": 347,
+            "height": 44,
+            "top": 488,
+            "right": 361,
+            "bottom": 532,
+            "left": 14
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 14,
+            "y": 538,
+            "width": 347,
+            "height": 47,
+            "top": 538,
+            "right": 361,
+            "bottom": 585,
+            "left": 14
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 14,
+            "y": 591,
+            "width": 347,
+            "height": 48,
+            "top": 591,
+            "right": 361,
+            "bottom": 639,
+            "left": 14
+          }
+        }
+      ],
+      "icons": []
+    },
+    {
+      "name": "production-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "compare-preview-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3335025979799074
+    },
+    {
+      "name": "production-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-solo-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.8568853741818185
+    },
+    {
+      "name": "production-same-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        836
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 135.09999999403954,
+          "load": 165.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-eight-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3878403095409742
+    },
+    {
+      "name": "preview-eight-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 100.30000001192093,
+          "dom": 275.30000001192093,
+          "load": 314.5
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-eight-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-eight-load-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3887181813715507
+    },
+    {
+      "name": "preview-eight-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.49615094130811166
+    },
+    {
+      "name": "preview-eight-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 100.30000001192093,
+          "dom": 275.30000001192093,
+          "load": 314.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "preview-eight-tv-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.5745352150388215
+    },
+    {
+      "name": "production-eight-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 14,
+            "y": 488,
+            "width": 347,
+            "height": 44,
+            "top": 488,
+            "right": 361,
+            "bottom": 532,
+            "left": 14
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 14,
+            "y": 538,
+            "width": 347,
+            "height": 47,
+            "top": 538,
+            "right": 361,
+            "bottom": 585,
+            "left": 14
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 14,
+            "y": 591,
+            "width": 347,
+            "height": 48,
+            "top": 591,
+            "right": 361,
+            "bottom": 639,
+            "left": 14
+          }
+        }
+      ],
+      "icons": []
+    }
+  ],
+  "a11y": [
+    {
+      "name": "preview-lobby-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "name": "preview-tv-lobby-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "name": "preview-load-390",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ]
+    },
+    {
+      "name": "preview-fit-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 41
+        }
+      ]
+    },
+    {
+      "name": "preview-snap-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ]
+    },
+    {
+      "name": "preview-controller-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "name": "preview-controller-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "name": "preview-snap-reduced",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "name": "preview-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ]
+    },
+    {
+      "name": "preview-tv-results-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "name": "preview-ledger-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 84
+        }
+      ]
+    },
+    {
+      "name": "preview-practice-fit-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "name": "production-landing-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "name": "production-controller-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ]
+    },
+    {
+      "name": "preview-landing-390",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "name": "preview-host-form-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "name": "preview-code-join-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "name": "preview-solo-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ]
+    },
+    {
+      "name": "production-same-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "name": "preview-eight-lobby-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "name": "preview-eight-snap-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ]
+    },
+    {
+      "name": "preview-eight-tv-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 70
+        }
+      ]
+    }
+  ],
+  "network": {
+    "errors": [],
+    "failures": [],
+    "streams": [
+      {
+        "role": "host",
+        "duration": 31185.651
+      },
+      {
+        "role": "tv",
+        "duration": 30320.245
+      },
+      {
+        "role": "guest",
+        "duration": 30913.701
+      },
+      {
+        "role": "host",
+        "duration": 30328.163
+      },
+      {
+        "role": "tv",
+        "duration": 30286.243
+      },
+      {
+        "role": "guest",
+        "duration": 30293.398
+      },
+      {
+        "role": "tv",
+        "duration": 30186.852
+      },
+      {
+        "role": "host",
+        "duration": 30115.916
+      },
+      {
+        "role": "tv",
+        "duration": 30173.251
+      },
+      {
+        "role": "host",
+        "duration": 30113.594
+      },
+      {
+        "role": "guest",
+        "duration": 30282.909
+      },
+      {
+        "role": "tv",
+        "duration": 30163.044
+      },
+      {
+        "role": "host",
+        "duration": 30167.836
+      },
+      {
+        "role": "guest",
+        "duration": 30142.959
+      },
+      {
+        "role": "tv",
+        "duration": 30210.045
+      },
+      {
+        "role": "host",
+        "duration": 30161.741
+      },
+      {
+        "role": "guest",
+        "duration": 30125.856
+      },
+      {
+        "role": "tv",
+        "duration": 30160.182
+      },
+      {
+        "role": "host",
+        "duration": 30099.725
+      },
+      {
+        "role": "guest",
+        "duration": 30132.775
+      },
+      {
+        "role": "tv",
+        "duration": 30284.882
+      },
+      {
+        "role": "host",
+        "duration": 30267.647
+      },
+      {
+        "role": "guest",
+        "duration": 30122.297
+      },
+      {
+        "role": "tv",
+        "duration": 30193.379
+      },
+      {
+        "role": "host",
+        "duration": 30171.563
+      },
+      {
+        "role": "guest",
+        "duration": 30172.163
+      },
+      {
+        "role": "tv",
+        "duration": 30126.759
+      },
+      {
+        "role": "guest",
+        "duration": 30326.788
+      },
+      {
+        "role": "tv",
+        "duration": 30116.43
+      },
+      {
+        "role": "guest",
+        "duration": 30327.827
+      },
+      {
+        "role": "tv",
+        "duration": 30200.826
+      },
+      {
+        "role": "host",
+        "duration": 30155.878
+      },
+      {
+        "role": "guest",
+        "duration": 30182.421
+      },
+      {
+        "role": "tv",
+        "duration": 30128.846
+      },
+      {
+        "role": "host",
+        "duration": 30127.714
+      },
+      {
+        "role": "guest",
+        "duration": 30341.695
+      },
+      {
+        "role": "tv",
+        "duration": 30262.812
+      },
+      {
+        "role": "host",
+        "duration": 30179.405
+      },
+      {
+        "role": "guest",
+        "duration": 30322.958
+      },
+      {
+        "role": "tv",
+        "duration": 30153.606
+      },
+      {
+        "role": "host",
+        "duration": 30269.466
+      },
+      {
+        "role": "guest",
+        "duration": 30201.885
+      },
+      {
+        "role": "tv",
+        "duration": 30325.21
+      },
+      {
+        "role": "host",
+        "duration": 30154.188
+      },
+      {
+        "role": "guest",
+        "duration": 30169.93
+      },
+      {
+        "role": "tv",
+        "duration": 30327.47
+      },
+      {
+        "role": "host",
+        "duration": 30184.525
+      },
+      {
+        "role": "guest",
+        "duration": 30238.286
+      },
+      {
+        "role": "tv",
+        "duration": 30326.441
+      },
+      {
+        "role": "host",
+        "duration": 30185.941
+      },
+      {
+        "role": "guest",
+        "duration": 30308.965
+      },
+      {
+        "role": "tv",
+        "duration": 30145.022
+      },
+      {
+        "role": "guest",
+        "duration": 30114.097
+      },
+      {
+        "role": "tv",
+        "duration": 30145.761
+      },
+      {
+        "role": "guest",
+        "duration": 30147.983
+      },
+      {
+        "role": "tv",
+        "duration": 30167.741
+      },
+      {
+        "role": "guest",
+        "duration": 30193.917
+      },
+      {
+        "role": "tv",
+        "duration": 30239.069
+      },
+      {
+        "role": "guest",
+        "duration": 30178.852
+      },
+      {
+        "role": "tv",
+        "duration": 30173.773
+      },
+      {
+        "role": "guest",
+        "duration": 30274.772
+      }
+    ],
+    "failedRequests": [],
+    "responseCount": 724
+  },
+  "soloFinal": {
+    "code": "EYQH",
+    "version": 192,
+    "game": 1,
+    "hostId": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+    "phase": "finished",
+    "round": 8,
+    "limit": 20,
+    "phaseEndsAt": 0,
+    "revealAt": 1793428876989,
+    "serverNow": 1793428893218,
+    "players": [
+      {
+        "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+        "name": "You",
+        "avatar": {
+          "hat": 0,
+          "color": 0
+        },
+        "bot": null,
+        "seat": true,
+        "departed": false,
+        "score": 27,
+        "snaps": 0,
+        "connected": true,
+        "covered": true,
+        "signal": "light",
+        "locked": true
+      },
+      {
+        "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+        "name": "Steady Sam",
+        "avatar": {
+          "hat": 0,
+          "color": 2
+        },
+        "bot": "sam",
+        "seat": true,
+        "departed": false,
+        "score": 27,
+        "snaps": 0,
+        "connected": true,
+        "covered": true,
+        "signal": "light",
+        "locked": true
+      },
+      {
+        "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+        "name": "Greedy Gus",
+        "avatar": {
+          "hat": 1,
+          "color": 3
+        },
+        "bot": "gus",
+        "seat": true,
+        "departed": false,
+        "score": 39,
+        "snaps": 0,
+        "connected": true,
+        "covered": true,
+        "signal": "heavy",
+        "locked": true
+      },
+      {
+        "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+        "name": "Liar Lou",
+        "avatar": {
+          "hat": 2,
+          "color": 4
+        },
+        "bot": "lou",
+        "seat": true,
+        "departed": false,
+        "score": 19,
+        "snaps": 1,
+        "connected": true,
+        "covered": true,
+        "signal": "light",
+        "locked": true
+      },
+      {
+        "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+        "name": "Mirror Mel",
+        "avatar": {
+          "hat": 3,
+          "color": 5
+        },
+        "bot": "mel",
+        "seat": true,
+        "departed": false,
+        "score": 28,
+        "snaps": 0,
+        "connected": true,
+        "covered": true,
+        "signal": "light",
+        "locked": true
+      }
+    ],
+    "meId": null,
+    "myLoad": null,
+    "history": [
+      {
+        "round": 1,
+        "limit": 20,
+        "total": 15,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "shrug",
+            "load": 3,
+            "delta": 3,
+            "before": 0,
+            "after": 3,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 2,
+            "delta": 2,
+            "before": 0,
+            "after": 2,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 0,
+            "after": 5,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "heavy",
+            "load": 2,
+            "delta": 2,
+            "before": 0,
+            "after": 2,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 0,
+            "after": 3,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "limit": 17,
+        "total": 17,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 3,
+            "after": 6,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 2,
+            "after": 5,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 6,
+            "delta": 6,
+            "before": 5,
+            "after": 11,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "heavy",
+            "load": 2,
+            "delta": 2,
+            "before": 2,
+            "after": 4,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 3,
+            "after": 6,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "limit": 16,
+        "total": 16,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 6,
+            "after": 9,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 5,
+            "after": 8,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 11,
+            "after": 16,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "heavy",
+            "load": 2,
+            "delta": 2,
+            "before": 4,
+            "after": 6,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 6,
+            "after": 9,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "limit": 17,
+        "total": 16,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 9,
+            "after": 12,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 8,
+            "after": 11,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 16,
+            "after": 21,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "heavy",
+            "load": 2,
+            "delta": 2,
+            "before": 6,
+            "after": 8,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 9,
+            "after": 12,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "limit": 19,
+        "total": 18,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 2,
+            "delta": 2,
+            "before": 12,
+            "after": 14,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 11,
+            "after": 14,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 21,
+            "after": 26,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "light",
+            "load": 5,
+            "delta": 5,
+            "before": 8,
+            "after": 13,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 12,
+            "after": 15,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 6,
+        "limit": 16,
+        "total": 16,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 14,
+            "after": 17,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 14,
+            "after": 17,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 26,
+            "after": 31,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "heavy",
+            "load": 2,
+            "delta": 2,
+            "before": 13,
+            "after": 15,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 15,
+            "after": 18,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 7,
+        "limit": 17,
+        "total": 18,
+        "fits": false,
+        "multiplier": 2,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 3,
+            "delta": 4,
+            "before": 17,
+            "after": 21,
+            "blame": false,
+            "salvage": true
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 4,
+            "before": 17,
+            "after": 21,
+            "blame": false,
+            "salvage": true
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 4,
+            "delta": 0,
+            "before": 31,
+            "after": 31,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "light",
+            "load": 5,
+            "delta": -6,
+            "before": 15,
+            "after": 9,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 4,
+            "before": 18,
+            "after": 22,
+            "blame": false,
+            "salvage": true
+          }
+        ]
+      },
+      {
+        "round": 8,
+        "limit": 20,
+        "total": 18,
+        "fits": true,
+        "multiplier": 2,
+        "entries": [
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+            "name": "You",
+            "signal": "light",
+            "load": 3,
+            "delta": 6,
+            "before": 21,
+            "after": 27,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 6,
+            "before": 21,
+            "after": 27,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 4,
+            "delta": 8,
+            "before": 31,
+            "after": 39,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+            "name": "Liar Lou",
+            "signal": "light",
+            "load": 5,
+            "delta": 10,
+            "before": 9,
+            "after": 19,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+            "name": "Mirror Mel",
+            "signal": "light",
+            "load": 3,
+            "delta": 6,
+            "before": 22,
+            "after": 28,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      }
+    ],
+    "result": {
+      "round": 8,
+      "limit": 20,
+      "total": 18,
+      "fits": true,
+      "multiplier": 2,
+      "entries": [
+        {
+          "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+          "name": "You",
+          "signal": "light",
+          "load": 3,
+          "delta": 6,
+          "before": 21,
+          "after": 27,
+          "blame": false,
+          "salvage": false
+        },
+        {
+          "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+          "name": "Steady Sam",
+          "signal": "light",
+          "load": 3,
+          "delta": 6,
+          "before": 21,
+          "after": 27,
+          "blame": false,
+          "salvage": false
+        },
+        {
+          "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+          "name": "Greedy Gus",
+          "signal": "heavy",
+          "load": 4,
+          "delta": 8,
+          "before": 31,
+          "after": 39,
+          "blame": false,
+          "salvage": false
+        },
+        {
+          "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+          "name": "Liar Lou",
+          "signal": "light",
+          "load": 5,
+          "delta": 10,
+          "before": 9,
+          "after": 19,
+          "blame": false,
+          "salvage": false
+        },
+        {
+          "id": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+          "name": "Mirror Mel",
+          "signal": "light",
+          "load": 3,
+          "delta": 6,
+          "before": 22,
+          "after": 28,
+          "blame": false,
+          "salvage": false
+        }
+      ]
+    },
+    "standings": [
+      "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus",
+      "b83dc466-618f-4e83-a5c7-9a12dc76aa33-mel",
+      "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+      "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+      "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou"
+    ],
+    "winnerIds": [
+      "b83dc466-618f-4e83-a5c7-9a12dc76aa33-gus"
+    ],
+    "awards": [
+      {
+        "title": "The Breaker",
+        "icon": "ϟ",
+        "playerId": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-lou",
+        "name": "Liar Lou",
+        "detail": "Most snaps caused"
+      },
+      {
+        "title": "The Saint",
+        "icon": "✧",
+        "playerId": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+        "name": "You",
+        "detail": "Fewest crates loaded"
+      },
+      {
+        "title": "Honest Abe",
+        "icon": "◇",
+        "playerId": "b83dc466-618f-4e83-a5c7-9a12dc76aa33-sam",
+        "name": "Steady Sam",
+        "detail": "Most truthful signals"
+      },
+      {
+        "title": "Dark Horse",
+        "icon": "♞",
+        "playerId": "b83dc466-618f-4e83-a5c7-9a12dc76aa33",
+        "name": "You",
+        "detail": "Biggest recovery from behind"
+      }
+    ]
+  },
+  "resultComparison": [
+    {
+      "name": "preview",
+      "height": 999,
+      "width": 375,
+      "rematch": {
+        "x": 16,
+        "y": 701.578125,
+        "width": 343,
+        "height": 56,
+        "top": 701.578125,
+        "right": 359,
+        "bottom": 757.578125,
+        "left": 16
+      }
+    },
+    {
+      "name": "production",
+      "height": 836,
+      "width": 375,
+      "rematch": {
+        "x": 14,
+        "y": 612.5,
+        "width": 347,
+        "height": 50,
+        "top": 612.5,
+        "right": 361,
+        "bottom": 662.5,
+        "left": 14
+      }
+    }
+  ],
+  "errorScreens": {
+    "previewError": {
+      "text": "Overload\nYour lift is arriving\n\nUse the four-letter room code.\n\nBack to the desk",
+      "helpButtons": 0
+    },
+    "productionError": {
+      "text": "↟\nOVERLOAD\nYour lift is arriving.\n\nUse the four-letter room code.\n\nBack to the desk",
+      "helpButtons": 0
+    }
+  },
+  "previewRules": "How to play\nEach round, secretly load 1 to 6 crates.\nFits under the limit? Everyone banks their crates.\nToo heavy? The cable snaps: the heaviest loader loses 3, the lightest gets +2.\nSignals\nBefore loading, everyone shows Going light, Going heavy or Shrug. It’s a promise you don’t have to keep.\nTiming\n5 seconds to signal, 10 to load. No pick in time? The porter loads 3.\nTies\nEvery tied heaviest loader loses 3 and every tied lightest loader gets +2.\nWinning\n8 rounds. The last two count double. Most points wins; fewer blames breaks a tie.\n\nKeyboard: L H S to signal, 1–6 to pick, Enter to lock in.\n\nGot it",
+  "productionRules": "×\n\nTHE GUEST HANDBOOK\n\nA little greed.\nA very old cable.\nBluff. Signal anything. Secretly load 1–6 crates.\nFit? Bank crates. Snap? No bank; heaviest −3, lightest +2.\n8 lifts. Last two ×2. Most points wins; fewer blames breaks ties.\n\nYou have 5 seconds to signal and 10 to load. A missed pick loads 3. Signals are promises you don’t have to keep.\n\nEvery tied heaviest loader takes blame; every tied lightest loader salvages. If everyone ties on a snap, both apply. Final two rounds double all points, penalties, and salvage.\n\nLight means 1–3 crates; heavy means 4–6 for the Honest Abe award. Shrug makes no promise. Equal scores and equal blame counts share the win.\n\nKeyboard: L / H / S to signal · 1–6 to pick · Enter to lock.\n\nGot it. Let’s load.",
+  "focusProduction": [
+    {
+      "inside": true,
+      "label": "Close rules"
+    },
+    {
+      "inside": true,
+      "label": "Got it. Let’s load."
+    },
+    {
+      "inside": false,
+      "label": "Play now vs bots ↗"
+    },
+    {
+      "inside": false,
+      "label": "Host a room"
+    },
+    {
+      "inside": false,
+      "label": "Join friends"
+    },
+    {
+      "inside": false,
+      "label": "Learn it in 15 seconds ↗"
+    }
+  ],
+  "shareCapabilities": {
+    "canShare": "function",
+    "share": "function",
+    "fileShare": true
+  },
+  "shiftComparison": [
+    {
+      "name": "preview",
+      "maxSessionShift": 0.10417472342820344,
+      "events": [
+        {
+          "at": 568312.3000000119,
+          "value": 0.0016807651037674567,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              },
+              "current": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              }
+            },
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            },
+            {
+              "node": {},
+              "previous": {
+                "x": 115.3671875,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 133.3671875,
+                "bottom": 624,
+                "left": 115.3671875
+              },
+              "current": {
+                "x": 91.6484375,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 109.6484375,
+                "bottom": 624,
+                "left": 91.6484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 570062.400000006,
+          "value": 0.00028180311081340886,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        },
+        {
+          "at": 570590,
+          "value": 0.001219299575287319,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              },
+              "current": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              }
+            }
+          ]
+        },
+        {
+          "at": 571253.8000000119,
+          "value": 0.000011246953359901757,
+          "recent": false,
+          "sources": [
+            {
+              "node": "",
+              "previous": {
+                "x": 324.7109375,
+                "y": 105.5,
+                "width": 24.578125,
+                "height": 13,
+                "top": 105.5,
+                "right": 349.2890625,
+                "bottom": 118.5,
+                "left": 324.7109375
+              },
+              "current": {
+                "x": 330.484375,
+                "y": 105.5,
+                "width": 13.0234375,
+                "height": 13,
+                "top": 105.5,
+                "right": 343.5078125,
+                "bottom": 118.5,
+                "left": 330.484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 572638.8000000119,
+          "value": 0.0004494314171624832,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 25.950088500976562,
+                "y": 395.07464599609375,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.07464599609375,
+                "right": 348.95008850097656,
+                "bottom": 410.57464599609375,
+                "left": 25.950088500976562
+              },
+              "current": {
+                "x": 25.950088500976562,
+                "y": 395.07464599609375,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.07464599609375,
+                "right": 348.95008850097656,
+                "bottom": 410.57464599609375,
+                "left": 25.950088500976562
+              }
+            }
+          ]
+        },
+        {
+          "at": 573370.900000006,
+          "value": 0.10372529201104096,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 26,
+                "y": 172,
+                "width": 323,
+                "height": 219,
+                "top": 172,
+                "right": 349,
+                "bottom": 391,
+                "left": 26
+              },
+              "current": {
+                "x": 220.7890625,
+                "y": 150,
+                "width": 136.2109375,
+                "height": 98,
+                "top": 150,
+                "right": 357,
+                "bottom": 248,
+                "left": 220.7890625
+              }
+            }
+          ]
+        },
+        {
+          "at": 574453.8000000119,
+          "value": 0.0008458782228076366,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        },
+        {
+          "at": 585333.2000000179,
+          "value": 0.0008778718305764659,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              },
+              "current": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              }
+            }
+          ]
+        },
+        {
+          "at": 586248.2000000179,
+          "value": 0.000011246953359901757,
+          "recent": false,
+          "sources": [
+            {
+              "node": "",
+              "previous": {
+                "x": 324.7109375,
+                "y": 105.5,
+                "width": 24.578125,
+                "height": 13,
+                "top": 105.5,
+                "right": 349.2890625,
+                "bottom": 118.5,
+                "left": 324.7109375
+              },
+              "current": {
+                "x": 330.484375,
+                "y": 105.5,
+                "width": 13.0234375,
+                "height": 13,
+                "top": 105.5,
+                "right": 343.5078125,
+                "bottom": 118.5,
+                "left": 330.484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 595495.599999994,
+          "value": 0.0016807651037674567,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              },
+              "current": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              }
+            },
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            },
+            {
+              "node": {},
+              "previous": {
+                "x": 115.3671875,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 133.3671875,
+                "bottom": 624,
+                "left": 115.3671875
+              },
+              "current": {
+                "x": 91.6484375,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 109.6484375,
+                "bottom": 624,
+                "left": 91.6484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 597203.8000000119,
+          "value": 0.00028180311081340886,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        },
+        {
+          "at": 597733.2000000179,
+          "value": 0.001219299575287319,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              },
+              "current": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              }
+            }
+          ]
+        },
+        {
+          "at": 598394.3000000119,
+          "value": 0.000011246953359901757,
+          "recent": false,
+          "sources": [
+            {
+              "node": "",
+              "previous": {
+                "x": 324.7109375,
+                "y": 105.5,
+                "width": 24.578125,
+                "height": 13,
+                "top": 105.5,
+                "right": 349.2890625,
+                "bottom": 118.5,
+                "left": 324.7109375
+              },
+              "current": {
+                "x": 330.484375,
+                "y": 105.5,
+                "width": 13.0234375,
+                "height": 13,
+                "top": 105.5,
+                "right": 343.5078125,
+                "bottom": 118.5,
+                "left": 330.484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 599787.400000006,
+          "value": 0.0004494314171624832,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 25.968978881835938,
+                "y": 395.06707763671875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.06707763671875,
+                "right": 348.96897888183594,
+                "bottom": 410.56707763671875,
+                "left": 25.968978881835938
+              },
+              "current": {
+                "x": 25.968978881835938,
+                "y": 395.06707763671875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.06707763671875,
+                "right": 348.96897888183594,
+                "bottom": 410.56707763671875,
+                "left": 25.968978881835938
+              }
+            }
+          ]
+        },
+        {
+          "at": 600511.3000000119,
+          "value": 0.10372529201104096,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 26,
+                "y": 172,
+                "width": 323,
+                "height": 219,
+                "top": 172,
+                "right": 349,
+                "bottom": 391,
+                "left": 26
+              },
+              "current": {
+                "x": 220.7890625,
+                "y": 150,
+                "width": 136.2109375,
+                "height": 98,
+                "top": 150,
+                "right": 357,
+                "bottom": 248,
+                "left": 220.7890625
+              }
+            }
+          ]
+        },
+        {
+          "at": 601595.7000000179,
+          "value": 0.0008458782228076366,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "production",
+      "maxSessionShift": 0.11007370014861384,
+      "events": [
+        {
+          "at": 228121.90000000596,
+          "value": 0.0007663995026474769,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              }
+            },
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 229812.10000002384,
+          "value": 0.00038109880591937915,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            },
+            {
+              "previous": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              },
+              "current": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              }
+            }
+          ]
+        },
+        {
+          "at": 230372.70000001788,
+          "value": 0.00029510837253786897,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 232418.70000001788,
+          "value": 0.0002955014246999439,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 400.3895263671875,
+                "width": 343.7762145996094,
+                "height": 8,
+                "top": 400.3895263671875,
+                "right": 357.7762145996094,
+                "bottom": 408.3895263671875,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 400.3895263671875,
+                "width": 343.7762145996094,
+                "height": 8,
+                "top": 400.3895263671875,
+                "right": 357.7762145996094,
+                "bottom": 408.3895263671875,
+                "left": 14
+              }
+            }
+          ]
+        },
+        {
+          "at": 233119.20000001788,
+          "value": 0.1097781987239139,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 25,
+                "y": 172,
+                "width": 325,
+                "height": 209,
+                "top": 172,
+                "right": 350,
+                "bottom": 381,
+                "left": 25
+              },
+              "current": {
+                "x": 263.0234375,
+                "y": 153.5,
+                "width": 96.9765625,
+                "height": 76.5,
+                "top": 153.5,
+                "right": 360,
+                "bottom": 230,
+                "left": 263.0234375
+              }
+            }
+          ]
+        },
+        {
+          "at": 234201.20000001788,
+          "value": 0.0002237243447241896,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 245071,
+          "value": 0.0002811141280933746,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              }
+            }
+          ]
+        },
+        {
+          "at": 255211.10000002384,
+          "value": 0.0007663995026474769,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              }
+            },
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 256958.70000001788,
+          "value": 0.00038109880591937915,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            },
+            {
+              "previous": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              },
+              "current": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              }
+            }
+          ]
+        },
+        {
+          "at": 257519.80000001192,
+          "value": 0.00029510837253786897,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 259568.80000001192,
+          "value": 0.00029507191681520556,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 400.5001220703125,
+                "width": 343.49969482421875,
+                "height": 8,
+                "top": 400.5001220703125,
+                "right": 357.49969482421875,
+                "bottom": 408.5001220703125,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 400.5001220703125,
+                "width": 343.49969482421875,
+                "height": 8,
+                "top": 400.5001220703125,
+                "right": 357.49969482421875,
+                "bottom": 408.5001220703125,
+                "left": 14
+              }
+            }
+          ]
+        },
+        {
+          "at": 260261.10000002384,
+          "value": 0.1097781987239139,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 25,
+                "y": 172,
+                "width": 325,
+                "height": 209,
+                "top": 172,
+                "right": 350,
+                "bottom": 381,
+                "left": 25
+              },
+              "current": {
+                "x": 263.0234375,
+                "y": 153.5,
+                "width": 96.9765625,
+                "height": 76.5,
+                "top": 153.5,
+                "right": 360,
+                "bottom": 230,
+                "left": 263.0234375
+              }
+            }
+          ]
+        },
+        {
+          "at": 261348.40000000596,
+          "value": 0.0002237243447241896,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

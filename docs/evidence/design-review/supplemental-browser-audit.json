@@ -1,0 +1,3870 @@
+{
+  "checks": [
+    "Host, avatar selection, join by code, bot fill, TV lobby, landing rules",
+    {
+      "rules": "lobby",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "rules": "TV lobby",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "keyboardSignal": "false"
+    },
+    "Keyboard loads 1–6 and Enter, mouse signal",
+    "Reload retained round 2 seat and locked load",
+    "Absent player covered; same seat restored on return",
+    {
+      "rules": "join-by-QR",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Decoded QR opened join form; late joiner spectates",
+    {
+      "reducedMotion": "snap-flash"
+    },
+    {
+      "doubleRound": 7,
+      "banner": "Double points"
+    },
+    {
+      "doubleRound": 8,
+      "banner": "Double points"
+    },
+    {
+      "rules": "results",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Forced unsupported native-share environment: actual PNG download succeeds",
+    "Host left; remaining human rematched successfully in same room",
+    {
+      "lateSeated": true,
+      "newHost": "Review Grace"
+    },
+    {
+      "rules": "practice",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "All 3 practice lessons; auto-start solo; mute persists",
+    {
+      "rules": "controller",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "rules": "solo controller",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Solo vs 4 personality bots completed all 8 rounds through auto-load; rematch returns to lobby",
+    "Solo rematch starts round 1",
+    "Solo leave works after rematch",
+    {
+      "rules": "TV controller",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "8 seats in live preview: lobby, controls, snap, blame and TV rendered",
+    "Practice manual completion button creates a playable solo room; comparison screenshots captured"
+  ],
+  "captures": [
+    {
+      "name": "preview-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.017856763359728252
+    },
+    {
+      "name": "preview-tv-lobby-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-signal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-load-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.017856763359728252
+    },
+    {
+      "name": "preview-fit-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.004442330535444421
+    },
+    {
+      "name": "preview-tv-fit-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.0008210289056409043
+    },
+    {
+      "name": "preview-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.10740845600438162
+    },
+    {
+      "name": "preview-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.1294542919127692
+    },
+    {
+      "name": "preview-tv-snap-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.11428326989790048
+    },
+    {
+      "name": "preview-controller-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 120,
+            "y": 676,
+            "width": 528,
+            "height": 46,
+            "top": 676,
+            "right": 648,
+            "bottom": 722,
+            "left": 120
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 120,
+            "y": 730,
+            "width": 528,
+            "height": 52,
+            "top": 730,
+            "right": 648,
+            "bottom": 782,
+            "left": 120
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 120,
+            "y": 790,
+            "width": 528,
+            "height": 50,
+            "top": 790,
+            "right": 648,
+            "bottom": 840,
+            "left": 120
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.22322138018556315
+    },
+    {
+      "name": "preview-controller-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 465,
+            "y": 700,
+            "width": 510,
+            "height": 46,
+            "top": 700,
+            "right": 975,
+            "bottom": 746,
+            "left": 465
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 465,
+            "y": 754,
+            "width": 510,
+            "height": 52,
+            "top": 754,
+            "right": 975,
+            "bottom": 806,
+            "left": 465
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 465,
+            "y": 814,
+            "width": 510,
+            "height": 50,
+            "top": 814,
+            "right": 975,
+            "bottom": 864,
+            "left": 465
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.10922856790311501
+    },
+    {
+      "name": "preview-snap-reduced",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.33548515604688284
+    },
+    {
+      "name": "preview-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.2200631034137448
+    },
+    {
+      "name": "preview-tv-snap-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.34353725130616874
+    },
+    {
+      "name": "preview-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-results-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        375,
+        1007
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3335025979799074
+    },
+    {
+      "name": "preview-tv-results-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.4584959518551336
+    },
+    {
+      "name": "preview-results-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-results-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1425,
+        956
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-ledger-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-practice-fit-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-practice-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ],
+      "rawShiftSum": 0.45525702175383453
+    },
+    {
+      "name": "preview-practice-salvage-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ],
+      "rawShiftSum": 0.5857375846020956
+    },
+    {
+      "name": "preview-solo-load-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.7151801574966827
+    },
+    {
+      "name": "production-landing-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        677
+      ],
+      "nav": [
+        {
+          "ttfb": 107.90000000596046,
+          "dom": 194.60000002384186,
+          "load": 213
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "production-controller-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 135.09999999403954,
+          "load": 165.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 14,
+            "y": 488,
+            "width": 347,
+            "height": 44,
+            "top": 488,
+            "right": 361,
+            "bottom": 532,
+            "left": 14
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 14,
+            "y": 538,
+            "width": 347,
+            "height": 47,
+            "top": 538,
+            "right": 361,
+            "bottom": 585,
+            "left": 14
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 14,
+            "y": 591,
+            "width": 347,
+            "height": 48,
+            "top": 591,
+            "right": 361,
+            "bottom": 639,
+            "left": 14
+          }
+        }
+      ],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 95.90000000596046,
+          "dom": 172.90000000596046,
+          "load": 191.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        677
+      ],
+      "nav": [
+        {
+          "ttfb": 168.30000001192093,
+          "dom": 253.60000002384186,
+          "load": 271.40000000596046
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.19999998807907,
+          "dom": 36.19999998807907,
+          "load": 63.80000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        375,
+        846
+      ],
+      "nav": [
+        {
+          "ttfb": 25.400000005960464,
+          "dom": 34.10000002384186,
+          "load": 79.40000000596046
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.900000005960464,
+          "dom": 35.400000005960464,
+          "load": 61.599999994039536
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 26.19999998807907,
+          "dom": 33.79999998211861,
+          "load": 76.39999997615814
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-landing-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 28.19999998807907,
+          "dom": 47.599999994039536,
+          "load": 74.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-landing-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 104.30000001192093,
+          "load": 145.90000000596046
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-host-form-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 38.5,
+          "load": 66.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "preview-code-join-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 38.5,
+          "load": 66.30000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "compare-preview-reveal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.732394964354873
+    },
+    {
+      "name": "compare-production-reveal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 135.09999999403954,
+          "load": 165.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 14,
+            "y": 488,
+            "width": 347,
+            "height": 44,
+            "top": 488,
+            "right": 361,
+            "bottom": 532,
+            "left": 14
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 14,
+            "y": 538,
+            "width": 347,
+            "height": 47,
+            "top": 538,
+            "right": 361,
+            "bottom": 585,
+            "left": 14
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 14,
+            "y": 591,
+            "width": 347,
+            "height": 48,
+            "top": 591,
+            "right": 361,
+            "bottom": 639,
+            "left": 14
+          }
+        }
+      ],
+      "icons": []
+    },
+    {
+      "name": "production-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "compare-preview-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3335025979799074
+    },
+    {
+      "name": "production-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-solo-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.8568853741818185
+    },
+    {
+      "name": "production-same-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        836
+      ],
+      "nav": [
+        {
+          "ttfb": 25.30000001192093,
+          "dom": 135.09999999403954,
+          "load": 165.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-eight-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3878403095409742
+    },
+    {
+      "name": "preview-eight-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 100.30000001192093,
+          "dom": 275.30000001192093,
+          "load": 314.5
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "production-eight-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-eight-load-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3887181813715507
+    },
+    {
+      "name": "preview-eight-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.49615094130811166
+    },
+    {
+      "name": "preview-eight-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 100.30000001192093,
+          "dom": 275.30000001192093,
+          "load": 314.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "preview-eight-tv-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.5745352150388215
+    },
+    {
+      "name": "production-eight-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 98.7000000178814,
+          "dom": 381.80000001192093,
+          "load": 382.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 14,
+            "y": 488,
+            "width": 347,
+            "height": 44,
+            "top": 488,
+            "right": 361,
+            "bottom": 532,
+            "left": 14
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 14,
+            "y": 538,
+            "width": 347,
+            "height": 47,
+            "top": 538,
+            "right": 361,
+            "bottom": 585,
+            "left": 14
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 14,
+            "y": 591,
+            "width": 347,
+            "height": 48,
+            "top": 591,
+            "right": 361,
+            "bottom": 639,
+            "left": 14
+          }
+        }
+      ],
+      "icons": []
+    },
+    {
+      "name": "preview-link-join-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        724
+      ],
+      "nav": [
+        {
+          "ttfb": 25.799999982118607,
+          "dom": 151.09999999403954,
+          "load": 155.69999998807907
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "preview-link-join-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.799999982118607,
+          "dom": 151.09999999403954,
+          "load": 155.69999998807907
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "preview-practice-compare-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 247.90000000596046,
+          "load": 248.80000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ]
+    },
+    {
+      "name": "production-practice-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 24.599999994039536,
+          "dom": 236.09999999403954,
+          "load": 269.39999997615814
+        }
+      ],
+      "controls": [],
+      "icons": []
+    },
+    {
+      "name": "preview-practice-salvage-compare",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 247.90000000596046,
+          "load": 248.80000001192093
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true
+      ]
+    },
+    {
+      "name": "production-practice-salvage",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 24.599999994039536,
+          "dom": 236.09999999403954,
+          "load": 269.39999997615814
+        }
+      ],
+      "controls": [],
+      "icons": []
+    }
+  ],
+  "a11y": [
+    {
+      "name": "preview-lobby-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "name": "preview-tv-lobby-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "name": "preview-load-390",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ]
+    },
+    {
+      "name": "preview-fit-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 41
+        }
+      ]
+    },
+    {
+      "name": "preview-snap-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ]
+    },
+    {
+      "name": "preview-controller-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "name": "preview-controller-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "name": "preview-snap-reduced",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "name": "preview-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ]
+    },
+    {
+      "name": "preview-tv-results-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "name": "preview-ledger-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 84
+        }
+      ]
+    },
+    {
+      "name": "preview-practice-fit-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "name": "production-landing-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "name": "production-controller-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 2
+        },
+        {
+          "id": "color-contrast",
+          "count": 38
+        }
+      ]
+    },
+    {
+      "name": "preview-landing-390",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "name": "preview-host-form-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "name": "preview-code-join-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "name": "preview-solo-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ]
+    },
+    {
+      "name": "production-same-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "name": "preview-eight-lobby-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "name": "preview-eight-snap-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 68
+        }
+      ]
+    },
+    {
+      "name": "preview-eight-tv-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 70
+        }
+      ]
+    },
+    {
+      "name": "preview-link-join-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 15
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "failedRequests": [
+    {
+      "url": "/api/rooms/VAWS/events",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "streams": [
+    {
+      "role": "host",
+      "duration": 31185.651
+    },
+    {
+      "role": "tv",
+      "duration": 30320.245
+    },
+    {
+      "role": "guest",
+      "duration": 30913.701
+    },
+    {
+      "role": "host",
+      "duration": 30328.163
+    },
+    {
+      "role": "tv",
+      "duration": 30286.243
+    },
+    {
+      "role": "guest",
+      "duration": 30293.398
+    },
+    {
+      "role": "tv",
+      "duration": 30186.852
+    },
+    {
+      "role": "host",
+      "duration": 30115.916
+    },
+    {
+      "role": "tv",
+      "duration": 30173.251
+    },
+    {
+      "role": "host",
+      "duration": 30113.594
+    },
+    {
+      "role": "guest",
+      "duration": 30282.909
+    },
+    {
+      "role": "tv",
+      "duration": 30163.044
+    },
+    {
+      "role": "host",
+      "duration": 30167.836
+    },
+    {
+      "role": "guest",
+      "duration": 30142.959
+    },
+    {
+      "role": "tv",
+      "duration": 30210.045
+    },
+    {
+      "role": "host",
+      "duration": 30161.741
+    },
+    {
+      "role": "guest",
+      "duration": 30125.856
+    },
+    {
+      "role": "tv",
+      "duration": 30160.182
+    },
+    {
+      "role": "host",
+      "duration": 30099.725
+    },
+    {
+      "role": "guest",
+      "duration": 30132.775
+    },
+    {
+      "role": "tv",
+      "duration": 30284.882
+    },
+    {
+      "role": "host",
+      "duration": 30267.647
+    },
+    {
+      "role": "guest",
+      "duration": 30122.297
+    },
+    {
+      "role": "tv",
+      "duration": 30193.379
+    },
+    {
+      "role": "host",
+      "duration": 30171.563
+    },
+    {
+      "role": "guest",
+      "duration": 30172.163
+    },
+    {
+      "role": "tv",
+      "duration": 30126.759
+    },
+    {
+      "role": "guest",
+      "duration": 30326.788
+    },
+    {
+      "role": "tv",
+      "duration": 30116.43
+    },
+    {
+      "role": "guest",
+      "duration": 30327.827
+    },
+    {
+      "role": "tv",
+      "duration": 30200.826
+    },
+    {
+      "role": "host",
+      "duration": 30155.878
+    },
+    {
+      "role": "guest",
+      "duration": 30182.421
+    },
+    {
+      "role": "tv",
+      "duration": 30128.846
+    },
+    {
+      "role": "host",
+      "duration": 30127.714
+    },
+    {
+      "role": "guest",
+      "duration": 30341.695
+    },
+    {
+      "role": "tv",
+      "duration": 30262.812
+    },
+    {
+      "role": "host",
+      "duration": 30179.405
+    },
+    {
+      "role": "guest",
+      "duration": 30322.958
+    },
+    {
+      "role": "tv",
+      "duration": 30153.606
+    },
+    {
+      "role": "host",
+      "duration": 30269.466
+    },
+    {
+      "role": "guest",
+      "duration": 30201.885
+    },
+    {
+      "role": "tv",
+      "duration": 30325.21
+    },
+    {
+      "role": "host",
+      "duration": 30154.188
+    },
+    {
+      "role": "guest",
+      "duration": 30169.93
+    },
+    {
+      "role": "tv",
+      "duration": 30327.47
+    },
+    {
+      "role": "host",
+      "duration": 30184.525
+    },
+    {
+      "role": "guest",
+      "duration": 30238.286
+    },
+    {
+      "role": "tv",
+      "duration": 30326.441
+    },
+    {
+      "role": "host",
+      "duration": 30185.941
+    },
+    {
+      "role": "guest",
+      "duration": 30308.965
+    },
+    {
+      "role": "tv",
+      "duration": 30145.022
+    },
+    {
+      "role": "guest",
+      "duration": 30114.097
+    },
+    {
+      "role": "tv",
+      "duration": 30145.761
+    },
+    {
+      "role": "guest",
+      "duration": 30147.983
+    },
+    {
+      "role": "tv",
+      "duration": 30167.741
+    },
+    {
+      "role": "guest",
+      "duration": 30193.917
+    },
+    {
+      "role": "tv",
+      "duration": 30239.069
+    },
+    {
+      "role": "guest",
+      "duration": 30178.852
+    },
+    {
+      "role": "tv",
+      "duration": 30173.773
+    },
+    {
+      "role": "guest",
+      "duration": 30274.772
+    },
+    {
+      "role": "tv",
+      "duration": 30217.813
+    },
+    {
+      "role": "guest",
+      "duration": 30126.393
+    },
+    {
+      "role": "tv",
+      "duration": 30156.05
+    },
+    {
+      "role": "guest",
+      "duration": 30130.736
+    },
+    {
+      "role": "tv",
+      "duration": 30141.811
+    },
+    {
+      "role": "guest",
+      "duration": 30126.692
+    }
+  ],
+  "shiftComparison": [
+    {
+      "name": "preview",
+      "maxSessionShift": 0.10417472342820344,
+      "events": [
+        {
+          "at": 568312.3000000119,
+          "value": 0.0016807651037674567,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              },
+              "current": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              }
+            },
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            },
+            {
+              "node": {},
+              "previous": {
+                "x": 115.3671875,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 133.3671875,
+                "bottom": 624,
+                "left": 115.3671875
+              },
+              "current": {
+                "x": 91.6484375,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 109.6484375,
+                "bottom": 624,
+                "left": 91.6484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 570062.400000006,
+          "value": 0.00028180311081340886,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        },
+        {
+          "at": 570590,
+          "value": 0.001219299575287319,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              },
+              "current": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              }
+            }
+          ]
+        },
+        {
+          "at": 571253.8000000119,
+          "value": 0.000011246953359901757,
+          "recent": false,
+          "sources": [
+            {
+              "node": "",
+              "previous": {
+                "x": 324.7109375,
+                "y": 105.5,
+                "width": 24.578125,
+                "height": 13,
+                "top": 105.5,
+                "right": 349.2890625,
+                "bottom": 118.5,
+                "left": 324.7109375
+              },
+              "current": {
+                "x": 330.484375,
+                "y": 105.5,
+                "width": 13.0234375,
+                "height": 13,
+                "top": 105.5,
+                "right": 343.5078125,
+                "bottom": 118.5,
+                "left": 330.484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 572638.8000000119,
+          "value": 0.0004494314171624832,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 25.950088500976562,
+                "y": 395.07464599609375,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.07464599609375,
+                "right": 348.95008850097656,
+                "bottom": 410.57464599609375,
+                "left": 25.950088500976562
+              },
+              "current": {
+                "x": 25.950088500976562,
+                "y": 395.07464599609375,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.07464599609375,
+                "right": 348.95008850097656,
+                "bottom": 410.57464599609375,
+                "left": 25.950088500976562
+              }
+            }
+          ]
+        },
+        {
+          "at": 573370.900000006,
+          "value": 0.10372529201104096,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 26,
+                "y": 172,
+                "width": 323,
+                "height": 219,
+                "top": 172,
+                "right": 349,
+                "bottom": 391,
+                "left": 26
+              },
+              "current": {
+                "x": 220.7890625,
+                "y": 150,
+                "width": 136.2109375,
+                "height": 98,
+                "top": 150,
+                "right": 357,
+                "bottom": 248,
+                "left": 220.7890625
+              }
+            }
+          ]
+        },
+        {
+          "at": 574453.8000000119,
+          "value": 0.0008458782228076366,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        },
+        {
+          "at": 585333.2000000179,
+          "value": 0.0008778718305764659,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              },
+              "current": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              }
+            }
+          ]
+        },
+        {
+          "at": 586248.2000000179,
+          "value": 0.000011246953359901757,
+          "recent": false,
+          "sources": [
+            {
+              "node": "",
+              "previous": {
+                "x": 324.7109375,
+                "y": 105.5,
+                "width": 24.578125,
+                "height": 13,
+                "top": 105.5,
+                "right": 349.2890625,
+                "bottom": 118.5,
+                "left": 324.7109375
+              },
+              "current": {
+                "x": 330.484375,
+                "y": 105.5,
+                "width": 13.0234375,
+                "height": 13,
+                "top": 105.5,
+                "right": 343.5078125,
+                "bottom": 118.5,
+                "left": 330.484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 595495.599999994,
+          "value": 0.0016807651037674567,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              },
+              "current": {
+                "x": 16,
+                "y": 642.3046875,
+                "width": 343,
+                "height": 17,
+                "top": 642.3046875,
+                "right": 359,
+                "bottom": 659.3046875,
+                "left": 16
+              }
+            },
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            },
+            {
+              "node": {},
+              "previous": {
+                "x": 115.3671875,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 133.3671875,
+                "bottom": 624,
+                "left": 115.3671875
+              },
+              "current": {
+                "x": 91.6484375,
+                "y": 606,
+                "width": 18,
+                "height": 18,
+                "top": 606,
+                "right": 109.6484375,
+                "bottom": 624,
+                "left": 91.6484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 597203.8000000119,
+          "value": 0.00028180311081340886,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        },
+        {
+          "at": 597733.2000000179,
+          "value": 0.001219299575287319,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              },
+              "current": {
+                "x": 18,
+                "y": 327.1015625,
+                "width": 339,
+                "height": 17.5,
+                "top": 327.1015625,
+                "right": 357,
+                "bottom": 344.6015625,
+                "left": 18
+              }
+            }
+          ]
+        },
+        {
+          "at": 598394.3000000119,
+          "value": 0.000011246953359901757,
+          "recent": false,
+          "sources": [
+            {
+              "node": "",
+              "previous": {
+                "x": 324.7109375,
+                "y": 105.5,
+                "width": 24.578125,
+                "height": 13,
+                "top": 105.5,
+                "right": 349.2890625,
+                "bottom": 118.5,
+                "left": 324.7109375
+              },
+              "current": {
+                "x": 330.484375,
+                "y": 105.5,
+                "width": 13.0234375,
+                "height": 13,
+                "top": 105.5,
+                "right": 343.5078125,
+                "bottom": 118.5,
+                "left": 330.484375
+              }
+            }
+          ]
+        },
+        {
+          "at": 599787.400000006,
+          "value": 0.0004494314171624832,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 25.968978881835938,
+                "y": 395.06707763671875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.06707763671875,
+                "right": 348.96897888183594,
+                "bottom": 410.56707763671875,
+                "left": 25.968978881835938
+              },
+              "current": {
+                "x": 25.968978881835938,
+                "y": 395.06707763671875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.06707763671875,
+                "right": 348.96897888183594,
+                "bottom": 410.56707763671875,
+                "left": 25.968978881835938
+              }
+            }
+          ]
+        },
+        {
+          "at": 600511.3000000119,
+          "value": 0.10372529201104096,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 26,
+                "y": 172,
+                "width": 323,
+                "height": 219,
+                "top": 172,
+                "right": 349,
+                "bottom": 391,
+                "left": 26
+              },
+              "current": {
+                "x": 220.7890625,
+                "y": 150,
+                "width": 136.2109375,
+                "height": 98,
+                "top": 150,
+                "right": 357,
+                "bottom": 248,
+                "left": 220.7890625
+              }
+            }
+          ]
+        },
+        {
+          "at": 601595.7000000179,
+          "value": 0.0008458782228076366,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              },
+              "current": {
+                "x": 26,
+                "y": 395.0546875,
+                "width": 323,
+                "height": 15.5,
+                "top": 395.0546875,
+                "right": 349,
+                "bottom": 410.5546875,
+                "left": 26
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "production",
+      "maxSessionShift": 0.11007370014861384,
+      "events": [
+        {
+          "at": 228121.90000000596,
+          "value": 0.0007663995026474769,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              }
+            },
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 229812.10000002384,
+          "value": 0.00038109880591937915,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            },
+            {
+              "previous": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              },
+              "current": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              }
+            }
+          ]
+        },
+        {
+          "at": 230372.70000001788,
+          "value": 0.00029510837253786897,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 232418.70000001788,
+          "value": 0.0002955014246999439,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 400.3895263671875,
+                "width": 343.7762145996094,
+                "height": 8,
+                "top": 400.3895263671875,
+                "right": 357.7762145996094,
+                "bottom": 408.3895263671875,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 400.3895263671875,
+                "width": 343.7762145996094,
+                "height": 8,
+                "top": 400.3895263671875,
+                "right": 357.7762145996094,
+                "bottom": 408.3895263671875,
+                "left": 14
+              }
+            }
+          ]
+        },
+        {
+          "at": 233119.20000001788,
+          "value": 0.1097781987239139,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 25,
+                "y": 172,
+                "width": 325,
+                "height": 209,
+                "top": 172,
+                "right": 350,
+                "bottom": 381,
+                "left": 25
+              },
+              "current": {
+                "x": 263.0234375,
+                "y": 153.5,
+                "width": 96.9765625,
+                "height": 76.5,
+                "top": 153.5,
+                "right": 360,
+                "bottom": 230,
+                "left": 263.0234375
+              }
+            }
+          ]
+        },
+        {
+          "at": 234201.20000001788,
+          "value": 0.0002237243447241896,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 245071,
+          "value": 0.0002811141280933746,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              }
+            }
+          ]
+        },
+        {
+          "at": 255211.10000002384,
+          "value": 0.0007663995026474769,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 645.75,
+                "width": 347,
+                "height": 10,
+                "top": 645.75,
+                "right": 361,
+                "bottom": 655.75,
+                "left": 14
+              }
+            },
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 256958.70000001788,
+          "value": 0.00038109880591937915,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            },
+            {
+              "previous": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              },
+              "current": {
+                "x": 253,
+                "y": 227,
+                "width": 95,
+                "height": 8,
+                "top": 227,
+                "right": 348,
+                "bottom": 235,
+                "left": 253
+              }
+            }
+          ]
+        },
+        {
+          "at": 257519.80000001192,
+          "value": 0.00029510837253786897,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 338.5,
+                "width": 345,
+                "height": 8.5,
+                "top": 338.5,
+                "right": 360,
+                "bottom": 347,
+                "left": 15
+              }
+            }
+          ]
+        },
+        {
+          "at": 259568.80000001192,
+          "value": 0.00029507191681520556,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 14,
+                "y": 400.5001220703125,
+                "width": 343.49969482421875,
+                "height": 8,
+                "top": 400.5001220703125,
+                "right": 357.49969482421875,
+                "bottom": 408.5001220703125,
+                "left": 14
+              },
+              "current": {
+                "x": 14,
+                "y": 400.5001220703125,
+                "width": 343.49969482421875,
+                "height": 8,
+                "top": 400.5001220703125,
+                "right": 357.49969482421875,
+                "bottom": 408.5001220703125,
+                "left": 14
+              }
+            }
+          ]
+        },
+        {
+          "at": 260261.10000002384,
+          "value": 0.1097781987239139,
+          "recent": false,
+          "sources": [
+            {
+              "node": "verdict snap verdict-small",
+              "previous": {
+                "x": 25,
+                "y": 172,
+                "width": 325,
+                "height": 209,
+                "top": 172,
+                "right": 350,
+                "bottom": 381,
+                "left": 25
+              },
+              "current": {
+                "x": 263.0234375,
+                "y": 153.5,
+                "width": 96.9765625,
+                "height": 76.5,
+                "top": 153.5,
+                "right": 360,
+                "bottom": 230,
+                "left": 263.0234375
+              }
+            }
+          ]
+        },
+        {
+          "at": 261348.40000000596,
+          "value": 0.0002237243447241896,
+          "recent": false,
+          "sources": [
+            {
+              "previous": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              },
+              "current": {
+                "x": 15,
+                "y": 399.5,
+                "width": 345,
+                "height": 8,
+                "top": 399.5,
+                "right": 360,
+                "bottom": 407.5,
+                "left": 15
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

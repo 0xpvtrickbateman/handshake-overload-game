@@ -1,0 +1,66 @@
+{
+  "reviewedCommit": "5780a90ba9b143ab9126cd3ca2754312d00d19f6",
+  "baselineCommit": "4bb369741d94760bf8ce87f8ff7d09f7cc031ca6",
+  "commands": [
+    {
+      "command": "npm ci",
+      "exit": 0
+    },
+    {
+      "command": "npm run build",
+      "exit": 0
+    },
+    {
+      "command": "npm run lint",
+      "exit": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0
+    },
+    {
+      "command": "npm test",
+      "exit": 0,
+      "passed": 26
+    },
+    {
+      "command": "npm run test:e2e",
+      "exit": 0,
+      "passed": 4,
+      "seconds": 84,
+      "revealSpreadMs": [
+        13,
+        14,
+        1,
+        8,
+        4,
+        5,
+        6,
+        2
+      ],
+      "pollingSpreadMs": 3,
+      "streamDurationsMs": [
+        30052,
+        30047,
+        30059
+      ]
+    },
+    {
+      "command": "npm run test:e2e -- --browser=webkit",
+      "exit": 1,
+      "passed": 3,
+      "failed": 1,
+      "pollingSpreadMs": 10,
+      "failure": "Share button: waitForEvent(download) timed out after 8 seconds; eight rounds and ledger checks completed first"
+    },
+    {
+      "command": "PLAYWRIGHT_BASE_URL=https://overload-game.vercel.app npm run test:e2e -- --browser=webkit --grep \"two humans\"",
+      "exit": 1,
+      "failed": 1,
+      "failure": "Same download-event timeout reproduced on production after eight rounds"
+    }
+  ],
+  "sourceEdits": [],
+  "testEdits": [],
+  "note": "Local Chromium evidence transcribed from terminal run; WebKit JSON reports are separately preserved. No test assertion was relaxed."
+}

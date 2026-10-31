@@ -1,0 +1,2260 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "1",
+          "total": "11",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",3],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "1",
+          "total": "11",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",3],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "1",
+          "total": "11",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",3],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        }
+      ],
+      "events": [
+        [
+          {
+            "round": 1,
+            "game": 1,
+            "actualAt": 1793428374216,
+            "scheduledAt": 1793428374226
+          }
+        ],
+        [
+          {
+            "round": 1,
+            "game": 1,
+            "actualAt": 1793428374242,
+            "scheduledAt": 1793428374226
+          }
+        ],
+        [
+          {
+            "round": 1,
+            "game": 1,
+            "actualAt": 1793428374244,
+            "scheduledAt": 1793428374226
+          }
+        ]
+      ],
+      "skewMs": 28,
+      "verdict": "IT FITS!\n11 crates on a 15-crate limit"
+    },
+    {
+      "round": 2,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "2",
+          "total": "19",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-2],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",5],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "2",
+          "total": "19",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-2],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",5],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "2",
+          "total": "19",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-2],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",5],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",6]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 2,
+          "game": 1,
+          "actualAt": 1793428401265,
+          "scheduledAt": 1793428401246
+        },
+        {
+          "round": 2,
+          "game": 1,
+          "actualAt": 1793428401249,
+          "scheduledAt": 1793428401246
+        },
+        {
+          "round": 2,
+          "game": 1,
+          "actualAt": 1793428401245,
+          "scheduledAt": 1793428401246
+        }
+      ],
+      "skewMs": 20,
+      "verdict": "SNAP!\n19 crates on a 15-crate limit"
+    },
+    {
+      "round": 3,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "3",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",8],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "3",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-1],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",8],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 3,
+          "game": 1,
+          "actualAt": 1793428428406,
+          "scheduledAt": 1793428428382
+        },
+        {
+          "round": 3,
+          "game": 1,
+          "actualAt": 1793428428372,
+          "scheduledAt": 1793428428382
+        }
+      ],
+      "skewMs": 34,
+      "verdict": "IT FITS!\n12 crates on a 16-crate limit"
+    },
+    {
+      "round": 4,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "4",
+          "total": "18",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",10],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "4",
+          "total": "18",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",10],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "4",
+          "total": "18",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",10],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",11]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 4,
+          "game": 1,
+          "actualAt": 1793428455444,
+          "scheduledAt": 1793428455425
+        },
+        {
+          "round": 4,
+          "game": 1,
+          "actualAt": 1793428455408,
+          "scheduledAt": 1793428455425
+        },
+        {
+          "round": 4,
+          "game": 1,
+          "actualAt": 1793428455445,
+          "scheduledAt": 1793428455425
+        }
+      ],
+      "skewMs": 37,
+      "verdict": "SNAP!\n18 crates on a 15-crate limit"
+    },
+    {
+      "round": 5,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "5",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-3],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",13],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",16]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "5",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-3],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",13],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",16]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "5",
+          "total": "12",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-3],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",1],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",13],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",16]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 5,
+          "game": 1,
+          "actualAt": 1793428482490,
+          "scheduledAt": 1793428482466
+        },
+        {
+          "round": 5,
+          "game": 1,
+          "actualAt": 1793428482473,
+          "scheduledAt": 1793428482466
+        },
+        {
+          "round": 5,
+          "game": 1,
+          "actualAt": 1793428482469,
+          "scheduledAt": 1793428482466
+        }
+      ],
+      "skewMs": 21,
+      "verdict": "IT FITS!\n12 crates on a 13-crate limit"
+    },
+    {
+      "round": 6,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "6",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-6],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",15],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",13]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "6",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-6],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",15],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",13]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "6",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-6],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-2],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",15],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",13]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 6,
+          "game": 1,
+          "actualAt": 1793428509473,
+          "scheduledAt": 1793428509478
+        },
+        {
+          "round": 6,
+          "game": 1,
+          "actualAt": 1793428509497,
+          "scheduledAt": 1793428509478
+        },
+        {
+          "round": 6,
+          "game": 1,
+          "actualAt": 1793428509472,
+          "scheduledAt": 1793428509478
+        }
+      ],
+      "skewMs": 25,
+      "verdict": "SNAP!\n21 crates on a 13-crate limit"
+    },
+    {
+      "round": 7,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "7",
+          "total": "10",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",0],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",23],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",21]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "7",
+          "total": "10",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",0],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",23],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",21]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "7",
+          "total": "10",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-4],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",0],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",23],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",21]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 7,
+          "game": 1,
+          "actualAt": 1793428536507,
+          "scheduledAt": 1793428536500
+        },
+        {
+          "round": 7,
+          "game": 1,
+          "actualAt": 1793428536504,
+          "scheduledAt": 1793428536500
+        },
+        {
+          "round": 7,
+          "game": 1,
+          "actualAt": 1793428536520,
+          "scheduledAt": 1793428536500
+        }
+      ],
+      "skewMs": 16,
+      "verdict": "IT FITS!\n10 crates on a 12-crate limit"
+    },
+    {
+      "round": 8,
+      "snapshots": [
+        {
+          "phase": "reveal",
+          "round": "8",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-10],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-6],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",27],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",15]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "8",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-10],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-6],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",27],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",15]]"
+        },
+        {
+          "phase": "reveal",
+          "round": "8",
+          "total": "21",
+          "scores": "[[\"40d6099f-d055-472c-8608-ec812f6aa397\",-10],[\"77990f35-f67b-47f2-bcc1-c34aa1a2f27e\",-6],[\"67c7372f-b488-48d1-92c1-3febd1f18734-0\",27],[\"67c7372f-b488-48d1-92c1-3febd1f18734-1\",15]]"
+        }
+      ],
+      "events": [
+        {
+          "round": 8,
+          "game": 1,
+          "actualAt": 1793428563574,
+          "scheduledAt": 1793428563552
+        },
+        {
+          "round": 8,
+          "game": 1,
+          "actualAt": 1793428563550,
+          "scheduledAt": 1793428563552
+        },
+        {
+          "round": 8,
+          "game": 1,
+          "actualAt": 1793428563572,
+          "scheduledAt": 1793428563552
+        }
+      ],
+      "skewMs": 24,
+      "verdict": "SNAP!\n21 crates on a 12-crate limit"
+    }
+  ],
+  "checks": [
+    "Host, avatar selection, join by code, bot fill, TV lobby, landing rules",
+    {
+      "rules": "lobby",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "rules": "TV lobby",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    {
+      "keyboardSignal": "false"
+    },
+    "Keyboard loads 1–6 and Enter, mouse signal",
+    "Reload retained round 2 seat and locked load",
+    "Absent player covered; same seat restored on return",
+    {
+      "rules": "join-by-QR",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Decoded QR opened join form; late joiner spectates",
+    {
+      "reducedMotion": "snap-flash"
+    },
+    {
+      "doubleRound": 7,
+      "banner": "Double points"
+    },
+    {
+      "doubleRound": 8,
+      "banner": "Double points"
+    },
+    {
+      "rules": "results",
+      "opened": true,
+      "escapeClosed": true,
+      "focusTrapped": false
+    },
+    "Forced unsupported native-share environment: actual PNG download succeeds",
+    "Host left; remaining human rematched successfully in same room",
+    {
+      "lateSeated": true,
+      "newHost": "Review Grace"
+    }
+  ],
+  "captures": [
+    {
+      "name": "preview-lobby-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-lobby-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.017856763359728252
+    },
+    {
+      "name": "preview-tv-lobby-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-signal-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0
+    },
+    {
+      "name": "preview-load-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.017856763359728252
+    },
+    {
+      "name": "preview-fit-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 163.2000000178814,
+          "dom": 217.30000001192093,
+          "load": 259.2000000178814
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.004442330535444421
+    },
+    {
+      "name": "preview-tv-fit-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.0008210289056409043
+    },
+    {
+      "name": "preview-snap-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.10740845600438162
+    },
+    {
+      "name": "preview-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 102.09999999403954,
+          "dom": 162.2999999821186,
+          "load": 187.5
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.1294542919127692
+    },
+    {
+      "name": "preview-tv-snap-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.11428326989790048
+    },
+    {
+      "name": "preview-controller-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 120,
+            "y": 676,
+            "width": 528,
+            "height": 46,
+            "top": 676,
+            "right": 648,
+            "bottom": 722,
+            "left": 120
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 120,
+            "y": 730,
+            "width": 528,
+            "height": 52,
+            "top": 730,
+            "right": 648,
+            "bottom": 782,
+            "left": 120
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 120,
+            "y": 790,
+            "width": 528,
+            "height": 50,
+            "top": 790,
+            "right": 648,
+            "bottom": 840,
+            "left": 120
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.22322138018556315
+    },
+    {
+      "name": "preview-controller-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1440,
+        900
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 465,
+            "y": 700,
+            "width": 510,
+            "height": 46,
+            "top": 700,
+            "right": 975,
+            "bottom": 746,
+            "left": 465
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 465,
+            "y": 754,
+            "width": 510,
+            "height": 52,
+            "top": 754,
+            "right": 975,
+            "bottom": 806,
+            "left": 465
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 465,
+            "y": 814,
+            "width": 510,
+            "height": 50,
+            "top": 814,
+            "right": 975,
+            "bottom": 864,
+            "left": 465
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.10922856790311501
+    },
+    {
+      "name": "preview-snap-reduced",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        375,
+        667
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 489,
+            "width": 343,
+            "height": 44,
+            "top": 489,
+            "right": 359,
+            "bottom": 533,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 539,
+            "width": 343,
+            "height": 46,
+            "top": 539,
+            "right": 359,
+            "bottom": 585,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 591,
+            "width": 343,
+            "height": 48,
+            "top": 591,
+            "right": 359,
+            "bottom": 639,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.33548515604688284
+    },
+    {
+      "name": "preview-snap-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        390,
+        844
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [
+        {
+          "id": "signal-chips",
+          "box": {
+            "x": 16,
+            "y": 644,
+            "width": 358,
+            "height": 46,
+            "top": 644,
+            "right": 374,
+            "bottom": 690,
+            "left": 16
+          }
+        },
+        {
+          "id": "crate-picker",
+          "box": {
+            "x": 16,
+            "y": 698,
+            "width": 358,
+            "height": 52,
+            "top": 698,
+            "right": 374,
+            "bottom": 750,
+            "left": 16
+          }
+        },
+        {
+          "id": "lock-button",
+          "box": {
+            "x": 16,
+            "y": 758,
+            "width": 358,
+            "height": 50,
+            "top": 758,
+            "right": 374,
+            "bottom": 808,
+            "left": 16
+          }
+        }
+      ],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.2200631034137448
+    },
+    {
+      "name": "preview-tv-snap-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.34353725130616874
+    },
+    {
+      "name": "preview-results-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-results-390",
+      "viewport": [
+        390,
+        844
+      ],
+      "scroll": [
+        375,
+        1007
+      ],
+      "nav": [
+        {
+          "ttfb": 25.700000017881393,
+          "dom": 161.59999999403954,
+          "load": 162.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.3335025979799074
+    },
+    {
+      "name": "preview-tv-results-1920",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "scroll": [
+        1920,
+        1080
+      ],
+      "nav": [
+        {
+          "ttfb": 96.59999999403954,
+          "dom": 339.7999999821186,
+          "load": 361.7999999821186
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.4584959518551336
+    },
+    {
+      "name": "preview-results-768",
+      "viewport": [
+        768,
+        1024
+      ],
+      "scroll": [
+        768,
+        1024
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-results-1440",
+      "viewport": [
+        1440,
+        900
+      ],
+      "scroll": [
+        1425,
+        956
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    },
+    {
+      "name": "preview-ledger-375",
+      "viewport": [
+        375,
+        667
+      ],
+      "scroll": [
+        360,
+        1014
+      ],
+      "nav": [
+        {
+          "ttfb": 23.799999982118607,
+          "dom": 170.69999998807907,
+          "load": 171.09999999403954
+        }
+      ],
+      "controls": [],
+      "icons": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "rawShiftSum": 0.45134008413943333
+    }
+  ],
+  "a11y": [
+    {
+      "name": "preview-lobby-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "name": "preview-tv-lobby-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "name": "preview-load-390",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 29
+        }
+      ]
+    },
+    {
+      "name": "preview-fit-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 41
+        }
+      ]
+    },
+    {
+      "name": "preview-snap-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 47
+        }
+      ]
+    },
+    {
+      "name": "preview-controller-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "name": "preview-controller-1440",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "name": "preview-snap-reduced",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "name": "preview-results-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 35
+        }
+      ]
+    },
+    {
+      "name": "preview-tv-results-1920",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "name": "preview-ledger-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "count": 84
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "streams": [
+    {
+      "role": "host",
+      "duration": 31185.651
+    },
+    {
+      "role": "tv",
+      "duration": 30320.245
+    },
+    {
+      "role": "guest",
+      "duration": 30913.701
+    },
+    {
+      "role": "host",
+      "duration": 30328.163
+    },
+    {
+      "role": "tv",
+      "duration": 30286.243
+    },
+    {
+      "role": "guest",
+      "duration": 30293.398
+    },
+    {
+      "role": "tv",
+      "duration": 30186.852
+    },
+    {
+      "role": "host",
+      "duration": 30115.916
+    },
+    {
+      "role": "tv",
+      "duration": 30173.251
+    },
+    {
+      "role": "host",
+      "duration": 30113.594
+    },
+    {
+      "role": "guest",
+      "duration": 30282.909
+    },
+    {
+      "role": "tv",
+      "duration": 30163.044
+    },
+    {
+      "role": "host",
+      "duration": 30167.836
+    },
+    {
+      "role": "guest",
+      "duration": 30142.959
+    },
+    {
+      "role": "tv",
+      "duration": 30210.045
+    },
+    {
+      "role": "host",
+      "duration": 30161.741
+    },
+    {
+      "role": "guest",
+      "duration": 30125.856
+    },
+    {
+      "role": "tv",
+      "duration": 30160.182
+    },
+    {
+      "role": "host",
+      "duration": 30099.725
+    },
+    {
+      "role": "guest",
+      "duration": 30132.775
+    },
+    {
+      "role": "tv",
+      "duration": 30284.882
+    },
+    {
+      "role": "host",
+      "duration": 30267.647
+    },
+    {
+      "role": "guest",
+      "duration": 30122.297
+    },
+    {
+      "role": "tv",
+      "duration": 30193.379
+    },
+    {
+      "role": "host",
+      "duration": 30171.563
+    },
+    {
+      "role": "guest",
+      "duration": 30172.163
+    },
+    {
+      "role": "tv",
+      "duration": 30126.759
+    }
+  ],
+  "responseCount": 361,
+  "final": {
+    "code": "PFFK",
+    "version": 240,
+    "game": 1,
+    "hostId": "40d6099f-d055-472c-8608-ec812f6aa397",
+    "phase": "finished",
+    "round": 8,
+    "limit": 12,
+    "phaseEndsAt": 0,
+    "revealAt": 1793428563552,
+    "serverNow": 1793428585414,
+    "players": [
+      {
+        "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+        "name": "Review Ada",
+        "avatar": {
+          "hat": 1,
+          "color": 0
+        },
+        "bot": null,
+        "seat": true,
+        "departed": false,
+        "score": -10,
+        "snaps": 4,
+        "connected": true,
+        "covered": false,
+        "signal": "shrug",
+        "locked": true
+      },
+      {
+        "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+        "name": "Review Grace",
+        "avatar": {
+          "hat": 0,
+          "color": 0
+        },
+        "bot": null,
+        "seat": true,
+        "departed": false,
+        "score": -6,
+        "snaps": 4,
+        "connected": true,
+        "covered": false,
+        "signal": "shrug",
+        "locked": true
+      },
+      {
+        "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+        "name": "Steady Sam",
+        "avatar": {
+          "hat": 0,
+          "color": 2
+        },
+        "bot": "sam",
+        "seat": true,
+        "departed": false,
+        "score": 27,
+        "snaps": 0,
+        "connected": true,
+        "covered": true,
+        "signal": "light",
+        "locked": true
+      },
+      {
+        "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+        "name": "Greedy Gus",
+        "avatar": {
+          "hat": 1,
+          "color": 3
+        },
+        "bot": "gus",
+        "seat": true,
+        "departed": false,
+        "score": 15,
+        "snaps": 2,
+        "connected": true,
+        "covered": true,
+        "signal": "heavy",
+        "locked": true
+      },
+      {
+        "id": "46a1d1e1-0cb2-4885-94b8-cb5cac895dfc",
+        "name": "Late Reviewer",
+        "avatar": {
+          "hat": 0,
+          "color": 0
+        },
+        "bot": null,
+        "seat": false,
+        "departed": false,
+        "score": 0,
+        "snaps": 0,
+        "connected": true,
+        "covered": false,
+        "signal": null,
+        "locked": false
+      }
+    ],
+    "meId": null,
+    "myLoad": null,
+    "history": [
+      {
+        "round": 1,
+        "limit": 15,
+        "total": 11,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 1,
+            "delta": 1,
+            "before": 0,
+            "after": 1,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "heavy",
+            "load": 1,
+            "delta": 1,
+            "before": 0,
+            "after": 1,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 0,
+            "after": 3,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 6,
+            "delta": 6,
+            "before": 0,
+            "after": 6,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "limit": 15,
+        "total": 19,
+        "fits": false,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -3,
+            "before": 1,
+            "after": -2,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -3,
+            "before": 1,
+            "after": -2,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 2,
+            "delta": 2,
+            "before": 3,
+            "after": 5,
+            "blame": false,
+            "salvage": true
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 0,
+            "before": 6,
+            "after": 6,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "limit": 16,
+        "total": 12,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 1,
+            "delta": 1,
+            "before": -2,
+            "after": -1,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "shrug",
+            "load": 3,
+            "delta": 3,
+            "before": -2,
+            "after": 1,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 5,
+            "after": 8,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 6,
+            "after": 11,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "limit": 15,
+        "total": 18,
+        "fits": false,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -3,
+            "before": -1,
+            "after": -4,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -3,
+            "before": 1,
+            "after": -2,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 2,
+            "delta": 2,
+            "before": 8,
+            "after": 10,
+            "blame": false,
+            "salvage": true
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 4,
+            "delta": 0,
+            "before": 11,
+            "after": 11,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "limit": 13,
+        "total": 12,
+        "fits": true,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "light",
+            "load": 1,
+            "delta": 1,
+            "before": -4,
+            "after": -3,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "shrug",
+            "load": 3,
+            "delta": 3,
+            "before": -2,
+            "after": 1,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 3,
+            "before": 10,
+            "after": 13,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 5,
+            "delta": 5,
+            "before": 11,
+            "after": 16,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 6,
+        "limit": 13,
+        "total": 21,
+        "fits": false,
+        "multiplier": 1,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -3,
+            "before": -3,
+            "after": -6,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "heavy",
+            "load": 6,
+            "delta": -3,
+            "before": 1,
+            "after": -2,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 2,
+            "before": 13,
+            "after": 15,
+            "blame": false,
+            "salvage": true
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 6,
+            "delta": -3,
+            "before": 16,
+            "after": 13,
+            "blame": true,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 7,
+        "limit": 12,
+        "total": 10,
+        "fits": true,
+        "multiplier": 2,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 1,
+            "delta": 2,
+            "before": -6,
+            "after": -4,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "shrug",
+            "load": 1,
+            "delta": 2,
+            "before": -2,
+            "after": 0,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "heavy",
+            "load": 4,
+            "delta": 8,
+            "before": 15,
+            "after": 23,
+            "blame": false,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 4,
+            "delta": 8,
+            "before": 13,
+            "after": 21,
+            "blame": false,
+            "salvage": false
+          }
+        ]
+      },
+      {
+        "round": 8,
+        "limit": 12,
+        "total": 21,
+        "fits": false,
+        "multiplier": 2,
+        "entries": [
+          {
+            "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+            "name": "Review Ada",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -6,
+            "before": -4,
+            "after": -10,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+            "name": "Review Grace",
+            "signal": "shrug",
+            "load": 6,
+            "delta": -6,
+            "before": 0,
+            "after": -6,
+            "blame": true,
+            "salvage": false
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+            "name": "Steady Sam",
+            "signal": "light",
+            "load": 3,
+            "delta": 4,
+            "before": 23,
+            "after": 27,
+            "blame": false,
+            "salvage": true
+          },
+          {
+            "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+            "name": "Greedy Gus",
+            "signal": "heavy",
+            "load": 6,
+            "delta": -6,
+            "before": 21,
+            "after": 15,
+            "blame": true,
+            "salvage": false
+          }
+        ]
+      }
+    ],
+    "result": {
+      "round": 8,
+      "limit": 12,
+      "total": 21,
+      "fits": false,
+      "multiplier": 2,
+      "entries": [
+        {
+          "id": "40d6099f-d055-472c-8608-ec812f6aa397",
+          "name": "Review Ada",
+          "signal": "shrug",
+          "load": 6,
+          "delta": -6,
+          "before": -4,
+          "after": -10,
+          "blame": true,
+          "salvage": false
+        },
+        {
+          "id": "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+          "name": "Review Grace",
+          "signal": "shrug",
+          "load": 6,
+          "delta": -6,
+          "before": 0,
+          "after": -6,
+          "blame": true,
+          "salvage": false
+        },
+        {
+          "id": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+          "name": "Steady Sam",
+          "signal": "light",
+          "load": 3,
+          "delta": 4,
+          "before": 23,
+          "after": 27,
+          "blame": false,
+          "salvage": true
+        },
+        {
+          "id": "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+          "name": "Greedy Gus",
+          "signal": "heavy",
+          "load": 6,
+          "delta": -6,
+          "before": 21,
+          "after": 15,
+          "blame": true,
+          "salvage": false
+        }
+      ]
+    },
+    "standings": [
+      "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+      "67c7372f-b488-48d1-92c1-3febd1f18734-1",
+      "77990f35-f67b-47f2-bcc1-c34aa1a2f27e",
+      "40d6099f-d055-472c-8608-ec812f6aa397"
+    ],
+    "winnerIds": [
+      "67c7372f-b488-48d1-92c1-3febd1f18734-0"
+    ],
+    "awards": [
+      {
+        "title": "The Breaker",
+        "icon": "ϟ",
+        "playerId": "40d6099f-d055-472c-8608-ec812f6aa397",
+        "name": "Review Ada",
+        "detail": "Most snaps caused"
+      },
+      {
+        "title": "The Saint",
+        "icon": "✧",
+        "playerId": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+        "name": "Steady Sam",
+        "detail": "Fewest crates loaded"
+      },
+      {
+        "title": "Honest Abe",
+        "icon": "◇",
+        "playerId": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+        "name": "Steady Sam",
+        "detail": "Most truthful signals"
+      },
+      {
+        "title": "Dark Horse",
+        "icon": "♞",
+        "playerId": "67c7372f-b488-48d1-92c1-3febd1f18734-0",
+        "name": "Steady Sam",
+        "detail": "Biggest recovery from behind"
+      }
+    ]
+  },
+  "ledgerCount": 8,
+  "qr": "https://overload-game-5h1w8ls5s-williamjake.vercel.app/room/PFFK",
+  "shareCapabilities": {
+    "canShare": "function",
+    "share": "function",
+    "fileShare": true
+  }
+}

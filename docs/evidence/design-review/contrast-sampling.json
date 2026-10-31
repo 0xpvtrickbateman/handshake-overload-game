@@ -1,0 +1,1142 @@
+[
+  {
+    "screen": "landing",
+    "text": "Overload",
+    "ratio": 11.79,
+    "threshold": 3,
+    "size": 26,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Limit tonight",
+    "ratio": 10.25,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "14 crates",
+    "ratio": 14.32,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Load it up.",
+    "ratio": 14.76,
+    "threshold": 3,
+    "size": 28.5,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Don’t snap the cable.",
+    "ratio": 14.76,
+    "threshold": 3,
+    "size": 28.5,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "How it works",
+    "ratio": 10.36,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Each round,",
+    "ratio": 9.13,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "secretly load 1 to 6 crates.",
+    "ratio": 12.82,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Fits under the limit?",
+    "ratio": 9.69,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Everyone banks their crates.",
+    "ratio": 13.61,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Everyone banks their crates.",
+    "ratio": 13.61,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Too heavy? The cable snaps:",
+    "ratio": 9.78,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 13.73,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 13.87,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Learn it in 15 seconds",
+    "ratio": 11.65,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Play now vs bots",
+    "ratio": 8.79,
+    "threshold": 4.5,
+    "size": 18,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Host a room",
+    "ratio": 13.69,
+    "threshold": 4.5,
+    "size": 16,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Join friends",
+    "ratio": 13.69,
+    "threshold": 4.5,
+    "size": 16,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "landing",
+    "text": "Made for the Handshake × OpenAI challenge",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Live",
+    "ratio": 6.24,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(121, 205, 174)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Room code",
+    "ratio": 9.5,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "PFFK",
+    "ratio": 11.39,
+    "threshold": 3,
+    "size": 40,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Invite friends",
+    "ratio": 12.98,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Who’s bringing too much baggage?",
+    "ratio": 14.76,
+    "threshold": 3,
+    "size": 28,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Who’s bringing too much baggage?",
+    "ratio": 14.76,
+    "threshold": 3,
+    "size": 28,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Each round,",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "secretly load 1 to 6 crates.",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Fits under the limit?",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Everyone banks their crates.",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Too heavy? The cable snaps:",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Review Grace",
+    "ratio": 13.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Host",
+    "ratio": 6.14,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Late Reviewer",
+    "ratio": 13.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Checked in",
+    "ratio": 6.14,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Steady Sam",
+    "ratio": 13.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Steady Sam",
+    "ratio": 13.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Bot",
+    "ratio": 6.14,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Greedy Gus",
+    "ratio": 13.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Greedy Gus",
+    "ratio": 13.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Bot",
+    "ratio": 6.14,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Start the lift",
+    "ratio": 9.14,
+    "threshold": 4.5,
+    "size": 18,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Open the TV view for a big screen",
+    "ratio": 12.35,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "lobby",
+    "text": "Made for the Handshake × OpenAI challenge",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Live",
+    "ratio": 6.24,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(121, 205, 174)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Room",
+    "ratio": 6.04,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "EYQH",
+    "ratio": 13.06,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "8",
+    "ratio": 12.22,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "/8",
+    "ratio": 5.48,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Double points",
+    "ratio": 12.47,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Signal",
+    "ratio": 5.82,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Load",
+    "ratio": 12.47,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Reveal",
+    "ratio": 5.36,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Your secret is safe.",
+    "ratio": 13.53,
+    "threshold": 4.5,
+    "size": 21,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "7",
+    "ratio": 10.96,
+    "threshold": 4.5,
+    "size": 20,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "sec",
+    "ratio": 6.19,
+    "threshold": 4.5,
+    "size": 9,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Limit",
+    "ratio": 14.37,
+    "threshold": 4.5,
+    "size": 10,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "20",
+    "ratio": 13.46,
+    "threshold": 3,
+    "size": 23,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "crates",
+    "ratio": 12.5,
+    "threshold": 4.5,
+    "size": 10,
+    "color": "rgb(42, 14, 20)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Every crate counts",
+    "ratio": 7.02,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Load it up. Don’t snap the cable.",
+    "ratio": 10.88,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "You",
+    "ratio": 12.35,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "21",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "PT",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 9,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Sam",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "21",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "PT",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 9,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Gus",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "31",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "PT",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 9,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Lou",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "9",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "PT",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 9,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "Mel",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 11,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "22",
+    "ratio": 14.76,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "PT",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 9,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "controller",
+    "text": "No pick in time? The porter loads 3 for you.",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "How to play",
+    "ratio": 13.27,
+    "threshold": 3,
+    "size": 28,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Each round,",
+    "ratio": 9.55,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "secretly load 1 to 6 crates.",
+    "ratio": 13.41,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "secretly load 1 to 6 crates.",
+    "ratio": 13.55,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Fits under the limit?",
+    "ratio": 9.74,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Everyone banks their crates.",
+    "ratio": 13.68,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Everyone banks their crates.",
+    "ratio": 13.75,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Too heavy? The cable snaps:",
+    "ratio": 9.84,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 13.82,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 13.88,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "the heaviest loader loses 3, the lightest gets +2.",
+    "ratio": 13.94,
+    "threshold": 4.5,
+    "size": 15,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Signals",
+    "ratio": 11.89,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Before loading, everyone shows Going light, Going heavy or Shrug. It’s a promise you don’t",
+    "ratio": 10.11,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Before loading, everyone shows Going light, Going heavy or Shrug. It’s a promise you don’t",
+    "ratio": 10.16,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Before loading, everyone shows Going light, Going heavy or Shrug. It’s a promise you don’t",
+    "ratio": 10.2,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Timing",
+    "ratio": 12.1,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "5 seconds to signal, 10 to load. No pick in time? The porter loads 3.",
+    "ratio": 10.43,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "5 seconds to signal, 10 to load. No pick in time? The porter loads 3.",
+    "ratio": 10.48,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Ties",
+    "ratio": 12.35,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Every tied heaviest loader loses 3 and every tied lightest loader gets +2.",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Every tied heaviest loader loses 3 and every tied lightest loader gets +2.",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Winning",
+    "ratio": 12.35,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(242, 212, 145)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "8 rounds. The last two count double. Most points wins; fewer blames breaks a tie.",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "8 rounds. The last two count double. Most points wins; fewer blames breaks a tie.",
+    "ratio": 10.51,
+    "threshold": 4.5,
+    "size": 14,
+    "color": "rgb(215, 197, 166)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Keyboard:",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "L",
+    "ratio": 13.52,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "H",
+    "ratio": 13.52,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "S",
+    "ratio": 13.52,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "to signal,",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "1",
+    "ratio": 13.52,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "–",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "6",
+    "ratio": 13.52,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "to pick,",
+    "ratio": 6.55,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "to pick,",
+    "ratio": 7.49,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "Enter",
+    "ratio": 16.94,
+    "threshold": 4.5,
+    "size": 12,
+    "color": "rgb(245, 233, 208)",
+    "opacity": 1,
+    "pass": true
+  },
+  {
+    "screen": "rules",
+    "text": "to lock in.",
+    "ratio": 7.52,
+    "threshold": 4.5,
+    "size": 13,
+    "color": "rgb(174, 154, 130)",
+    "opacity": 1,
+    "pass": true
+  }
+]
