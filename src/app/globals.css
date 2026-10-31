@@ -1605,6 +1605,10 @@ footer {
   text-shadow: 0 1px 6px #000;
   white-space: nowrap;
 }
+.snapped.spotlit .capacity-plate,
+.snapped.spotlit .weight-gauge {
+  z-index: 5;
+}
 .fits.scored .verdict {
   background: transparent;
 }
@@ -2014,6 +2018,7 @@ footer {
   .blame-scene {
     inset: 44px 4px 24px;
     gap: 2px;
+    padding-top: 40px;
   }
   .blame-avatars .avatar {
     width: 34px;
@@ -2021,7 +2026,7 @@ footer {
   }
   .blame-stamp {
     font-size: 21px;
-    margin: 2px 0;
+    margin: 8px 0 2px;
   }
   .blame-scene > p {
     font-size: 13px;
@@ -2734,6 +2739,82 @@ footer {
 }
 .tv-root .podium-place > b {
   font-size: 20px;
+}
+
+@media (max-height: 900px) {
+  .tv-root .room-toolbar {
+    height: 64px;
+  }
+  .tv-root .controller {
+    height: calc(100svh - 64px);
+    grid-template-rows: 28px 68px minmax(260px, 1fr) 80px 96px;
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+  .tv-controller .phase-heading h2 {
+    font-size: 32px;
+  }
+  .tv-controller .timer {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+  .tv-controller .weight-gauge {
+    width: 170px;
+    top: 10px;
+  }
+  .tv-controller .capacity-plate {
+    top: 60px;
+    left: 40px;
+    min-width: 90px;
+  }
+  .tv-controller .capacity-plate strong {
+    font-size: 40px;
+  }
+  .tv-controller .capacity-plate small,
+  .tv-controller .capacity-plate > span {
+    font-size: 14px;
+  }
+  .tv-controller .verdict.verdict-small {
+    inset: 68px 40px auto auto;
+  }
+  .tv-controller .verdict.verdict-small strong {
+    font-size: 38px;
+  }
+  .tv-controller .verdict.verdict-small .verdict-short {
+    font-size: 18px;
+  }
+  .tv-controller .blame-scene {
+    inset: 150px 24px 36px;
+    gap: 4px;
+    padding-top: 0;
+  }
+  .tv-controller .blame-avatars .avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .tv-controller .blame-avatars span {
+    font-size: 13px;
+  }
+  .tv-controller .blame-stamp {
+    font-size: 36px;
+    margin: 10px 0 4px;
+  }
+  .tv-controller .blame-scene > p {
+    font-size: 20px;
+  }
+  .tv-controller .salvage-line {
+    font-size: 16px;
+  }
+  .tv-controller .player-rail .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .tv-message .room-qr.compact canvas {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* ───────────────────────── Motion ───────────────────────── */
