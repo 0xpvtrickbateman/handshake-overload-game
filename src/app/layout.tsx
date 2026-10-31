@@ -1,5 +1,17 @@
 import type { Metadata, Viewport } from 'next';
+import { Jost, Limelight } from 'next/font/google';
 import './globals.css';
+const display = Limelight({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+const sans = Jost({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 export const metadata: Metadata = {
   title: 'OVERLOAD — Load it up. Don’t snap the cable.',
   description:
@@ -15,12 +27,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#28191c',
+  themeColor: '#1d0b0f',
   viewportFit: 'cover',
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   );

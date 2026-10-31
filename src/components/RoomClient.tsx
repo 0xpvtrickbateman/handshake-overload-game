@@ -14,6 +14,7 @@ import { SoundToggle } from './Sound';
 import { RoomQR, InviteButton } from './RoomQR';
 import { Results } from './Results';
 import { playSound } from '@/client/sound';
+import { Icon, SIGNAL_ICONS } from './Icon';
 
 type Send = (action: Action) => Promise<Snapshot>;
 export function RoomClient({ code, tv = false }: { code: string; tv?: boolean }) {
@@ -36,9 +37,9 @@ export function RoomClient({ code, tv = false }: { code: string; tv?: boolean })
     return (
       <main className="reconnect-shell">
         <Brand />
-        <div className="skeleton lift-skeleton" />
-        <h2>Your lift is arriving.</h2>
-        <p>{error || 'The desk is finding your room…'}</p>
+        <div className="skeleton lift-skeleton" aria-hidden="true" />
+        <h2>Your lift is arriving</h2>
+        <p role="status">{error || 'Finding room ' + code + '…'}</p>
         <Link className="secondary" href="/">
           Back to the desk
         </Link>
@@ -47,14 +48,23 @@ export function RoomClient({ code, tv = false }: { code: string; tv?: boolean })
   if (!state.meId && !tv)
     return (
       <main className="join-page">
-        <Brand />
-        <p className="eyebrow">ROOM {code}</p>
-        <h1>{state.phase === 'lobby' ? 'You’re on the list.' : 'Take a front-row seat.'}</h1>
-        <p>
-          {state.phase === 'lobby'
-            ? 'Choose a name and a hat. We’ll handle the cargo.'
-            : 'Watch this game. You’ll be seated for the next one.'}
+        <header className="site-header">
+          <Brand small />
+          <div className="header-tools">
+            <SoundToggle />
+            <Rules />
+          </div>
+        </header>
+        <p className="room-tag">
+          Room <b>{code}</b>
         </p>
+        <h1>{state.phase === 'lobby' ? 'You’re on the list' : 'Take a front-row seat'}</h1>
+        <p className="join-lede">
+          {state.phase === 'lobby'
+            ? 'Pick a name and a hat, then wait for the host to start.'
+            : 'This game is underway. Watch it now and you’ll get a seat for the next one.'}
+        </p>
+        <RuleLines className="compact" />
         <GuestForm
           label={state.phase === 'lobby' ? 'Join the lift' : 'Watch & join next game'}
           onSubmit={(name, avatar) => void send({ type: 'join', name, avatar }).catch(() => {})}
@@ -74,15 +84,16 @@ export function RoomClient({ code, tv = false }: { code: string; tv?: boolean })
           <Brand small />
           <span
             className={`connection ${connected ? '' : 'offline'}`}
-            title={connected ? 'Live connection' : 'Reconnecting; seat saved'}
+            title={connected ? 'Live connection' : 'Reconnecting. Your seat is saved.'}
+            role="status"
           >
-            {connected ? 'LIVE' : 'REJOINING'}
+            {connected ? 'Live' : 'Rejoining'}
           </span>
           <SoundToggle />
           <Rules />
           {tv ? (
             <Link className="icon-button" href="/" aria-label="Leave TV view">
-              ↗
+              <Icon name="leave" size={18} />
             </Link>
           ) : (
             <button
@@ -91,7 +102,7 @@ export function RoomClient({ code, tv = false }: { code: string; tv?: boolean })
               disabled={leaving}
               onClick={() => void leave()}
             >
-              ↗
+              <Icon name="leave" size={18} />
             </button>
           )}
         </div>
@@ -115,29 +126,22 @@ function Lobby({ state, send, tv }: { state: Snapshot; send: Send; tv: boolean }
   const seats = state.players.filter((p) => p.seat),
     host = state.meId === state.hostId;
   return (
-    <section className="lobby">
-      <p className="eyebrow">YOUR PRIVATE FREIGHT LIFT</p>
+    <section className="lobby" data-crowded={seats.length >= 6}>
       <div className="room-code">
-        <span>ROOM</span>
+        <span>Room code</span>
         <strong>{state.code}</strong>
         <InviteButton code={state.code} />
         <RoomQR code={state.code} compact />
       </div>
-      <h1>
-        Who’s bringing
-        <br />
-        <em>too much baggage?</em>
-      </h1>
-      <RuleLines />
+      <h1>Who’s bringing too much baggage?</h1>
+      <RuleLines className="compact" />
       <div className="guest-list">
         {seats.map((p) => (
           <div className="guest-row" key={p.id}>
             <Avatar avatar={p.avatar} />
             <div>
               <b>{p.name}</b>
-              <small>
-                {p.bot ? 'HOTEL REGULAR · BOT' : p.id === state.hostId ? 'HOST' : 'CHECKED IN'}
-              </small>
+              <small>{p.bot ? 'Bot' : p.id === state.hostId ? 'Host' : 'Checked in'}</small>
             </div>
             {p.bot && host && !tv && (
               <button
@@ -145,7 +149,7 @@ function Lobby({ state, send, tv }: { state: Snapshot; send: Send; tv: boolean }
                 aria-label={`Remove ${p.name}`}
                 onClick={() => void send({ type: 'remove-bot', id: p.id }).catch(() => {})}
               >
-                −
+                <Icon name="minus" size={14} strokeWidth={2.4} />
               </button>
             )}
           </div>
@@ -173,7 +177,7 @@ function Lobby({ state, send, tv }: { state: Snapshot; send: Send; tv: boolean }
                   }).catch(() => {});
               }}
             >
-              <option value="">+ Add a regular</option>
+              <option value="">Add a bot…</option>
               {BOT_ORDER.map((b) => (
                 <option key={b} value={b}>
                   {BOT_NAMES[b]}
@@ -186,14 +190,16 @@ function Lobby({ state, send, tv }: { state: Snapshot; send: Send; tv: boolean }
             disabled={seats.length < 2}
             onClick={() => void send({ type: 'start' }).catch(() => {})}
           >
-            Start the lift <span>{seats.length}/8 guests ↟</span>
+            Start the lift <span className="button-meta">{seats.length} of 8 guests</span>
           </button>
         </>
       ) : (
-        <p className="waiting">Waiting for the host. Get your story straight.</p>
+        <p className="waiting" role="status">
+          Waiting for the host to start. Get your story straight.
+        </p>
       )}
       <Link className="tv-link" href={`/tv/${state.code}`} target="_blank">
-        Open big-screen TV view ↗
+        <Icon name="tv" size={16} /> Open the TV view for a big screen
       </Link>
       <Footer />
     </section>
@@ -270,24 +276,34 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
     >
       <div className="round-strip">
         <span>
-          ROOM <b>{state.code}</b>
+          Room <b>{state.code}</b>
         </span>
-        <span>
-          LIFT <b>{String(state.round).padStart(2, '0')}</b> / 08
+        <span className="round-count" aria-label={`Round ${state.round} of 8`}>
+          {Array.from({ length: 8 }, (_, i) => (
+            <i
+              key={i}
+              className={i + 1 < state.round ? 'done' : i + 1 === state.round ? 'now' : ''}
+            />
+          ))}
+          <b>{state.round}</b>/8
         </span>
         <span className={state.round >= 7 ? 'double active' : 'double'}>
-          {state.round >= 7 ? 'Final two rounds count double' : 'LAST TWO ×2'}
+          {state.round >= 7 ? 'Double points' : 'Last two ×2'}
         </span>
       </div>
       <div className="phase-heading">
         <div>
-          <p className="eyebrow">
-            {reveal
-              ? 'THE MOMENT OF TRUTH'
-              : state.phase === 'signal'
-                ? '01 / SAY SOMETHING'
-                : '02 / LOAD IN SECRET'}
-          </p>
+          <ol className="phase-track" aria-label="Round steps">
+            {(['signal', 'load', 'reveal'] as const).map((phase) => (
+              <li
+                key={phase}
+                aria-current={state.phase === phase ? 'step' : undefined}
+                className={state.phase === phase ? 'now' : ''}
+              >
+                {phase === 'signal' ? 'Signal' : phase === 'load' ? 'Load' : 'Reveal'}
+              </li>
+            ))}
+          </ol>
           <h2>
             {reveal
               ? revealing
@@ -301,12 +317,16 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
                 ? 'What’s your story?'
                 : me?.locked
                   ? 'Your secret is safe.'
-                  : 'How much do you dare?'}
+                  : 'How many crates?'}
           </h2>
         </div>
-        <div className="timer" role="timer" aria-label={`${countdown} seconds remaining`}>
+        <div
+          className={`timer ${countdown <= 3 && !reveal ? 'urgent' : ''}`}
+          role="timer"
+          aria-label={`${countdown} seconds remaining`}
+        >
           {countdown}
-          <small>SEC</small>
+          <small>sec</small>
         </div>
       </div>
       <ElevatorStage state={state} now={now} />
@@ -321,19 +341,35 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
             >
               <div className="avatar-wrap">
                 <Avatar avatar={p.avatar} size={32} />
-                <span className="player-state">
-                  {reveal && revealing && elapsed >= timing.verdict
-                    ? entry?.blame
-                      ? '−'
-                      : entry?.salvage
-                        ? '+'
-                        : '✓'
-                    : p.locked
-                      ? '✓'
-                      : (SIGNALS.find((s) => s.id === p.signal)?.icon ?? '·')}
+                <span
+                  className={`player-state ${
+                    reveal && revealing && elapsed >= timing.verdict
+                      ? entry?.blame
+                        ? 'blame'
+                        : entry?.salvage
+                          ? 'salvage'
+                          : 'ok'
+                      : p.locked
+                        ? 'locked'
+                        : p.signal
+                          ? 'signalled'
+                          : 'idle'
+                  }`}
+                >
+                  {reveal && revealing && elapsed >= timing.verdict ? (
+                    <Icon
+                      name={entry?.blame ? 'minus' : entry?.salvage ? 'plus' : 'check'}
+                      size={10}
+                      strokeWidth={3}
+                    />
+                  ) : p.locked ? (
+                    <Icon name="check" size={10} strokeWidth={3} />
+                  ) : p.signal ? (
+                    <Icon name={SIGNAL_ICONS[p.signal]} size={10} strokeWidth={2.6} />
+                  ) : null}
                 </span>
               </div>
-              <b>{p.id === me?.id ? 'YOU' : p.name.split(' ').at(-1)?.slice(0, 7)}</b>
+              <b>{p.id === me?.id ? 'You' : p.name.split(' ').at(-1)?.slice(0, 7)}</b>
               <span data-player-score={p.id}>
                 {reveal && !scored ? (entry?.before ?? p.score) : p.score}
                 <small> PT</small>
@@ -345,7 +381,6 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
                 >
                   {entry.delta > 0 ? '+' : ''}
                   {entry.delta}
-                  {entry.salvage ? ' ✧' : ''}
                 </span>
               )}
             </div>
@@ -354,7 +389,12 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
       </div>
       {!tv ? (
         <>
-          <div className="signal-chips" data-testid="signal-chips">
+          <div
+            className={`signal-chips ${state.phase === 'signal' && me?.seat ? 'is-active' : ''}`}
+            data-testid="signal-chips"
+            role="group"
+            aria-label="Signal your plan"
+          >
             {SIGNALS.map((s) => (
               <button
                 key={s.id}
@@ -369,14 +409,15 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
                   }).catch(() => {})
                 }
               >
-                <span>{s.icon}</span>
+                <Icon name={SIGNAL_ICONS[s.id]} size={18} strokeWidth={2.2} />
                 {s.label}
               </button>
             ))}
           </div>
           <div
-            className="crate-picker"
+            className={`crate-picker ${canLoad ? 'is-active' : ''}`}
             data-testid="crate-picker"
+            role="group"
             aria-label="Choose your secret load"
           >
             {[1, 2, 3, 4, 5, 6].map((n) => (
@@ -393,37 +434,39 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
           </div>
           <button
             data-testid="lock-button"
-            className="primary lock-button"
+            className={`primary lock-button ${me?.locked ? 'is-locked' : ''}`}
             disabled={!canLoad}
             onClick={() => void lock().catch(() => {})}
           >
+            {(me?.locked || canLoad) && (
+              <Icon name={me?.locked ? 'check' : 'lock'} size={18} strokeWidth={2.2} />
+            )}
             {!me?.seat
-              ? 'Spectating · seated next game'
+              ? 'Watching. You’re seated next game.'
               : reveal
                 ? 'The cable has spoken'
                 : state.phase === 'signal'
-                  ? 'Pick a signal first'
+                  ? 'Signal first, then load'
                   : me?.locked
-                    ? `${state.myLoad} crates locked ✓`
+                    ? `${state.myLoad} ${state.myLoad === 1 ? 'crate' : 'crates'} locked`
                     : pending
-                      ? 'Sealing your load…'
+                      ? 'Locking in…'
                       : `Lock in ${pick} ${pick === 1 ? 'crate' : 'crates'}`}
-            <span>{!me?.locked && state.phase === 'load' ? '↟' : ''}</span>
           </button>
           <p className="controller-note">
             {reveal
-              ? 'Next lift leaves automatically.'
+              ? 'The next round starts automatically.'
               : state.phase === 'signal'
-                ? 'A promise? A bluff? Nobody can hold you to it.'
-                : 'No pick by the bell? The porter loads 3.'}
+                ? 'Everyone sees your signal. Nobody can hold you to it.'
+                : 'No pick in time? The porter loads 3 for you.'}
           </p>
         </>
       ) : (
         <div className="tv-message">
           <div>
-            <h2>The lift is better with company.</h2>
+            <h2>The lift is better with company</h2>
             <p>
-              Scan to play on your phone · Room <b>{state.code}</b>
+              Scan to play on your phone, or enter room <b>{state.code}</b>
             </p>
           </div>
           <RoomQR code={state.code} compact />

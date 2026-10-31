@@ -6,24 +6,29 @@ import { api } from '@/client/connection';
 import { Brand } from './Brand';
 import { SoundToggle } from './Sound';
 import { ElevatorStage } from './ElevatorStage';
+import { Rules } from './Rules';
+import { Icon, type IconName } from './Icon';
 const lessons = [
   {
     title: 'Room for a little ambition.',
     text: '12 crates. Limit 14. It fits! Everyone banks exactly what they loaded.',
-    label: 'FIT → BANK YOUR CRATES',
-    icon: '↟',
+    label: 'Fit → bank your crates',
+    icon: 'check' as IconName,
+    tone: 'fit',
   },
   {
     title: 'Meet the blame game.',
     text: '16 crates. Limit 14. Snap! Nobody banks. Gus loaded the most, so he loses 3.',
-    label: 'SNAP → HEAVIEST LOSES 3',
-    icon: 'ϟ',
+    label: 'Snap → heaviest loses 3',
+    icon: 'bolt' as IconName,
+    tone: 'snap',
   },
   {
     title: 'Travel light. Land on your feet.',
     text: 'The lift snapped, but you packed the least. Salvage +2 while the greedy guest pays.',
-    label: 'LIGHTEST → SALVAGE +2',
-    icon: '✧',
+    label: 'Lightest → salvage +2',
+    icon: 'feather' as IconName,
+    tone: 'salvage',
   },
 ];
 export function Practice({ scenes }: { scenes: Snapshot[] }) {
@@ -68,37 +73,43 @@ export function Practice({ scenes }: { scenes: Snapshot[] }) {
   });
   return (
     <main className="practice-page">
-      <header>
+      <header className="site-header">
         <Brand small />
-        <SoundToggle />
+        <div className="header-tools">
+          <SoundToggle />
+          <Rules />
+        </div>
       </header>
       <div className="practice-heading">
-        <p className="eyebrow">ROUND 0 · THE PORTER’S CRASH COURSE</p>
+        <p className="practice-step">Practice round, lesson {index + 1} of 3</p>
         <h1>{lesson.title}</h1>
       </div>
       <ElevatorStage key={index} state={scenes[index]} now={local} practice />
-      <div className="practice-callout">
-        <span>{lesson.icon}</span>
+      <div className={`practice-callout ${lesson.tone}`} aria-live="polite">
+        <span className="callout-icon">
+          <Icon name={lesson.icon} size={24} strokeWidth={2.2} />
+        </span>
         <div>
           <b>{lesson.label}</b>
           <p>{lesson.text}</p>
         </div>
       </div>
-      <div className="practice-progress">
+      <div className="practice-progress" aria-hidden="true">
         {lessons.map((_, i) => (
-          <i className={i <= index ? 'done' : ''} key={i} />
+          <i className={i < index ? 'done' : i === index ? 'now' : ''} key={i}>
+            {i === index && <span style={{ animationDuration: '5s' }} />}
+          </i>
         ))}
       </div>
       <button className="primary" disabled={busy} onClick={() => void play()}>
         {busy
           ? 'Your first real lift is arriving…'
           : index === 2
-            ? 'Got it. Let’s play.'
-            : 'Skip practice & play'}
-        <span>↗</span>
+            ? 'Got it. Let’s play'
+            : 'Skip practice and play'}
       </button>
       <p className="controller-note">
-        {error || '15 seconds. Three lessons. Then the real thing.'}
+        {error || 'Your first real game starts on its own after lesson 3.'}
       </p>
     </main>
   );

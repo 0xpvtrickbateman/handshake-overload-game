@@ -1,11 +1,13 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { Action, Snapshot } from '@/game/types';
 import { SIGNALS } from '@/game/rules';
 import { resultsImage } from '@/client/share-image';
 import { Avatar } from './Avatar';
 import { Footer } from './Brand';
+import { AWARD_ICONS, Icon } from './Icon';
+import { Modal } from './Modal';
 export function Results({
   state,
   send,
@@ -19,13 +21,14 @@ export function Results({
     first = players[0];
   const winners = players.filter((p) => state.winnerIds.includes(p.id));
   const [recap, setRecap] = useState(false),
-    [shareLabel, setShareLabel] = useState('Share the evidence ↗'),
+    [shareLabel, setShareLabel] = useState('Share the evidence'),
     [blob, setBlob] = useState<Blob | null>(null);
   useEffect(() => {
     void resultsImage(state)
       .then(setBlob)
       .catch(() => {});
   }, [state]);
+  const closeRecap = useCallback(() => setRecap(false), []);
   async function share() {
     try {
       const image = blob ?? (await resultsImage(state));
@@ -39,19 +42,18 @@ export function Results({
         a.download = file.name;
         a.click();
         setTimeout(() => URL.revokeObjectURL(url), 1000);
-        setShareLabel('Results image saved ✓');
+        setShareLabel('Results image saved');
       }
     } catch (e) {
-      if ((e as Error).name !== 'AbortError') setShareLabel('Try sharing again ↗');
+      if ((e as Error).name !== 'AbortError') setShareLabel('Couldn’t share. Try again');
     }
   }
   return (
     <section className="results">
-      <p className="eyebrow">EIGHT LIFTS. A FEW BROKEN PROMISES.</p>
+      <p className="results-kicker">Final standings after 8 rounds</p>
       <h1>
-        {winners.map((p) => p.name).join(' & ')}
-        <br />
-        <em>{winners.length > 1 ? 'share the penthouse.' : 'takes the penthouse.'}</em>
+        <span className="winner-name">{winners.map((p) => p.name).join(' & ')}</span>{' '}
+        {winners.length > 1 ? 'share the penthouse' : 'takes the penthouse'}
       </h1>
       <div className="podium">
         {[1, 0, 2]
@@ -60,13 +62,13 @@ export function Results({
             const p = players[i];
             return (
               <div className={`podium-place place-${i + 1}`} key={p.id}>
-                <span className="podium-crown">{i === 0 ? '♛' : ''}</span>
+                <span className="podium-crown">{i === 0 && <Icon name="crown" size={28} />}</span>
                 <Avatar avatar={p.avatar} size={i === 0 ? 62 : 48} />
                 <b>{p.name}</b>
                 <div>
                   <strong>{p.score}</strong>
-                  <small>POINTS</small>
-                  <span>{i + 1}</span>
+                  <small>points</small>
+                  <span className="podium-rank">{['1st', '2nd', '3rd'][i]}</span>
                 </div>
               </div>
             );
@@ -75,7 +77,9 @@ export function Results({
       <div className="award-grid">
         {state.awards.map((a) => (
           <div className="award-card" key={a.title}>
-            <span>{a.icon}</span>
+            <span className="award-icon">
+              <Icon name={AWARD_ICONS[a.title] ?? 'diamond'} size={22} />
+            </span>
             <div>
               <small>{a.title}</small>
               <b>{a.name}</b>
@@ -90,7 +94,8 @@ export function Results({
             className="primary"
             onClick={() => void send({ type: 'rematch' }).catch(() => {})}
           >
-            One more lift? <span>Rematch ↻</span>
+            One more lift? <span className="button-meta">Rematch</span>
+            <Icon name="rematch" size={18} strokeWidth={2.2} />
           </button>
         )}
         <div className="split-actions">
@@ -98,79 +103,77 @@ export function Results({
             Open the guest ledger
           </button>
           <button className="secondary" onClick={() => void share()}>
+            <Icon name="share" size={16} />
             {shareLabel}
           </button>
         </div>
       </div>
       <p className="result-note">
-        {first.snaps} blamed {first.snaps === 1 ? 'snap' : 'snaps'} for the winner. A stay to
-        remember.
+        The winner took the blame for {first.snaps} {first.snaps === 1 ? 'snap' : 'snaps'}. A stay
+        to remember.
       </p>
       <Link className="text-link" href="/">
         Back to the hotel
       </Link>
       <Footer />
       {recap && (
-        <div className="modal-backdrop">
-          <section
-            className="modal ledger"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Round-by-round guest ledger"
-          >
-            <button className="close" aria-label="Close ledger" onClick={() => setRecap(false)}>
-              ×
-            </button>
-            <p className="eyebrow">THE HOTEL KEEPS RECEIPTS</p>
-            <h2>The guest ledger</h2>
-            <div className="final-scores">
-              {players.map((p, i) => (
-                <div key={p.id}>
-                  <b>{i + 1}</b>
-                  <Avatar avatar={p.avatar} size={28} />
-                  <span>{p.name}</span>
-                  <strong>{p.score}</strong>
-                  <small>{p.snaps} blame</small>
+        <Modal
+          label="Round-by-round guest ledger"
+          closeLabel="Close ledger"
+          onClose={closeRecap}
+          className="ledger"
+        >
+          <h2>The guest ledger</h2>
+          <p className="modal-lede">Every round, every load, every broken promise.</p>
+          <div className="final-scores">
+            {players.map((p, i) => (
+              <div key={p.id}>
+                <b>{i + 1}</b>
+                <Avatar avatar={p.avatar} size={28} />
+                <span>{p.name}</span>
+                <strong>{p.score}</strong>
+                <small>
+                  {p.snaps} {p.snaps === 1 ? 'blame' : 'blames'}
+                </small>
+              </div>
+            ))}
+          </div>
+          {state.history.map((r) => (
+            <details key={r.round} className="round-ledger">
+              <summary>
+                <b>
+                  Round {r.round}
+                  {r.multiplier === 2 ? ' ×2' : ''}
+                </b>
+                <span>
+                  {r.total} of {r.limit}
+                </span>
+                <strong className={r.fits ? 'fit-text' : 'snap-text'}>
+                  {r.fits ? 'Fit' : 'Snap'}
+                </strong>
+              </summary>
+              <div className="ledger-columns">
+                <span>Guest and signal</span>
+                <span>Load</span>
+                <span>Points</span>
+              </div>
+              {r.entries.map((e) => (
+                <div className="ledger-row" key={e.id}>
+                  <div>
+                    <b>{e.name}</b>
+                    <small>{SIGNALS.find((s) => s.id === e.signal)?.label}</small>
+                  </div>
+                  <strong>{e.load}</strong>
+                  <span className={e.delta < 0 ? 'snap-text' : 'fit-text'}>
+                    {e.delta > 0 ? '+' : ''}
+                    {e.delta}
+                    {e.blame ? ' blame' : e.salvage ? ' lightest' : ''}
+                  </span>
                 </div>
               ))}
-            </div>
-            {state.history.map((r) => (
-              <details key={r.round} className="round-ledger">
-                <summary>
-                  <b>
-                    Lift {r.round}
-                    {r.multiplier === 2 ? ' ×2' : ''}
-                  </b>
-                  <span>
-                    {r.total} / {r.limit}
-                  </span>
-                  <strong className={r.fits ? 'fit-text' : 'snap-text'}>
-                    {r.fits ? 'FIT' : 'SNAP'}
-                  </strong>
-                </summary>
-                <div className="ledger-columns">
-                  <span>GUEST / SIGNAL</span>
-                  <span>LOAD</span>
-                  <span>POINTS</span>
-                </div>
-                {r.entries.map((e) => (
-                  <div className="ledger-row" key={e.id}>
-                    <div>
-                      <b>{e.name}</b>
-                      <small>{SIGNALS.find((s) => s.id === e.signal)?.label}</small>
-                    </div>
-                    <strong>{e.load}</strong>
-                    <span className={e.delta < 0 ? 'snap-text' : 'fit-text'}>
-                      {e.delta > 0 ? '+' : ''}
-                      {e.delta}
-                      {e.blame ? ' BLAME' : e.salvage ? ' SAVE' : ''}
-                    </span>
-                  </div>
-                ))}
-              </details>
-            ))}
-          </section>
-        </div>
+            </details>
+          ))}
+        </Modal>
       )}
     </section>
   );

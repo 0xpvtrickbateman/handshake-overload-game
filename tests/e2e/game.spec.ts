@@ -116,7 +116,7 @@ test('two humans and TV complete eight synchronized lifts, refresh, leave, and r
   await expect(host.locator('.round-ledger')).toHaveCount(8);
   await host.getByRole('button', { name: 'Close ledger' }).click();
   const download = host.waitForEvent('download');
-  await host.getByRole('button', { name: 'Share the evidence ↗' }).click();
+  await host.getByRole('button', { name: 'Share the evidence' }).click();
   const image = await download;
   expect(image.suggestedFilename()).toBe('OVERLOAD-' + code + '.png');
   await image.saveAs(info.outputPath('results.png'));

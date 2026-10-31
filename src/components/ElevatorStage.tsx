@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import type { Snapshot } from '@/game/types';
 import { playSound } from '@/client/sound';
 import { Avatar } from './Avatar';
+import { Dial } from './Dial';
 export function revealTiming(state: Snapshot) {
   const scale = Math.min(1, Math.max(0.1, (state.phaseEndsAt - state.revealAt) / 10200));
   const seats = state.players.filter((p) => p.seat).length;
@@ -75,11 +76,10 @@ export function ElevatorStage({
     result?.fits,
     salvaged.length,
   ]);
-  const needle = -85 + (Math.min(1.25, total / state.limit) / 1.25) * 170;
   return (
     <div
       data-testid="elevator-stage"
-      className={`elevator-stage choreographed ${verdict ? (result?.fits ? 'fits' : 'snapped') : ''} ${spotlight ? 'spotlit' : ''} ${scored ? 'scored' : ''}`}
+      className={`elevator-stage choreographed ${practice ? 'practice-stage' : ''} ${verdict ? (result?.fits ? 'fits' : 'snapped') : ''} ${spotlight ? 'spotlit' : ''} ${scored ? 'scored' : ''}`}
       style={
         {
           '--motion-time': `${timing.scale}s`,
@@ -87,37 +87,28 @@ export function ElevatorStage({
         } as React.CSSProperties
       }
     >
-      <div className="stage-crown">
-        THE GRAND <span>{practice ? 'PRACTICE LIFT · ROUND 0' : 'FREIGHT № 01'}</span>
-      </div>
+      <div className="shaft" aria-hidden="true" />
       <div className="cable" />
       <div className="capacity-plate">
-        <small>WEIGHT LIMIT</small>
+        <small>Limit</small>
         <strong>{state.limit}</strong>
-        <span>CRATES</span>
+        <span>crates</span>
       </div>
-      <div className="weight-gauge" aria-label={`${total} of ${state.limit} crates on the lift`}>
-        <svg viewBox="0 0 150 90" aria-hidden="true">
-          <path d="M15 73A60 60 0 0 1 135 73" fill="#1c1619" stroke="#c6a66c" strokeWidth="2" />
-          <path d="M122 35A60 60 0 0 1 135 73" fill="none" stroke="#c56b65" strokeWidth="7" />
-          {[-80, -50, -20, 10, 40, 70].map((a) => (
-            <path
-              key={a}
-              d="M75 16v7"
-              stroke="#d3b579"
-              strokeWidth="1"
-              transform={`rotate(${a} 75 73)`}
-            />
-          ))}
-          <path
-            d="M75 73V25"
-            stroke={total > state.limit ? '#ef998c' : '#ead1a0'}
-            strokeWidth="3"
-            transform={`rotate(${needle} 75 73)`}
-          />
-          <circle cx="75" cy="73" r="5" fill="#d3b579" />
-        </svg>
-        <span>{isReveal ? `${total} / ${state.limit}` : 'EVERY CRATE COUNTS'}</span>
+      <div
+        className="weight-gauge"
+        role="img"
+        aria-label={`${total} of ${state.limit} crates on the lift`}
+      >
+        <Dial value={total} limit={state.limit} />
+        <span className={isReveal ? 'gauge-readout live' : 'gauge-readout'}>
+          {isReveal ? (
+            <>
+              <b>{total}</b> aboard
+            </>
+          ) : (
+            'Every crate counts'
+          )}
+        </span>
       </div>
       <div className="platform">
         <div className="platform-crates">
@@ -138,11 +129,13 @@ export function ElevatorStage({
                   <>
                     <b>{entry?.load}</b>
                     <small>
-                      {p.id === state.meId ? 'YOU' : p.name.split(' ').at(-1)?.slice(0, 5)}
+                      {p.id === state.meId ? 'You' : p.name.split(' ').at(-1)?.slice(0, 5)}
                     </small>
                   </>
                 ) : (
-                  '?'
+                  <span className="mystery" aria-hidden="true">
+                    ?
+                  </span>
                 )}
               </div>
             );
@@ -154,7 +147,7 @@ export function ElevatorStage({
         <div className="recap-label">
           {elapsed < timing.firstDrop
             ? 'Promises made. Cargo incoming.'
-            : `${dropCount} OF ${seats.length} GUESTS LOADED`}
+            : `${dropCount} of ${seats.length} guests loaded`}
         </div>
       )}
       {verdict && result && (
@@ -164,7 +157,7 @@ export function ElevatorStage({
         >
           <strong>{result.fits ? 'IT FITS!' : 'SNAP!'}</strong>
           <span>
-            {result.total} / {result.limit} crates
+            {result.total} crates on a {result.limit}-crate limit
           </span>
         </div>
       )}
@@ -189,11 +182,11 @@ export function ElevatorStage({
             <b>−{3 * (result?.multiplier ?? 1)}</b>
           </p>
           <span className="salvage-line">
-            ✧{' '}
+            Lightest:{' '}
             {salvaged.length > 2
-              ? `${salvaged.length} light packers`
+              ? `${salvaged.length} guests`
               : salvaged.map((e) => e.name).join(' & ')}{' '}
-            salvaged +{2 * (result?.multiplier ?? 1)}
+            <b>+{2 * (result?.multiplier ?? 1)}</b>
           </span>
         </div>
       )}
@@ -201,14 +194,16 @@ export function ElevatorStage({
       <div className="closing-door right" />
       <div className="stage-floor">
         {scored
-          ? 'LEDGER UPDATED · NEXT LIFT COMING'
+          ? 'Scores updated. Next lift is on its way.'
           : verdict
             ? result?.fits
-              ? 'THE CABLE LIVES ANOTHER ROUND.'
-              : 'NOBODY BANKS. SOMEONE GETS THE BLAME.'
+              ? 'Everyone banks what they loaded.'
+              : 'Nobody banks this round.'
             : state.phase === 'reveal' && !isReveal
-              ? 'DOORS SEALED · EVERYONE IS LOCKED'
-              : 'LOAD IT UP. DON’T SNAP THE CABLE.'}
+              ? 'Doors sealed. Everyone is locked in.'
+              : practice
+                ? 'Practice lift'
+                : 'Load it up. Don’t snap the cable.'}
       </div>
     </div>
   );

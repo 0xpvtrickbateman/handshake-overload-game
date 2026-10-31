@@ -2,13 +2,16 @@
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { SoundToggle } from './Sound';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { api } from '@/client/connection';
 import type { Snapshot } from '@/game/types';
 import { Avatar, COLORS } from './Avatar';
 import { Brand, Footer } from './Brand';
-import { Rules } from './Rules';
+import { RuleLines, Rules } from './Rules';
+import { Dial } from './Dial';
+import { Modal } from './Modal';
 
+const HATS = ['Top hat', 'Cloche', 'Cap', 'Crown'];
 export function GuestForm({
   onSubmit,
   label,
@@ -29,21 +32,22 @@ export function GuestForm({
         onSubmit(name.trim() || 'Hotel Guest', { hat, color });
       }}
     >
-      <label htmlFor="nickname">YOUR NAME AT THE DESK</label>
+      <label htmlFor="nickname">Your name at the desk</label>
       <input
         id="nickname"
         name="nickname"
         maxLength={18}
-        placeholder="e.g. The Duchess"
+        placeholder="The Duchess"
         autoComplete="nickname"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <div className="avatar-picker">
-        <Avatar avatar={{ hat, color }} size={58} />
-        <div>
-          <div className="hat-options">
-            {['Top hat', 'Cloche', 'Cap', 'Crown'].map((label, i) => (
+      <fieldset className="avatar-picker">
+        <legend>Pick a look</legend>
+        <Avatar avatar={{ hat, color }} size={64} />
+        <div className="avatar-options">
+          <div className="hat-options" role="group" aria-label="Hat">
+            {HATS.map((label, i) => (
               <button
                 type="button"
                 key={label}
@@ -51,11 +55,11 @@ export function GuestForm({
                 aria-pressed={hat === i}
                 onClick={() => setHat(i)}
               >
-                {['♜', '◡', '◒', '♛'][i]}
+                <Avatar avatar={{ hat: i, color }} size={30} />
               </button>
             ))}
           </div>
-          <div className="color-options">
+          <div className="color-options" role="group" aria-label="Color">
             {COLORS.map((c, i) => (
               <button
                 type="button"
@@ -68,19 +72,42 @@ export function GuestForm({
             ))}
           </div>
         </div>
-      </div>
+      </fieldset>
       <button className="primary" disabled={busy} type="submit">
-        {busy ? 'Checking in…' : label} <span>↗</span>
+        {busy ? 'Checking in…' : label}
       </button>
     </form>
   );
 }
+
+function HeroLift() {
+  return (
+    <div className="hero-lift">
+      <div className="lift-transom">
+        <Dial value={12} limit={14} className="hero-dial" />
+        <p className="dial-caption">
+          Limit tonight <b>14 crates</b>
+        </p>
+      </div>
+      <div className="lift-frame" aria-hidden="true">
+        <div className="lift-door left" />
+        <div className="lift-door right" />
+        <div className="lift-sill" />
+      </div>
+    </div>
+  );
+}
+
 export function Landing() {
   const router = useRouter();
   const [mode, setMode] = useState<'create' | 'join' | null>(null),
     [code, setCode] = useState(''),
     [error, setError] = useState(''),
     [busy, setBusy] = useState(false);
+  const close = useCallback(() => {
+    setMode(null);
+    setError('');
+  }, []);
   async function create(name: string, avatar: { hat: number; color: number }, solo = false) {
     setBusy(true);
     setError('');
@@ -99,137 +126,116 @@ export function Landing() {
   }
   return (
     <main className="landing">
-      <header>
+      <header className="site-header">
         <Brand />
         <div className="header-tools">
           <SoundToggle />
           <Rules />
         </div>
       </header>
-      <section className="hero">
-        <p className="eyebrow">THE GRAND HOTEL · EST. 1931</p>
-        <h1>
-          Good company.
-          <br />
-          <em>Questionable cargo.</em>
-        </h1>
-        <p className="tagline">Load it up. Don’t snap the cable.</p>
-        <div className="hero-lift" aria-hidden="true">
-          <div className="lift-crown">◆ &nbsp; FREIGHT &nbsp; ◆</div>
-          <div className="lift-doors">
-            <div />
-            <div />
-            <span className="lift-dial">
-              ↟
-              <small>
-                CAPACITY
-                <br />
-                PROBABLY FINE
-              </small>
-            </span>
-            <div className="hero-crates">
-              <i>1</i>
-              <i>3</i>
-              <i>6</i>
-            </div>
-          </div>
-          <div className="lift-floor" />
-        </div>
-        <div className="hero-meta">
-          <span>2–8 guests</span>
-          <b>◆</b>
-          <span>4 minutes</span>
-          <b>◆</b>
-          <span>Trust optional</span>
-        </div>
-        <button
-          className="primary play-now"
-          disabled={busy}
-          onClick={() => {
-            let practiced = false;
-            try {
-              practiced = localStorage.getItem('overload:practiced') === 'true';
-            } catch {}
-            if (practiced) void create('You', { hat: 0, color: 0 }, true);
-            else router.push('/practice');
-          }}
-        >
-          {busy ? 'Your lift is arriving…' : 'Play now vs bots'} <span>↗</span>
-        </button>
-        <div className="split-actions">
-          <button className="secondary" onClick={() => setMode('create')}>
-            Host a room
-          </button>
-          <button className="secondary" onClick={() => setMode('join')}>
-            Join friends
-          </button>
-        </div>
-        {error && (
-          <p className="error" role="alert">
-            {error}
+      <section className="hero" aria-labelledby="hero-title">
+        <HeroLift />
+        <div className="hero-copy">
+          <h1 id="hero-title">
+            Load it up.
+            <br />
+            Don’t snap the cable.
+          </h1>
+          <p className="lede">
+            A bluffing game for 2 to 8 guests in a very old hotel freight lift. Four minutes, no
+            account.
           </p>
-        )}
-        <p className="hero-note">Secret crates. Public blame. Absolutely no account.</p>
-        <Link className="practice-link" href="/practice">
-          Learn it in 15 seconds ↗
-        </Link>
-      </section>
-      <Footer />
-      {mode && (
-        <div className="modal-backdrop">
-          <section
-            className="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label={mode === 'create' ? 'Host a room' : 'Join a room'}
-          >
-            <button className="close" aria-label="Close" onClick={() => setMode(null)}>
-              ×
-            </button>
-            <p className="eyebrow">WELCOME TO THE GRAND</p>
-            <h2>{mode === 'create' ? 'Your usual room?' : 'The gang’s upstairs.'}</h2>
-            {mode === 'join' && (
-              <label className="code-label">
-                FOUR-LETTER ROOM CODE
-                <input
-                  aria-label="Room code"
-                  maxLength={4}
-                  placeholder="ABCD"
-                  value={code}
-                  onChange={(e) => setCode(e.target.value.toUpperCase().replace(/[^A-Z]/g, ''))}
-                />
-              </label>
-            )}
-            <GuestForm
-              busy={busy}
-              label={mode === 'create' ? 'Create room' : 'Join room'}
-              onSubmit={(name, avatar) => {
-                if (mode === 'create') void create(name, avatar);
-                else {
-                  if (code.length !== 4) {
-                    setError('Enter the four-letter room code.');
-                    return;
-                  }
-                  setBusy(true);
-                  void api<Snapshot>(`/api/rooms/${code}`, {
-                    action: { type: 'join', name, avatar },
-                    requestId: crypto.randomUUID(),
-                  })
-                    .then(() => router.push(`/room/${code}`))
-                    .catch((e) => {
-                      setError(e.message);
-                      setBusy(false);
-                    });
-                }
+          <div className="rules-plaque">
+            <h2 className="plaque-title">How it works</h2>
+            <RuleLines />
+            <Link className="practice-link" href="/practice">
+              Learn it in 15 seconds
+            </Link>
+          </div>
+          <div className="hero-actions">
+            <button
+              className="primary play-now"
+              disabled={busy}
+              onClick={() => {
+                let practiced = false;
+                try {
+                  practiced = localStorage.getItem('overload:practiced') === 'true';
+                } catch {}
+                if (practiced) void create('You', { hat: 0, color: 0 }, true);
+                else router.push('/practice');
               }}
-            />
-            {error && (
-              <p role="alert" className="error">
+            >
+              {busy ? 'Your lift is arriving…' : 'Play now vs bots'}
+            </button>
+            <div className="split-actions">
+              <button className="secondary" onClick={() => setMode('create')}>
+                Host a room
+              </button>
+              <button className="secondary" onClick={() => setMode('join')}>
+                Join friends
+              </button>
+            </div>
+            {error && !mode && (
+              <p className="error" role="alert">
                 {error}
               </p>
             )}
-          </section>
+          </div>
         </div>
+      </section>
+      <Footer />
+      {mode && (
+        <Modal label={mode === 'create' ? 'Host a room' : 'Join a room'} onClose={close}>
+          <h2>{mode === 'create' ? 'Host a room' : 'Join your friends'}</h2>
+          <p className="modal-lede">
+            {mode === 'create'
+              ? 'You’ll get a room code and a QR to share. Bots can fill empty seats.'
+              : 'Ask the host for the four-letter code on their screen.'}
+          </p>
+          {mode === 'join' && (
+            <label className="code-label">
+              Room code
+              <input
+                aria-label="Room code"
+                maxLength={4}
+                placeholder="ABCD"
+                autoCapitalize="characters"
+                autoComplete="off"
+                spellCheck={false}
+                value={code}
+                onChange={(e) => setCode(e.target.value.toUpperCase().replace(/[^A-Z]/g, ''))}
+              />
+            </label>
+          )}
+          <GuestForm
+            busy={busy}
+            label={mode === 'create' ? 'Create room' : 'Join room'}
+            onSubmit={(name, avatar) => {
+              if (mode === 'create') void create(name, avatar);
+              else {
+                if (code.length !== 4) {
+                  setError('Enter the four-letter room code.');
+                  return;
+                }
+                setBusy(true);
+                void api<Snapshot>(`/api/rooms/${code}`, {
+                  action: { type: 'join', name, avatar },
+                  requestId: crypto.randomUUID(),
+                })
+                  .then(() => router.push(`/room/${code}`))
+                  .catch((e) => {
+                    setError(e.message);
+                    setBusy(false);
+                  });
+              }
+            }}
+          />
+          {error && (
+            <p role="alert" className="error">
+              {error}
+            </p>
+          )}
+        </Modal>
       )}
     </main>
   );

@@ -1,64 +1,85 @@
 'use client';
-import { useState } from 'react';
-export function RuleLines() {
+import { useCallback, useState } from 'react';
+import { Icon } from './Icon';
+import { Modal } from './Modal';
+export function RuleLines({ className = '' }: { className?: string }) {
   return (
-    <ol className="rule-lines">
+    <ul className={`rule-lines ${className}`}>
       <li>
-        <b>Bluff.</b> Signal anything. Secretly load 1–6 crates.
+        <span className="rule-icon load">
+          <Icon name="crate" size={16} />
+        </span>
+        <span>
+          Each round, <b>secretly load 1 to 6 crates.</b>
+        </span>
       </li>
       <li>
-        <b>Fit?</b> Bank crates. <b>Snap?</b> No bank; heaviest −3, lightest +2.
+        <span className="rule-icon fit">
+          <Icon name="check" size={16} strokeWidth={2.4} />
+        </span>
+        <span>
+          Fits under the limit? <b>Everyone banks their crates.</b>
+        </span>
       </li>
       <li>
-        <b>8 lifts.</b> Last two ×2. Most points wins; fewer blames breaks ties.
+        <span className="rule-icon snap">
+          <Icon name="bolt" size={15} />
+        </span>
+        <span>
+          Too heavy? The cable snaps: <b>the heaviest loader loses 3, the lightest gets +2.</b>
+        </span>
       </li>
-    </ol>
+    </ul>
   );
 }
 export function Rules() {
   const [open, setOpen] = useState(false);
+  const close = useCallback(() => setOpen(false), []);
   return (
     <>
-      <button className="icon-button" aria-label="How to play" onClick={() => setOpen(true)}>
-        ?
+      <button
+        className="icon-button help-button"
+        aria-label="How to play"
+        aria-haspopup="dialog"
+        onClick={() => setOpen(true)}
+      >
+        <span aria-hidden="true">?</span>
       </button>
       {open && (
-        <div className="modal-backdrop" onClick={() => setOpen(false)}>
-          <section
-            className="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-label="How to play"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="close" aria-label="Close rules" onClick={() => setOpen(false)}>
-              ×
-            </button>
-            <p className="eyebrow">THE GUEST HANDBOOK</p>
-            <h2>
-              A little greed.
-              <br />A very old cable.
-            </h2>
-            <RuleLines />
-            <p>
-              You have 5 seconds to signal and 10 to load. A missed pick loads 3. Signals are
-              promises you don’t have to keep.
-            </p>
-            <p>
-              Every tied heaviest loader takes blame; every tied lightest loader salvages. If
-              everyone ties on a snap, both apply. Final two rounds double all points, penalties,
-              and salvage.
-            </p>
-            <p>
-              Light means 1–3 crates; heavy means 4–6 for the Honest Abe award. Shrug makes no
-              promise. Equal scores and equal blame counts share the win.
-            </p>
-            <p className="muted">Keyboard: L / H / S to signal · 1–6 to pick · Enter to lock.</p>
-            <button className="primary" onClick={() => setOpen(false)}>
-              Got it. Let’s load.
-            </button>
-          </section>
-        </div>
+        <Modal label="How to play" closeLabel="Close rules" onClose={close} className="rules-modal">
+          <h2>How to play</h2>
+          <RuleLines />
+          <dl className="rule-details">
+            <div>
+              <dt>Signals</dt>
+              <dd>
+                Before loading, everyone shows Going light, Going heavy or Shrug. It’s a promise you
+                don’t have to keep.
+              </dd>
+            </div>
+            <div>
+              <dt>Timing</dt>
+              <dd>5 seconds to signal, 10 to load. No pick in time? The porter loads 3.</dd>
+            </div>
+            <div>
+              <dt>Ties</dt>
+              <dd>Every tied heaviest loader loses 3 and every tied lightest loader gets +2.</dd>
+            </div>
+            <div>
+              <dt>Winning</dt>
+              <dd>
+                8 rounds. The last two count double. Most points wins; fewer blames breaks a tie.
+              </dd>
+            </div>
+          </dl>
+          <p className="keyboard-hint">
+            Keyboard: <kbd>L</kbd> <kbd>H</kbd> <kbd>S</kbd> to signal, <kbd>1</kbd>–<kbd>6</kbd> to
+            pick, <kbd>Enter</kbd> to lock in.
+          </p>
+          <button className="primary" onClick={close}>
+            Got it
+          </button>
+        </Modal>
       )}
     </>
   );
