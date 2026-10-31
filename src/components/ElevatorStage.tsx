@@ -156,8 +156,11 @@ export function ElevatorStage({
           data-testid="reveal-result"
         >
           <strong>{result.fits ? 'IT FITS!' : 'SNAP!'}</strong>
-          <span>
+          <span className="verdict-detail">
             {result.total} crates on a {result.limit}-crate limit
+          </span>
+          <span className="verdict-short">
+            {result.total} / {result.limit} crates
           </span>
         </div>
       )}
@@ -198,7 +201,7 @@ export function ElevatorStage({
           : verdict
             ? result?.fits
               ? 'Everyone banks what they loaded.'
-              : 'Nobody banks this round.'
+              : `${result?.total} crates on a ${result?.limit} limit. Nobody banks.`
             : state.phase === 'reveal' && !isReveal
               ? 'Doors sealed. Everyone is locked in.'
               : practice

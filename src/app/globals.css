@@ -353,6 +353,11 @@ footer {
   background: #79cdae1f;
   box-shadow: inset 0 0 0 1px #79cdae55;
 }
+.rule-icon.win {
+  color: var(--brass-hi);
+  background: #d8b06424;
+  box-shadow: inset 0 0 0 1px var(--brass-line);
+}
 .rule-icon.snap {
   color: var(--signal);
   background: #ff6e5a1f;
@@ -920,6 +925,15 @@ footer {
   justify-content: center;
   text-align: center;
   gap: 14px;
+}
+.shell-header {
+  position: absolute;
+  top: max(14px, env(safe-area-inset-top));
+  left: var(--gutter);
+  right: var(--gutter);
+}
+.reconnect-shell {
+  position: relative;
 }
 .reconnect-shell p {
   color: var(--cream-dim);
@@ -1577,8 +1591,19 @@ footer {
 .verdict.verdict-small strong {
   font-size: 26px;
 }
-.verdict.verdict-small span {
+.verdict-short {
   display: none;
+}
+.verdict.verdict-small .verdict-detail {
+  display: none;
+}
+.verdict.verdict-small .verdict-short {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cream);
+  text-shadow: 0 1px 6px #000;
+  white-space: nowrap;
 }
 .fits.scored .verdict {
   background: transparent;
@@ -2030,6 +2055,12 @@ footer {
   gap: 18px;
   text-align: center;
   padding: 18px 0 0;
+}
+@media (max-height: 700px) {
+  .results {
+    gap: 14px;
+    padding-top: 10px;
+  }
 }
 .results-kicker {
   font-size: 14px;
@@ -2601,6 +2632,9 @@ footer {
 }
 .tv-controller .verdict.verdict-small strong {
   font-size: 52px;
+}
+.tv-controller .verdict.verdict-small .verdict-short {
+  font-size: 22px;
 }
 .tv-controller .blame-scene {
   inset: 120px 40px 50px;

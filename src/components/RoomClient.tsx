@@ -36,7 +36,13 @@ export function RoomClient({ code, tv = false }: { code: string; tv?: boolean })
   if (!state)
     return (
       <main className="reconnect-shell">
-        <Brand />
+        <header className="site-header shell-header">
+          <Brand small />
+          <div className="header-tools">
+            <SoundToggle />
+            <Rules />
+          </div>
+        </header>
         <div className="skeleton lift-skeleton" aria-hidden="true" />
         <h2>Your lift is arriving</h2>
         <p role="status">{error || 'Finding room ' + code + '…'}</p>

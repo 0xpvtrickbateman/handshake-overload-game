@@ -74,20 +74,6 @@ export function Results({
             );
           })}
       </div>
-      <div className="award-grid">
-        {state.awards.map((a) => (
-          <div className="award-card" key={a.title}>
-            <span className="award-icon">
-              <Icon name={AWARD_ICONS[a.title] ?? 'diamond'} size={22} />
-            </span>
-            <div>
-              <small>{a.title}</small>
-              <b>{a.name}</b>
-              <p>{a.detail}</p>
-            </div>
-          </div>
-        ))}
-      </div>
       <div className="results-actions">
         {!tv && (
           <button
@@ -106,6 +92,20 @@ export function Results({
             {shareLabel}
           </button>
         </div>
+      </div>
+      <div className="award-grid">
+        {state.awards.map((a) => (
+          <div className="award-card" key={a.title}>
+            <span className="award-icon">
+              <Icon name={AWARD_ICONS[a.title] ?? 'diamond'} size={22} />
+            </span>
+            <div>
+              <small>{a.title}</small>
+              <b>{a.name}</b>
+              <p>{a.detail}</p>
+            </div>
+          </div>
+        ))}
       </div>
       <p className="result-note">
         {first.snaps === 0

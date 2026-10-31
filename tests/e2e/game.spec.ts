@@ -115,15 +115,47 @@ test('two humans and TV complete eight synchronized lifts, refresh, leave, and r
   await host.getByRole('button', { name: 'Open the guest ledger' }).click();
   await expect(host.locator('.round-ledger')).toHaveCount(8);
   await host.getByRole('button', { name: 'Close ledger' }).click();
-  const download = host.waitForEvent('download');
-  await host.getByRole('button', { name: 'Share the evidence' }).click();
-  const image = await download;
-  expect(image.suggestedFilename()).toBe('OVERLOAD-' + code + '.png');
-  await image.saveAs(info.outputPath('results.png'));
-  await info.attach('results-image', {
-    path: info.outputPath('results.png'),
-    contentType: 'image/png',
+  // Browsers that can share files (WebKit) open the native sheet instead of downloading.
+  // Record that share rather than waiting for a download that never comes.
+  const nativeShare = await host.evaluate(() => {
+    const file = new File(['x'], 'probe.png', { type: 'image/png' });
+    if (!navigator.canShare?.({ files: [file] })) return false;
+    const w = window as unknown as { shared: { name: string; type: string; size: number }[] };
+    w.shared = [];
+    Object.defineProperty(navigator, 'share', {
+      configurable: true,
+      value: async (data: ShareData) => {
+        for (const f of data.files ?? [])
+          w.shared.push({ name: f.name, type: f.type, size: f.size });
+      },
+    });
+    return true;
   });
+  if (nativeShare) {
+    await host.getByRole('button', { name: 'Share the evidence' }).click();
+    await expect
+      .poll(() =>
+        host.evaluate(
+          () => (window as unknown as { shared: { name: string }[] }).shared[0]?.name ?? '',
+        ),
+      )
+      .toBe('OVERLOAD-' + code + '.png');
+    const shared = await host.evaluate(
+      () => (window as unknown as { shared: { type: string; size: number }[] }).shared[0],
+    );
+    expect(shared.type).toBe('image/png');
+    expect(shared.size).toBeGreaterThan(1000);
+  } else {
+    const download = host.waitForEvent('download');
+    await host.getByRole('button', { name: 'Share the evidence' }).click();
+    const image = await download;
+    expect(image.suggestedFilename()).toBe('OVERLOAD-' + code + '.png');
+    await image.saveAs(info.outputPath('results.png'));
+    await info.attach('results-image', {
+      path: info.outputPath('results.png'),
+      contentType: 'image/png',
+    });
+  }
   await host.getByRole('button', { name: 'Leave room', exact: true }).click();
   await expect(host).toHaveURL('/');
   await guest.getByRole('button', { name: /One more lift/ }).click();
