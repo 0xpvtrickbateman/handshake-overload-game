@@ -71,13 +71,11 @@ test('two humans and TV complete eight synchronized lifts, refresh, leave, and r
     for (const p of screens) await expect(p.getByTestId('reveal-result')).toBeVisible();
     const states = await Promise.all(
       screens.map((p) =>
-        p
-          .getByTestId('controller')
-          .evaluate((el) => ({
-            phase: el.getAttribute('data-phase'),
-            total: el.getAttribute('data-total'),
-            scores: el.getAttribute('data-scores'),
-          })),
+        p.getByTestId('controller').evaluate((el) => ({
+          phase: el.getAttribute('data-phase'),
+          total: el.getAttribute('data-total'),
+          scores: el.getAttribute('data-scores'),
+        })),
       ),
     );
     for (const state of states) expect(state).toEqual(states[0]);

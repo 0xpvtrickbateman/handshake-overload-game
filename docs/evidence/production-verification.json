@@ -1,0 +1,35 @@
+{
+  "deployment": "https://overload-game-gw4ufr2qe-williamjake.vercel.app",
+  "alias": "https://overload-game.vercel.app",
+  "runtime_commit": "3ebd02a",
+  "stats": {
+    "startTime": "2026-10-31T05:22:01.538Z",
+    "duration": 280392.822,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "two humans and TV complete eight synchronized lifts, refresh, leave, and rematch",
+      "status": "passed",
+      "durationMs": 221236
+    },
+    {
+      "title": "API rejects invalid and unauthorized input and deduplicates concurrent requests",
+      "status": "passed",
+      "durationMs": 8173
+    },
+    {
+      "title": "eight-player snap fits both phones, polling stays synchronized, and host absence transfers",
+      "status": "passed",
+      "durationMs": 34030
+    },
+    {
+      "title": "practice teaches all three outcomes, starts automatically, and remembers mute",
+      "status": "passed",
+      "durationMs": 16523
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 **Load it up. Don’t snap the cable.** A mobile party game in a 1930s hotel freight elevator, made for the Handshake × OpenAI challenge.
 
+Live: **https://overload-game.vercel.app** · TV: **https://overload-game.vercel.app/tv/CODE**
+
 ## Play
 
 - **Play now vs bots** creates a private game immediately, with all four bot personalities.
@@ -9,7 +11,7 @@
 - `/room/CODE` is the phone controller. `/tv/CODE` is a read-only big-screen view.
 - The first solo visit includes a skippable 15-second practice lift. It demonstrates fit, blame, and salvage using examples scored by the same server rules module.
 - Room links and QR codes work without accounts. The phone controller fits 375×667 and 390×844 without scrolling; results and the optional ledger can scroll.
-- 2–8 seated players; later arrivals watch and are seated at rematch, with humans taking priority over bots.
+- 2–8 seated players. Later arrivals watch; rematch seats up to eight humans before bots. Additional viewers remain spectators.
 
 ## Rules
 
@@ -65,7 +67,9 @@ npm run build
 npm run test:e2e
 ```
 
-Playwright starts the production build locally and creates isolated contexts for two humans and TV, plays eight accelerated local rounds, checks reveal phase/totals/scores, measures reveal-start skew, verifies 375×667 and 390×844 controller fit, refreshes mid-round, tests an absent player, and rematches after the host leaves. Run `npm run build` before the local end-to-end suite.
+Playwright starts the production build locally and creates isolated contexts for two humans and TV, plays eight accelerated local rounds, checks reveal phase/totals/scores, measures reveal-start skew, verifies 375×667 and 390×844 controller fit, refreshes mid-round, tests an absent player, and rematches after the host leaves. The additional tests cover concurrent API retries, input validation, hidden loads, eight-player ties, forced polling, passive host transfer, practice completion, reduced motion, and mute memory. The main game also checks late spectators, a downloaded results image, and 30-second SSE rotation. Run `npm run build` before the local end-to-end suite.
+
+Optional WebKit check: `npx playwright install webkit` followed by `npx playwright test --browser=webkit --grep "eight-player|practice teaches"`.
 
 The local test server explicitly uses `OVERLOAD_TEST_MODE=1`, an isolated in-memory store and shorter phase durations. This mode is **disabled whenever `VERCEL` is set** and is not used for production validation. Set `OVERLOAD_TEST_REDIS=1 npm run test:e2e` to exercise real Redis with accelerated rounds in a separate test namespace. Production is checked separately with `PLAYWRIGHT_BASE_URL=https://overload-game.vercel.app npm run test:e2e`, using real Redis, SSE, and normal round lengths.
 
@@ -78,4 +82,4 @@ vercel --prod --scope williamjake --yes
 
 Target: **Jake / williamjake / overload-game**. Database: `overload-game-redis`, Upstash Marketplace, primary region `iad1`; Vercel functions use the same region. The integration is connected to production, preview, and development.
 
-Keep the last working production deployment available while preparing the next release. Verify an anonymous production page load and a real multi-session game after deployment. The competitor review and measurement evidence are under `docs/`.
+Keep the last working production deployment available while preparing the next release. Verify an anonymous production page load and a real multi-session game after deployment. The [competitor review](docs/competitor-review.md), [release verification](docs/verification.md), and measurement evidence are under `docs/`.

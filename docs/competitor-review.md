@@ -1,6 +1,6 @@
 # OVERLOAD — competitor playtest
 
-Tested October 30, 2026, America/Phoenix. Phase 0 only; OVERLOAD has not been implemented or deployed.
+Tested October 30, 2026, America/Phoenix. These Phase 0 observations were recorded before OVERLOAD was implemented. The released build and its checks are documented in `verification.md`.
 
 ## Method and limits
 

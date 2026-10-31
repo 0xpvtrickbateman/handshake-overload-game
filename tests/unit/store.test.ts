@@ -1,8 +1,11 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { randomUUID } from 'node:crypto';
-import { newRoom, roomTransaction } from '../../src/server/store';
+import { newRoom, roomTransaction, rateLimit } from '../../src/server/store';
 const avatar = { hat: 0, color: 0 };
-afterEach(() => vi.unstubAllEnvs());
+afterEach(() => {
+  vi.unstubAllEnvs();
+  vi.restoreAllMocks();
+});
 function useMemory() {
   vi.stubEnv('OVERLOAD_TEST_MODE', '1');
   vi.stubEnv('VERCEL', '');
@@ -41,4 +44,16 @@ describe('atomic room transactions', () => {
     expect(replay.players).toHaveLength(2);
     expect((await newRoom(hash, 'Host', avatar, false, creation)).code).toBe(room.code);
   });
+});
+
+it('rate limits each identity and opens a fresh time bucket', async () => {
+  useMemory();
+  const now = vi.spyOn(Date, 'now').mockReturnValue(1000);
+  const identity = randomUUID();
+  await rateLimit(identity, 2);
+  await rateLimit(identity, 2);
+  await expect(rateLimit(identity, 2)).rejects.toMatchObject({ status: 429 });
+  await expect(rateLimit(randomUUID(), 2)).resolves.toBeUndefined();
+  now.mockReturnValue(61000);
+  await expect(rateLimit(identity, 2)).resolves.toBeUndefined();
 });
