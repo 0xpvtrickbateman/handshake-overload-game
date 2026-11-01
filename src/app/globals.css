@@ -1449,8 +1449,10 @@ footer {
   position: absolute;
   top: 108px;
   left: 50%;
-  /* The cable pays out with the car's sag (--load is total / limit, set per frame). */
-  bottom: calc(70px - var(--load, 0) * var(--sag, 22px));
+  /* The cable pays out with the car's sag (--load is total / limit, set per frame).
+     An empty car rides one --sag higher, so a full one settles at the original mark
+     and never covers the floor caption. */
+  bottom: calc(70px + (1 - var(--load, 0)) * var(--sag, 22px));
   width: 4px;
   margin-left: -2px;
   background: repeating-linear-gradient(35deg, var(--brass-hi) 0 2px, var(--brass-lo) 2px 4px);
@@ -1515,7 +1517,7 @@ footer {
   left: 7%;
   right: 7%;
   /* The car has weight: every crate settles it lower on the cable. */
-  transform: translateY(calc(var(--load, 0) * var(--sag, 22px)));
+  transform: translateY(calc((var(--load, 0) - 1) * var(--sag, 22px)));
   transition: transform 0.38s var(--ease-spring);
 }
 .platform-crates {
@@ -1593,7 +1595,8 @@ footer {
 }
 .recap-label {
   position: absolute;
-  bottom: 88px;
+  /* Rides with the car so it always clears the crate tops. */
+  bottom: calc(88px + (1 - var(--load, 0)) * var(--sag, 22px));
   left: 50%;
   z-index: 1;
   width: max-content;
@@ -1612,6 +1615,7 @@ footer {
   border: 1px solid var(--brass-line);
   border-radius: 999px;
   box-shadow: 0 2px 8px #00000099;
+  transition: bottom 0.38s var(--ease-spring);
 }
 .verdict {
   position: absolute;
@@ -2098,7 +2102,7 @@ footer {
     font-size: 8px;
   }
   .recap-label {
-    bottom: 78px;
+    bottom: calc(78px + (1 - var(--load, 0)) * var(--sag, 22px));
     font-size: 12px;
   }
   .verdict strong {
@@ -2669,7 +2673,7 @@ footer {
 }
 .tv-controller .cable {
   top: 180px;
-  bottom: calc(110px - var(--load, 0) * var(--sag, 42px));
+  bottom: calc(110px + (1 - var(--load, 0)) * var(--sag, 42px));
   width: 6px;
 }
 .tv-controller .capacity-plate {
@@ -2714,7 +2718,7 @@ footer {
 }
 .tv-controller .recap-label {
   font-size: 22px;
-  bottom: 160px;
+  bottom: calc(160px + (1 - var(--load, 0)) * var(--sag, 42px));
   padding: 4px 20px;
 }
 .tv-controller .verdict strong {
