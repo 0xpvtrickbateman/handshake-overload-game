@@ -11,7 +11,7 @@ import { RuleLines, Rules } from './Rules';
 import { GuestForm } from './Landing';
 import { ElevatorStage, revealTiming } from './ElevatorStage';
 import { SoundToggle } from './Sound';
-import { RoomQR, InviteButton } from './RoomQR';
+import { RoomQR, InviteButton, JoinAddress } from './RoomQR';
 import { Results } from './Results';
 import { playSound } from '@/client/sound';
 import { Icon, SIGNAL_ICONS } from './Icon';
@@ -136,7 +136,7 @@ function Lobby({ state, send, tv }: { state: Snapshot; send: Send; tv: boolean }
       <div className="room-code">
         <span>Room code</span>
         <strong>{state.code}</strong>
-        <InviteButton code={state.code} />
+        {tv ? <JoinAddress code={state.code} /> : <InviteButton code={state.code} />}
         <RoomQR code={state.code} compact />
       </div>
       <h1>Who’s bringing too much baggage?</h1>
@@ -471,9 +471,8 @@ function Controller({ state, send, tv }: { state: Snapshot; send: Send; tv: bool
         <div className="tv-message">
           <div>
             <h2>The lift is better with company</h2>
-            <p>
-              Scan to play on your phone, or enter room <b>{state.code}</b>
-            </p>
+            <p>Scan to play on your phone, or open</p>
+            <JoinAddress code={state.code} />
           </div>
           <RoomQR code={state.code} compact />
         </div>

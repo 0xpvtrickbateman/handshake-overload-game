@@ -41,7 +41,7 @@ export async function resultsImage(state: Snapshot): Promise<Blob> {
   text(
     winners.length > 1
       ? 'A shared penthouse.'
-      : `${winners[0]?.name ?? 'The guests'} takes the penthouse.`,
+      : `${winners[0]?.name ?? 'The guests'} ${winners[0]?.name === 'You' ? 'take' : 'takes'} the penthouse.`,
     540,
     245,
     winners.length === 1 && winners[0]?.name.length > 13 ? 36 : 43,

@@ -68,9 +68,21 @@ export function Practice({ scenes }: { scenes: Snapshot[] }) {
       setError((e as Error).message);
     }
   }
+  const autoStart = useRef(play);
   useEffect(() => {
-    if (elapsed >= 15000 && !starting.current && !error) void play();
+    autoStart.current = play;
   });
+  useEffect(() => {
+    // Auto-start after the lessons, but never yank a reader out of the open rules dialog.
+    let tried = false;
+    const check = setInterval(() => {
+      if (tried || Date.now() - began.current < 15000 || starting.current) return;
+      if (document.querySelector('[role="dialog"]')) return;
+      tried = true;
+      void autoStart.current();
+    }, 250);
+    return () => clearInterval(check);
+  }, []);
   return (
     <main className="practice-page">
       <header className="site-header">

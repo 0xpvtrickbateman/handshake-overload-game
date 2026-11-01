@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import QRCode from 'qrcode';
 import { Icon } from './Icon';
 export function RoomQR({ code, compact = false }: { code: string; compact?: boolean }) {
@@ -38,7 +38,7 @@ export function InviteButton({ code }: { code: string }) {
         try {
           if (navigator.share)
             await navigator.share({
-              title: 'OVERLOAD — your lift is waiting',
+              title: 'OVERLOAD: your lift is waiting',
               text: `Join room ${code}. Load it up. Don’t snap the cable.`,
               url,
             });
@@ -54,5 +54,21 @@ export function InviteButton({ code }: { code: string }) {
       <Icon name="share" size={15} />
       {label}
     </button>
+  );
+}
+
+const noop = () => () => {};
+/** The typed fallback to the QR: "overload-game.vercel.app/room/CODE". Client-only. */
+export function JoinAddress({ code }: { code: string }) {
+  const host = useSyncExternalStore(
+    noop,
+    () => location.host,
+    () => '',
+  );
+  if (!host) return null;
+  return (
+    <span className="join-address" data-testid="join-address">
+      {host}/room/<b>{code}</b>
+    </span>
   );
 }

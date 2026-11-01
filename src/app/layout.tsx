@@ -13,7 +13,7 @@ const sans = Jost({
   display: 'swap',
 });
 export const metadata: Metadata = {
-  title: 'OVERLOAD — Load it up. Don’t snap the cable.',
+  title: 'OVERLOAD: Load it up. Don’t snap the cable.',
   description:
     'Secret crates. Public blame. A four-minute multiplayer bluffing game in a very old hotel elevator. Play with friends or jump straight in with bots.',
   metadataBase: new URL('https://overload-game.vercel.app'),

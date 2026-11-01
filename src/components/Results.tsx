@@ -34,7 +34,7 @@ export function Results({
       const image = blob ?? (await resultsImage(state));
       const file = new File([image], `OVERLOAD-${state.code}.png`, { type: 'image/png' });
       if (navigator.canShare?.({ files: [file] }))
-        await navigator.share({ files: [file], title: 'OVERLOAD — the final guest ledger' });
+        await navigator.share({ files: [file], title: 'OVERLOAD: the final guest ledger' });
       else {
         const url = URL.createObjectURL(image),
           a = document.createElement('a');
@@ -53,7 +53,9 @@ export function Results({
       <p className="results-kicker">Final standings after 8 rounds</p>
       <h1>
         <span className="winner-name">{winners.map((p) => p.name).join(' & ')}</span>{' '}
-        {winners.length > 1 ? 'share the penthouse' : 'takes the penthouse'}
+        {winners.length > 1 || winners[0]?.name === 'You'
+          ? `${winners.length > 1 ? 'share' : 'take'} the penthouse`
+          : 'takes the penthouse'}
       </h1>
       <div className="podium">
         {[1, 0, 2]
@@ -75,6 +77,7 @@ export function Results({
           })}
       </div>
       <div className="results-actions">
+        {tv && <p className="tv-rematch-note">Rematch from any phone in the room.</p>}
         {!tv && (
           <button
             className="primary"
