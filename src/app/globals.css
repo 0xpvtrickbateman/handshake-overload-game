@@ -1449,11 +1449,13 @@ footer {
   position: absolute;
   top: 108px;
   left: 50%;
-  bottom: 70px;
+  /* The cable pays out with the car's sag (--load is total / limit, set per frame). */
+  bottom: calc(70px - var(--load, 0) * var(--sag, 22px));
   width: 4px;
   margin-left: -2px;
   background: repeating-linear-gradient(35deg, var(--brass-hi) 0 2px, var(--brass-lo) 2px 4px);
   box-shadow: 0 0 6px #00000099;
+  transition: bottom 0.38s var(--ease-spring);
 }
 .capacity-plate {
   position: absolute;
@@ -1512,6 +1514,9 @@ footer {
   bottom: 30px;
   left: 7%;
   right: 7%;
+  /* The car has weight: every crate settles it lower on the cable. */
+  transform: translateY(calc(var(--load, 0) * var(--sag, 22px)));
+  transition: transform 0.38s var(--ease-spring);
 }
 .platform-crates {
   display: flex;
@@ -1576,23 +1581,37 @@ footer {
   bottom: 8px;
   left: 8px;
   right: 8px;
+  /* Above the sagging platform, still under the closing doors. */
+  z-index: 2;
   text-align: center;
   font-size: 12px;
   color: var(--cream-dim);
+  text-shadow: 0 1px 4px #000;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .recap-label {
   position: absolute;
-  bottom: 86px;
-  left: 0;
-  width: 100%;
+  bottom: 88px;
+  left: 50%;
+  z-index: 1;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  transform: translateX(-50%);
+  padding: 2px 12px;
+  overflow: hidden;
   text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 13px;
   font-weight: 600;
   color: var(--cream);
-  text-shadow: 0 1px 10px #000;
+  /* A lacquer pill so the narration reads cleanly where it crosses the cable. */
+  background: linear-gradient(180deg, var(--lacquer-hi), var(--lacquer));
+  border: 1px solid var(--brass-line);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px #00000099;
 }
 .verdict {
   position: absolute;
@@ -1760,6 +1779,29 @@ footer {
 .choreographed.snapped .cable {
   background: #8f7761;
   clip-path: polygon(0 0, 100% 0, 100% 38%, 0 34%, 0 55%, 100% 60%, 100% 100%, 0 100%);
+}
+/* Strain beat: from 85% of the limit until the verdict, the cable hums and the needle quivers.
+   Individual translate and rotate properties stack on top of the sag and the needle angle. */
+.choreographed.straining .cable {
+  animation: cable-strain 90ms linear infinite;
+}
+.choreographed.straining .dial-needle {
+  animation: needle-quiver 120ms linear infinite;
+}
+/* Snap: the car drops out of the shaft and the crates tumble off it. Delays come from
+   --shake-delay (minus the time since the verdict), so late joiners land mid-fall. */
+.choreographed.snapped .platform {
+  animation: platform-fall 0.55s ease-in both;
+  animation-delay: var(--shake-delay);
+}
+.choreographed.snapped .cargo.dropped {
+  animation: cargo-tumble 0.55s ease-in both;
+  animation-delay: calc(var(--shake-delay) + var(--i, 0) * 40ms);
+}
+/* Fit: relieved of the doubt, the car lifts a touch before the doors close. */
+.choreographed.fits .platform {
+  animation: platform-rise 0.6s var(--ease-out) both;
+  animation-delay: var(--shake-delay);
 }
 
 /* Player rail */
@@ -2056,7 +2098,7 @@ footer {
     font-size: 8px;
   }
   .recap-label {
-    bottom: 72px;
+    bottom: 78px;
     font-size: 12px;
   }
   .verdict strong {
@@ -2609,6 +2651,7 @@ footer {
   font-size: 13px;
 }
 .tv-controller .elevator-stage {
+  --sag: 42px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -2626,7 +2669,7 @@ footer {
 }
 .tv-controller .cable {
   top: 180px;
-  bottom: 110px;
+  bottom: calc(110px - var(--load, 0) * var(--sag, 42px));
   width: 6px;
 }
 .tv-controller .capacity-plate {
@@ -2672,6 +2715,7 @@ footer {
 .tv-controller .recap-label {
   font-size: 22px;
   bottom: 160px;
+  padding: 4px 20px;
 }
 .tv-controller .verdict strong {
   font-size: 120px;
@@ -2994,6 +3038,46 @@ footer {
     transform: translate(-2px, 0);
   }
 }
+@keyframes cable-strain {
+  0%,
+  100% {
+    translate: -1px 0;
+  }
+  50% {
+    translate: 1px 0;
+  }
+}
+@keyframes needle-quiver {
+  0%,
+  100% {
+    rotate: -1.5deg;
+  }
+  50% {
+    rotate: 1.5deg;
+  }
+}
+@keyframes platform-fall {
+  60% {
+    opacity: 1;
+  }
+  to {
+    translate: 0 150%;
+    rotate: 5deg;
+    opacity: 0;
+  }
+}
+@keyframes cargo-tumble {
+  to {
+    translate: 0 160px;
+    rotate: calc(var(--i, 0) * 13deg - 25deg);
+    opacity: 0;
+  }
+}
+@keyframes platform-rise {
+  to {
+    translate: 0 -10px;
+  }
+}
 @keyframes bank-points {
   0% {
     opacity: 0;
@@ -3035,5 +3119,9 @@ footer {
   }
   .point-burst {
     transform: translateY(-15px);
+  }
+  /* No fall or tumble: the car is simply gone from the shaft after a snap. */
+  .choreographed.snapped .platform {
+    opacity: 0;
   }
 }
