@@ -86,7 +86,7 @@ function HeroLift() {
       <div className="lift-transom">
         <Dial value={12} limit={14} className="hero-dial" />
         <p className="dial-caption">
-          Limit tonight <b>14 crates</b>
+          Tonight the cable holds <b>14 crates</b>
         </p>
       </div>
       <div className="lift-frame" aria-hidden="true">

@@ -204,9 +204,11 @@ function Lobby({ state, send, tv }: { state: Snapshot; send: Send; tv: boolean }
           Waiting for the host to start. Get your story straight.
         </p>
       )}
-      <Link className="tv-link" href={`/tv/${state.code}`} target="_blank">
-        <Icon name="tv" size={16} /> Open the TV view for a big screen
-      </Link>
+      {!tv && (
+        <Link className="tv-link" href={`/tv/${state.code}`} target="_blank">
+          <Icon name="tv" size={16} /> Open the TV view for a big screen
+        </Link>
+      )}
       <Footer />
     </section>
   );
