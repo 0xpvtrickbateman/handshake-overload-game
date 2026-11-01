@@ -1792,20 +1792,25 @@ footer {
 .choreographed.straining .dial-needle {
   animation: needle-quiver 120ms linear infinite;
 }
-/* Snap: the car drops out of the shaft and the crates tumble off it. Delays come from
-   --shake-delay (minus the time since the verdict), so late joiners land mid-fall. */
+/* Snap: the car drops out of the shaft and the crates tumble off it. These animations are
+   paused and scrubbed only by --shake-delay (minus the time since the verdict on the shared
+   clock), so every phone, and a phone that joins mid-fall, shows the same pose. A running
+   animation would also advance on the browser's own clock and race ahead. */
 .choreographed.snapped .platform {
   animation: platform-fall 0.55s ease-in both;
   animation-delay: var(--shake-delay);
+  animation-play-state: paused;
 }
 .choreographed.snapped .cargo.dropped {
   animation: cargo-tumble 0.55s ease-in both;
   animation-delay: calc(var(--shake-delay) + var(--i, 0) * 40ms);
+  animation-play-state: paused;
 }
 /* Fit: relieved of the doubt, the car lifts a touch before the doors close. */
 .choreographed.fits .platform {
   animation: platform-rise 0.6s var(--ease-out) both;
   animation-delay: var(--shake-delay);
+  animation-play-state: paused;
 }
 
 /* Player rail */
