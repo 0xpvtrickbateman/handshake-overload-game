@@ -63,6 +63,53 @@ body {
   background-attachment: fixed;
   overflow-x: hidden;
 }
+/* Film stock: a fixed vignette plus fine grain over every screen. Static on phones. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  z-index: 2147483000;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 .92  0 0 0 0 .8  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.07;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  pointer-events: none;
+  background: radial-gradient(130% 95% at 50% 42%, transparent 58%, #0a0306b3 100%);
+}
+@media (min-width: 960px) and (prefers-reduced-motion: no-preference) {
+  body::before {
+    animation: grain 0.9s steps(6) infinite;
+  }
+}
+@keyframes grain {
+  0% {
+    transform: translate(0, 0);
+  }
+  17% {
+    transform: translate(-4%, 3%);
+  }
+  33% {
+    transform: translate(3%, -5%);
+  }
+  50% {
+    transform: translate(-6%, -2%);
+  }
+  67% {
+    transform: translate(5%, 4%);
+  }
+  83% {
+    transform: translate(-2%, 6%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 button,
 a,
 input,
