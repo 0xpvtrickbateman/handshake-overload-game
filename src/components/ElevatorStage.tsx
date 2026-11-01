@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import type { Snapshot } from '@/game/types';
-import { playSound } from '@/client/sound';
+import { haptic, playSound, setStrain } from '@/client/sound';
 import { Avatar } from './Avatar';
 import { Dial } from './Dial';
 export function revealTiming(state: Snapshot) {
@@ -41,22 +41,39 @@ export function ElevatorStage({
     spotlight = verdict && elapsed >= timing.spotlight;
   const scored = verdict && elapsed >= timing.score;
   const total = result?.entries.slice(0, dropCount).reduce((n, e) => n + e.load, 0) ?? 0;
+  // How hard the car pulls on the cable: drives the sag, the strain beat and the drone pitch.
+  const loadRatio = state.limit > 0 ? total / state.limit : 0,
+    straining = isReveal && !verdict && loadRatio >= 0.85,
+    strain = isReveal && !verdict ? Math.min(1, loadRatio) : 0;
   const blamed = result?.entries.filter((e) => e.blame) ?? [],
     salvaged = result?.entries.filter((e) => e.salvage) ?? [];
   const soundMarks = useRef(new Set<string>());
   useEffect(() => {
     if (!isReveal) return;
+    // Every cue and buzz fires once, and only within 200 ms of its scheduled moment, so a
+    // late joiner or a polling client never gets a burst of catch-up noise.
+    if (!soundMarks.current.has('chime')) {
+      soundMarks.current.add('chime');
+      if (elapsed < 200) playSound('chime');
+    }
+    let running = 0;
     for (let i = 0; i < dropCount; i++) {
+      running += result?.entries[i]?.load ?? 0;
       if (!soundMarks.current.has(`drop-${i}`)) {
         soundMarks.current.add(`drop-${i}`);
-        if (elapsed - (timing.firstDrop + i * timing.interval) < 200) playSound('thud', i);
+        if (elapsed - (timing.firstDrop + i * timing.interval) < 200) {
+          playSound('thud', i);
+          if (state.limit > 0 && running >= 0.75 * state.limit)
+            playSound('creak', i, running / state.limit);
+          haptic(12);
+        }
       }
     }
     if (verdict && !soundMarks.current.has('verdict')) {
       soundMarks.current.add('verdict');
       if (elapsed - timing.verdict < 200) {
         playSound(result?.fits ? 'fit' : 'snap');
-        if (!result?.fits) navigator.vibrate?.([45, 35, 100]);
+        haptic(result?.fits ? [20, 30, 20] : [45, 35, 100]);
       }
     }
     if (spotlight && salvaged.length && !soundMarks.current.has('salvage')) {
@@ -73,17 +90,23 @@ export function ElevatorStage({
     timing.spotlight,
     verdict,
     spotlight,
-    result?.fits,
+    result,
+    state.limit,
     salvaged.length,
   ]);
+  useEffect(() => {
+    setStrain(strain);
+  }, [strain]);
+  useEffect(() => () => setStrain(0), []);
   return (
     <div
       data-testid="elevator-stage"
-      className={`elevator-stage choreographed ${practice ? 'practice-stage' : ''} ${verdict ? (result?.fits ? 'fits' : 'snapped') : ''} ${spotlight ? 'spotlit' : ''} ${scored ? 'scored' : ''}`}
+      className={`elevator-stage choreographed ${practice ? 'practice-stage' : ''} ${straining ? 'straining' : ''} ${verdict ? (result?.fits ? 'fits' : 'snapped') : ''} ${spotlight ? 'spotlit' : ''} ${scored ? 'scored' : ''}`}
       style={
         {
           '--motion-time': `${timing.scale}s`,
           '--shake-delay': `${-Math.max(0, elapsed - timing.verdict)}ms`,
+          '--load': Math.min(1.15, loadRatio).toFixed(3),
         } as React.CSSProperties
       }
     >
@@ -122,6 +145,7 @@ export function ElevatorStage({
                 style={
                   {
                     '--drop-delay': `${-Math.max(0, elapsed - timing.firstDrop - i * timing.interval)}ms`,
+                    '--i': i,
                   } as React.CSSProperties
                 }
               >
@@ -193,6 +217,13 @@ export function ElevatorStage({
           </span>
         </div>
       )}
+      <p className="sr-only" role="status" aria-live="polite">
+        {verdict && result
+          ? result.fits
+            ? `The lift held: ${result.total} crates against a limit of ${result.limit}. Everyone banks.`
+            : `The cable snapped: ${result.total} crates against a limit of ${result.limit}. Nobody banks.`
+          : ''}
+      </p>
       <div className="closing-door left" />
       <div className="closing-door right" />
       <div className="stage-floor">

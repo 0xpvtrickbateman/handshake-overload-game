@@ -1,6 +1,11 @@
 'use client';
 let context: AudioContext | null = null;
 let hum: GainNode | null = null;
+let drone: OscillatorNode | null = null;
+// 0 to 1: how hard the car is pulling on the cable. Bends the drone from 54 Hz toward 62 Hz.
+let strain = 0;
+const DRONE_BASE = 54,
+  DRONE_STRAINED = 62;
 let muted = false;
 let initialized = false;
 const listeners = new Set<() => void>();
@@ -37,12 +42,36 @@ export async function unlockAudio() {
       hum = context.createGain();
       hum.gain.value = 0.018;
       hum.connect(context.destination);
-      const drone = context.createOscillator();
+      drone = context.createOscillator();
       drone.type = 'sine';
-      drone.frequency.value = 54;
+      drone.frequency.value = DRONE_BASE + (DRONE_STRAINED - DRONE_BASE) * strain;
       drone.connect(hum);
       drone.start();
     }
+  } catch {}
+}
+export function setStrain(fraction: number) {
+  const next = Number.isFinite(fraction) ? Math.min(1, Math.max(0, fraction)) : 0;
+  if (next === strain) return;
+  strain = next;
+  if (!drone || !context) return;
+  try {
+    drone.frequency.setTargetAtTime(
+      DRONE_BASE + (DRONE_STRAINED - DRONE_BASE) * next,
+      context.currentTime,
+      next ? 0.2 : 0.45,
+    );
+  } catch {}
+}
+// Haptics never fire before the page has had a tap or key press: browsers block (and log)
+// vibrate calls without user activation, and iOS Safari has no vibrate at all.
+export function haptic(pattern: number | number[]) {
+  try {
+    if (typeof navigator === 'undefined' || typeof navigator.vibrate !== 'function') return;
+    const activation = (navigator as Navigator & { userActivation?: { hasBeenActive: boolean } })
+      .userActivation;
+    if (activation && !activation.hasBeenActive) return;
+    navigator.vibrate(pattern);
   } catch {}
 }
 export function pauseAudio() {
@@ -71,8 +100,16 @@ function tone(
   oscillator.start(t);
   oscillator.stop(t + duration + 0.02);
 }
-function noise(duration: number, volume: number, frequency: number, delay = 0) {
+function noise(
+  duration: number,
+  volume: number,
+  frequency: number,
+  delay = 0,
+  end = frequency,
+  q = 1,
+) {
   if (!context) return;
+  const t = context.currentTime + delay;
   const buffer = context.createBuffer(1, context.sampleRate * duration, context.sampleRate),
     channel = buffer.getChannelData(0);
   for (let i = 0; i < channel.length; i++)
@@ -82,16 +119,34 @@ function noise(duration: number, volume: number, frequency: number, delay = 0) {
     gain = context.createGain();
   source.buffer = buffer;
   filter.type = 'bandpass';
-  filter.frequency.value = frequency;
-  filter.Q.value = 1;
+  filter.frequency.setValueAtTime(frequency, t);
+  if (end !== frequency)
+    filter.frequency.exponentialRampToValueAtTime(Math.max(end, 1), t + duration);
+  filter.Q.value = q;
   gain.gain.value = volume;
   source.connect(filter);
   filter.connect(gain);
   gain.connect(context.destination);
-  source.start(context.currentTime + delay);
+  source.start(t);
 }
-export function playSound(cue: 'lock' | 'thud' | 'fit' | 'snap' | 'salvage', index = 0) {
+export type SoundCue = 'lock' | 'thud' | 'fit' | 'snap' | 'salvage' | 'chime' | 'creak';
+// intensity is only read by 'creak': the load on the car as a fraction of the limit.
+export function playSound(cue: SoundCue, index = 0, intensity = 1) {
   if (isMuted() || !context || context.state !== 'running') return;
+  try {
+    voice(cue, index, intensity);
+  } catch {}
+}
+function voice(cue: SoundCue, index: number, intensity: number) {
+  if (cue === 'chime') {
+    // The lift bell: a soft high-low ding-dong as the doors seal.
+    tone(1046, 0.2, 0.05);
+    tone(784, 0.23, 0.045, 0.12);
+  }
+  if (cue === 'creak') {
+    const load = Math.min(1.15, Math.max(0, intensity));
+    noise(0.3, 0.55 * load, 180, 0.02, 90, 4);
+  }
   if (cue === 'lock') {
     tone(260, 0.09, 0.08);
     tone(390, 0.09, 0.05, 0.07);
